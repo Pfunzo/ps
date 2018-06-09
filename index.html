@@ -1,0 +1,514 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title> Click To Price  </title>
+<script type="text/javascript" src="js/showHide.js" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+<script src="js/jquery.min.js"> </script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+		$("#newProject").hide();
+		$("#proSetupPlane").hide();
+		$("#projectSetupHead").hide();
+		$("#projectSetupBody").hide();
+		$("#proSetupSuccessAlertBackground").hide();
+		$("#globalDecision").hide();
+		$("#globalDecisionSuccessAlertBackground").hide();
+		$("#rawBoq").hide();
+		$("#rawBoqSuccessAlertBackground").hide();
+		$("#pricingSheet").hide();
+		$("#pTenderSheep").hide();
+		$("#rawBoqBodyLevel2").hide();
+		$("#rawBoqBodyLevel3").hide();
+		$("#pricingSheetCalculateSuccessAlertBackground").hide();
+		
+		
+    $("#newProjectBtn").click(function(){
+        $("#splash").hide();
+		$("#newProject").fadeIn("slow");
+		$("#proSetupPlane").fadeIn("slow");
+		$("#proSetupBtn").css({"background-color":"#fff", "border" : "3px solid #ffffff"});
+		$("#newProBtnText").css("color", "#3f8d8a");
+		$("#projectSetupHead").fadeIn("slow");
+		$("#projectSetupBody").fadeIn("slow");
+		
+		
+    });
+    $("#proSetupDoneBtn").click(function(){
+        $("#proSetupSuccessAlertBackground").slideDown("slow");
+	
+    });
+	
+	$("#proSetupNextBtn").click(function(){
+        $("#proSetupSuccessAlertBackground").hide("slow");
+        $("#proSetupPlane").fadeIn("slow");
+		$("#proSetupBtn").css({"background-color":"#fff", "border" : "3px solid #ffffff"});
+		$("#globalDecisionBtn").css({"background-color":"#fff", "border" : "3px solid #ffffff"});
+		$("#newProBtnText").css("color", "#3f8d8a");
+		$("#globalDecision").fadeIn("slow");
+	
+    });
+	
+	$("#globalDecisionDoneBtn").click(function(){
+        $("#globalDecisionSuccessAlertBackground").slideDown("slow");
+	
+    });
+	
+	$("#globalDecisionNextBtn").click(function(){
+		$("#globalDecisionSuccessAlertBackground").hide("slow");
+        $("#proSetupPlane").fadeIn("slow");
+		$("#proSetupBtn").css({"background-color":"#fff", "border" : "3px solid #ffffff"});
+		$("#globalDecisionBtn").css({"background-color":"#fff", "border" : "3px solid #ffffff"});
+		$("#rawBoqBtn").css({"background-color":"#fff", "border" : "3px solid #ffffff"});
+		$("#newProBtnText").css("color", "#3f8d8a");
+		$("#globalDecision").hide();
+		$("#rawBoq").fadeIn("slow");
+		$("#rawBoqHeadL1").css("background-color","#0aaaa4");
+		$("#rawBoqBodyLevel2").hide();
+		$("#rawBoqBodyLevel3").hide();
+		$("#rawBoqBodySuccessLevel1").hide();
+		$("#rawBoqBodySuccessLevel2").hide();
+		$("#rawBoqBodySuccessLevel3").hide();
+	
+    });
+	
+	$("#rawBoqLevel1DoneBtn").click(function(){
+        $("#rawBoqBodySuccessLevel1").slideDown("slow");
+    });
+	
+	$("#rawBoqLevel1NextBtn").click(function(){
+        $("#rawBoqBodySuccessLevel1").hide();
+		$("#rawBoqBodyLevel1").hide();
+		$("#rawBoqHeadL1").css("background-color","#535353");
+		$("#rawBoqHeadL2").css("background-color","#0aaaa4");
+		$("#rawBoqBodyLevel3").hide();
+		$("#rawBoqBodyLevel2").fadeIn("slow");
+    });
+	
+	$("#rawBoqLevel2DoneBtn").click(function(){
+        $("#rawBoqBodySuccessLevel2").slideDown("slow");
+    });
+	
+	$("#rawBoqLevel2NextBtn").click(function(){
+        $("#rawBoqBodySuccessLevel2").hide();
+		$("#rawBoqBodyLevel1").hide();
+		$("#rawBoqBodyLevel2").hide();
+		$("#rawBoqHeadL1").css("background-color","#535353");
+		$("#rawBoqHeadL2").css("background-color","#535353");
+		$("#rawBoqHeadL3").css("background-color","#0aaaa4");
+		$("#rawBoqBodyLevel3").fadeIn("slow");
+    });
+	
+	$("#rawBoqLevel3DoneBtn").click(function(){
+        $("#rawBoqBodySuccessLevel3").slideDown("slow");
+    });
+	
+	$("#rawBoqLevel3NextBtn").click(function(){
+        $("#rawBoqBodySuccessLevel3").hide();
+		$("#pricingSheet").fadeIn("slow");
+    });
+	
+	$("#pricingSheetRightFooterCalculateBtn").click(function(){
+        $("#newProject").hide();
+		$("#pricingSheetCalculateSuccessAlertBackground").fadeIn();
+    });
+	
+	$("#pricingSheetOkBtn").click(function(){
+        //$("#newProject").hide();
+		$("#pricingSheetCalculateSuccessAlertBackground").hide();
+		$("#pricingSheet").fadeIn("slow");
+		
+		
+    });
+	
+	$("#pricingSheetRightFooterViewBtn").click(function(){
+        $("#newProject").hide();
+		$("#pricingSheetCalculateSuccessAlertBackground").hide();
+		$("#pTenderSheep").fadeIn("slow");
+    });
+	
+	$("rawBoqLevel1AddBtn").click(function() {
+		var formDataArray = $("rawBoqLevel1Form").serializeArray();
+		var formDataJson = JSON.stringify(formDataArray);
+		var yourTableHTML = "";
+		var counter = 0;
+        jQuery.each(formDataJson, function(i,data) {
+            $("#rawBoqLevel1ListTable").append("<tr><td>" + data.sectionName + "</td><td>" + data.sectionId + "</td><td><button type="button">Level 2</button></td></tr>");
+        });
+	})
+	
+});
+
+</script>
+
+</head>
+
+
+<body>
+
+<div id="head">
+<p id="headText">Click To Price</p>
+</div>
+
+
+<div id="content1">
+
+
+
+<div id="leftSide">
+
+<table align="center">
+<tr><td><div id="newProjectBtn"><p id="homeBtnText"> New Project </p></div></td></tr>
+<tr><td><a href=""><div id="openProjectBtn"><p id="homeBtnText"> Load Project </p></div></a></td></tr>
+</table>
+</div>
+
+
+<div id="proSetupPlane">
+<table align="center">
+<tr><td><div id="proSetupBtn"><p id="newProBtnText"> Project Setup </p></div></td></tr>
+<tr><td><div id="globalDecisionBtn"><p id="newProBtnText"> Global Decision </p></div></td></tr>
+<tr><td><div id="rawBoqBtn"><p id="newProBtnText"> Raw BOQ </p></div></td></tr>
+<tr><td><div id="pricingSheetBtn"><p id="newProBtnText"> Pricing Sheet </p></div></td></tr>
+<tr><td><div id="planReportsBtn"><p id="newProBtnText"> Planned Reports </p></div></td></tr>
+</table>
+</div>
+
+
+
+<div id="splash"></div>
+<div id="newProject">
+
+<div id="projectSetupHead">
+<p id="proHeadText">Project Setup</p>
+</div>
+
+<div id="projectSetupBody">
+<br>&nbsp;</br>
+
+<form action="javascript:void(0);">
+  <table align="center">
+  
+  <tr><td><p id="proFormText"> Project Name </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="text" name="projectName" focus></td></tr>
+  <tr><td>&nbsp;</td></tr>
+  <tr><td><p id="proFormText"> Project Number </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="text" name="projectNumber" ></td></tr>
+  <tr><td>&nbsp;</td></tr>
+  <tr><td><p id="proFormText"> Client Number </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="text" name="clientNumber" ></td></tr>
+  
+  <tr><td></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupDoneBtn"  type="submit" value="Save"></td><td></td></tr>
+  
+  </table>
+</form> 
+</div>
+
+
+</div>
+
+<div id="globalDecision">
+<div id="projectSetupHead">
+<p id="proHeadText">Global Decision</p>
+</div>
+
+<div id="globalDecisionBody">
+
+<br>&nbsp;</br>
+
+
+<form action="javascript:void(0);">
+  <table align="center">
+  
+  <tr><td><p id="proFormText"> Overheads Percentage </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="text" name="overheadsPercentage" focus></td></tr>
+  <tr><td>&nbsp;</td></tr>
+  <tr><td><p id="proFormText"> Profit Percentage </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="text" name="profitPercentage" ></td></tr>
+  
+  <tr><td></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="globalDecisionDoneBtn"  type="submit" value="Save"></td><td></td></tr>
+  
+  </table>
+</form> 
+</div>
+
+</div>
+
+
+
+<div id="rawBoq">
+<div id="projectSetupHead">
+<p id="proHeadText">Raw BOQ</p>
+</div>
+
+<br>&nbsp;</br>
+<p></p>
+<center>
+<table>
+<tr>
+<td><div id="rawBoqHeadL1"><p id="rawBoqHeadText">Level 1</p></div></td>
+<td><div id="rawBoqHeadL2"><p id="rawBoqHeadText">Level 2</p></div></td>
+<td><div id="rawBoqHeadL3"><p id="rawBoqHeadText">Level 3</p></div></td>
+</tr>
+</table>
+</center>
+
+
+
+<div id="rawBoqBody"></div>
+
+<div id="rawBoqBodyLevel1">
+<br>&nbsp;</br>
+
+
+<form id="rawBoqLevel1Form" action="javascript:void(0);">
+  <table align="center">
+  
+  <tr><td><p id="proFormText"> Section Name </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="text" name="sectionName" focus></td></tr>
+  <tr><td>&nbsp;</td></tr>
+  <tr><td><p id="proFormText"> Section ID </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="text" name="sectionId" ></td></tr>
+  
+  <tr><td></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="rawBoqLevel1AddBtn"  type="submit" value="Add"></td><td></td></tr>
+  <tr><td>&nbsp;</td></tr>
+  <tr><td>&nbsp;</td></tr>
+  <tr><td>&nbsp;</td></tr>
+  <tr><td></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="rawBoqLevel1DoneBtn"  type="submit" value="Done"></td><td></td></tr>
+  
+  </table>
+</form>
+</div>
+
+<div id="rawBoqLevelSections" >
+<table style="width:100%">
+  <tr>
+    <th>Section Name</th>
+    <th>Section ID</th> 
+    <th>Action</th>
+  </tr>
+ 
+</table>
+</div>
+
+<div id="rawBoqBodySuccessLevel1">
+
+<br></br>
+<center><img src="images/rawBoqSuccess.png"/></center>
+<p id="homeBtnText">Raw BOQ Level 1 Saved Successfully! </p>
+<br></br>
+<center><input id="rawBoqLevel1NextBtn" type="submit" value="NEXT"></center>
+</div>
+
+
+
+
+<div id="rawBoqBodyLevel2">
+<br/>
+<form action="javascript:void(0);">
+  <table align="center">
+  
+  <tr><td><p id="proFormText"> Activity Name </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="text" name="activityName" focus></td></tr>
+  <tr><td><p id="proFormText"> Activity ID </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="text" name="activityId" ></td></tr>
+  <tr><td><p id="proFormText"> Start Date </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="date" name="activityStartDate" ></td></tr>
+  <tr><td><p id="proFormText"> End Date </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="date" name="activityEndDate" ></td></tr>
+  <tr><td><p id="proFormText"> No. Of Days </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="text" name="noOfDays" ></td></tr>
+
+  <tr><td></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="rawBoqLevel2AddBtn"  type="submit" value="Add"></td><td></td></tr>
+  <tr><td></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="rawBoqLevel2DoneBtn"  type="submit" value="Done"></td><td></td></tr>
+  
+  </table>
+</form>
+
+</div>
+
+<div id="rawBoqBodySuccessLevel2">
+<br></br>
+<center><img src="images/rawBoqSuccess.png"/></center>
+<p id="homeBtnText">Raw BOQ Level 2 Saved Successfully! </p>
+<br></br>
+<center><input id="rawBoqLevel2NextBtn" type="submit" value="NEXT"></center>
+</div>
+
+
+<div id="rawBoqBodyLevel3">
+<br>
+<form action="javascript:void(0);">
+  <table align="center">
+  
+  <tr><td><p id="proFormText"> Activity Description </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="text" name="activDescription" focus></td></tr>
+  <tr><td><p id="proFormText"> Start Date </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="date" name="activDescriptionStartDate" ></td></tr>
+  <tr><td><p id="proFormText"> End Date </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="date" name="activDescriptionEndDate" ></td></tr>
+  <tr><td><p id="proFormText"> No. Of Days </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="text" name="activDescriptionNoOfDays" ></td></tr>
+  
+
+  <tr><td></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="rawBoqLevel2AddBtn"  type="submit" value="Add"></td><td></td></tr>
+  </br>
+  <tr><td></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="rawBoqLevel3DoneBtn"  type="submit" value="Done"></td><td></td></tr>
+  
+  </table>
+</form>
+</div>
+
+<div id="rawBoqBodySuccessLevel3">
+<br></br>
+<center><img src="images/rawBoqSuccess.png"/></center>
+<p id="homeBtnText">Raw BOQ Level 3 Saved Successfully! </p>
+<br></br>
+<center><input id="rawBoqLevel3NextBtn" type="submit" value="NEXT"></center>
+</div>
+</div>
+
+
+
+
+<div id="proSetupSuccessAlertBackground">
+<br>&nbsp;</br>
+<center><img src="images/success.png" /></center>
+<p id="homeBtnText"> Project Setup Saved Successfully! </p>
+<br>&nbsp;</br>
+<center><input id="proSetupNextBtn" type="submit" value="NEXT"></center>
+</div>
+
+<div id="globalDecisionSuccessAlertBackground">
+<br>&nbsp;</br>
+<center><img src="images/success.png" /></center>
+<p id="homeBtnText">Global Decision Saved Successfully! </p>
+<br>&nbsp;</br>
+<center><input id="globalDecisionNextBtn" type="submit" value="NEXT"></center>
+</div>
+
+
+<div id="pricingSheet">
+<div id="pricingSheetHead"><p id="pricingSheetHeadText">Pricing Sheet</p></div>
+<div id="pricingSheetSelector">
+<form action="javascript:void(0);">
+<table>
+<tr>
+<td>
+<select id="pricingSheetHeadInput">
+  <option value="None">Select Section Name</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select>
+</td>
+
+<td>
+<select id="pricingSheetHeadInput">
+  <option value="None">Select Activity Name</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select>
+</td>
+<td>
+<select id="pricingSheetHeadInput">
+  <option value="None">Select Activity Description</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select>
+</td>
+</tr>
+</table>
+</form>
+</div>
+
+<table>
+<tr>
+<td>
+<div id="pricingSheetPeopleHead"><p id="pricingSheetResourceHeadText"> People </p></div>
+<iframe src="iframes/peoplePricingSheet.html" id="pricingSheetPeopleBody"></iframe>
+</td>
+<td>
+<div id="pricingSheetPeopleHead"><p id="pricingSheetResourceHeadText"> Material </p></div>
+<iframe src="iframes/materialPricingSheet.html" id="pricingSheetPeopleBody"></iframe>
+</td>
+</tr>
+
+<tr>
+<td>
+<div id="pricingSheetPeopleHeadL2"><p id="pricingSheetResourceHeadText"> Fuel </p></div>
+<iframe src="iframes/fuelPricingSheet.html" id="pricingSheetPeopleBody"></iframe>
+</td>
+<td>
+<div id="pricingSheetPeopleHeadL2"><p id="pricingSheetResourceHeadText"> Plant </p></div>
+<iframe src="iframes/plantPricingSheet.html" id="pricingSheetPeopleBody"></iframe>
+</td>
+</tr>
+
+</table>
+
+<div id="pricingSheetLeftFooterBody">
+<table>
+<tr>
+<td><div id="pricingSheetLeftFooterHead"><p id="pricingSheetLeftFooterHeadText">Utilization</p></div></td>
+<td><div id="pricingSheetLeftFooterHead"><p id="pricingSheetLeftFooterHeadText">Plant Availability</p></div></td>
+</tr>
+
+<tr>
+<td><input id="pricingSheetLeftFooterInput"></td>
+<td><input id="pricingSheetLeftFooterInput"></td>
+</tr>
+</table>
+
+</div>
+
+
+<div id="pricingSheetRightFooterBody">
+<center>
+<table>
+<tr>
+<td><div id="pricingSheetRightFooterCalculateBtn"><p id="pricingSheetCalculateText">Calculate</p></div></td>
+<td><div id="pricingSheetRightFooterViewBtn"><p id="pricingSheetViewText">View Priced Tender</p></div></td>
+</tr>
+</table>
+</center>
+</div>
+
+</div>
+
+<!-- Priced Tender Sheet -->
+<div id="pTenderSheep">
+<div id="pTenderSheetHead"><p id="pSheetTenderHeadText">Priced Tender Sheet</p></div>
+<table>
+<tr>
+<td>
+<div id="pricingSheetPeopleHead"><p id="pricingSheetResourceHeadText"> People </p></div>
+<iframe src="iframes/peoplePricingSheet.html" id="pricingSheetPeopleBody"></iframe>
+</td>
+<td>
+<div id="pricingSheetPeopleHead"><p id="pricingSheetResourceHeadText"> Material </p></div>
+<iframe src="iframes/materialPricingSheet.html" id="pricingSheetPeopleBody"></iframe>
+</td>
+</tr>
+
+<tr>
+<td>
+<div id="pricingSheetPeopleHeadL2"><p id="pricingSheetResourceHeadText"> Fuel </p></div>
+<iframe src="iframes/fuelPricingSheet.html" id="pricingSheetPeopleBody"></iframe>
+</td>
+<td>
+<div id="pricingSheetPeopleHeadL2"><p id="pricingSheetResourceHeadText"> Plant </p></div>
+<iframe src="iframes/plantPricingSheet.html" id="pricingSheetPeopleBody"></iframe>
+</td>
+</tr>
+
+</table>
+</div>
+
+
+
+<div id="pricingSheetCalculateSuccessAlertBackground">
+<br>&nbsp;</br>
+<center><img src="images/success.png" /></center>
+<p id="homeBtnText"> Pricing Sheet Calculated Successfully! </p>
+<br>&nbsp;</br>
+<center><input id="pricingSheetOkBtn" type="submit" value="OK"></center>
+</div>
+
+
+
+</div>
+
+
+</body>
+
+</html>

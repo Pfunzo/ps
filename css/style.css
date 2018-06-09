@@ -1,0 +1,206 @@
+html {background-color:#f1f1f1;}
+@font-face {font-family: BAUHS93; src: local(BAUHS93), url('../fonts/BAUHS93.TTF') format('truetype');}
+@font-face {font-family: trebuc; src: local(trebuc), url('../fonts/trebuc.ttf') format('truetype');}
+
+a{text-decoration:none;}
+
+/* Home containers */
+#head{position:relative; margin-left:auto; margin-right:auto; margin-top:-2px; width:1000px; height:80px;  background-color:#0aaaa4;}
+#content1{position:relative; margin-left:auto; margin-right:auto; margin-top:-2px; width:1000px; height:500px;  background-color:#bebebe;}
+#leftSide{position:absolute; margin-left:0px; margin-top:-2px; width:200px; height:498px;  border: 2px solid #0aaaa4; border-style: solid; background-color:#3f8d8a;}
+#splash{position:relative; margin-left:204px; margin-top:0px; width:796px; height:500px;  background : url(../images/logo.png); }
+
+
+
+
+/* New Project containers */
+#newProject{position:relative; margin-left:204px; margin-top:0px; width:796px; height:500px; background-color:#3f8d8a;}
+#proSetupPlane{position:absolute; margin-left:0px; margin-top:-2px; width:200px; height:498px;  border: 2px solid #0aaaa4; border-style: solid; background-color:#3f8d8a;}
+
+
+/* Project Setup Containers */
+#projectSetupHead{position:absolute; margin-left:0.2px; margin-top:10px; width:796px; height:46px; background : url(../images/proSetupHead.png); }
+#projectSetupBody{position:absolute; margin-left:95px; margin-top:62px; width:600px; height:300px; background-color:#0aaaa4; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+#proSetupSuccessAlertBackground{position:absolute; margin-left:auto; margin-right:auto; margin-top:-500px; width:1000px; height:500px;  background-color:#abf2c4;}
+
+
+
+/* Global Decision Containers */
+#globalDecision{position:relative; margin-left:204px; margin-top:-500px; width:796px; height:500px; background-color:#3f8d8a;}
+#globalDecisionBody{position:absolute; margin-left:95px; margin-top:62px; width:600px; height:300px; background-color:#0aaaa4; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+#globalDecisionSuccessAlertBackground{position:absolute; margin-left:auto; margin-right:auto; margin-top:-500px; width:1000px; height:500px;  background-color:#abf2c4;}
+
+
+/* Raw BOQ Containers*/
+#rawBoq{position:relative; margin-left:204px; margin-top:-500px; width:796px; height:500px; background-color:#3f8d8a;}
+#rawBoqBody{position:absolute; margin-left:63px; margin-top:0px; width:670px; height:300px; background-color:#0aaaa4;}
+#rawBoqSuccessAlertBackground{position:absolute; margin-left:auto; margin-right:auto; margin-top:-500px; width:1000px; height:500px;  background-color:#abf2c4;}
+
+#rawBoqHeadL1{position:relative; margin-left:0.2px; margin-left:auto; margin-right:auto; margin-top:10px; width:220px; height:24px; background-color:#535353; }
+#rawBoqHeadL2{position:relative; margin-left:0.2px; margin-left:auto; margin-right:auto; margin-top:10px; width:220px; height:24px; background-color:#535353; }
+#rawBoqHeadL3{position:relative; margin-left:0.2px; margin-left:auto; margin-right:auto; margin-top:10px; width:220px; height:24px; background-color:#535353; }
+
+#rawBoqBodyLevel1{position:absolute; margin-left:63px; margin-top:0px; width:670px; height:300px; background-color:#0aaaa4; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+#rawBoqBodySuccessLevel1{position:absolute; margin-left:63px; margin-top:0px; width:670px; height:300px; background-color:#abf2c4; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+#rawBoqBodyLevel2{position:absolute; margin-left:63px; margin-top:0px; width:670px; height:300px; background-color:#0aaaa4; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+#rawBoqBodySuccessLevel2{position:absolute; margin-left:63px; margin-top:0px; width:670px; height:300px; background-color:#abf2c4; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+#rawBoqBodyLevel3{position:absolute; margin-left:63px; margin-top:0px; width:670px; height:300px; background-color:#0aaaa4; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+#rawBoqBodySuccessLevel3{position:absolute; margin-left:63px; margin-top:0px; width:670px; height:300px; background-color:#abf2c4; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+
+/* Pricing Sheet Containers */
+#pricingSheet{position:relative; margin-left:auto; margin-right:auto; margin-top:-500px; width:1000px; height:500px;  background-color:#3f8d8a;}
+#pricingSheetHead{position:absolute; margin-left:0px; margin-top:2px; width:1000px; height:35px; background : url(../images/pricingSheetHead.png); }
+
+#pricingSheetSelector{position:absolute; margin-left:0px; margin-left:auto; margin-right:auto; margin-top:40px; width:1000px; height:24px;}
+#pricingSheetHeadInput{width:326px; height:24px; background-color:#d1d1d1; border:none; color:#535353;}
+
+
+#pricingSheetPeopleHead{position:relative; margin-left:0px; margin-left:10px; margin-top:69px; width:480px; height:22px; background-color:#535353;}
+#pricingSheetPeopleHeadL2{position:relative; margin-left:0px; margin-left:10px; margin-top:1px; width:480px; height:22px; background-color:#535353;}
+#pricingSheetPeopleBody{position:relative; margin-left:0px; margin-left:10px; margin-top:1px; width:480px; height:150px; background-color:#d1d1d1; border:none;}
+
+#pricingSheetListPeopleResource{width:250px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
+#pricingSheetListPeopleQuantity{width:100px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
+#pricingSheetListPeopleRate{width:100px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
+#pricingSheetListPeopleResourceTitle{width:250px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
+#pricingSheetListPeopleQuantityTitle{width:100px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
+#pricingSheetListPeopleRateTitle{width:100px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
+
+#pricingSheetListMaterialResourceTitle{width:150px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
+#pricingSheetListMaterialWasteTitle{width:130px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
+#pricingSheetListMaterialQuantityTitle{width:85px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
+#pricingSheetListMaterialRateTitle{width:85px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
+#pricingSheetListMaterialResourceInput{width:150px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
+#pricingSheetListMaterialWasteInput{width:130px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
+#pricingSheetListMaterialQuantityInput{width:85px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
+#pricingSheetListMaterialRateInput{width:85px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
+
+#pricingSheetListFuelResourceTitle{width:150px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
+#pricingSheetListFuelWasteTitle{width:130px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
+#pricingSheetListFuelQuantityTitle{width:85px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
+#pricingSheetListFuelRateTitle{width:85px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
+#pricingSheetListFuelResourceInput{width:150px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
+#pricingSheetListFuelWasteInput{width:130px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
+#pricingSheetListFuelQuantityInput{width:85px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
+#pricingSheetListFuelRateInput{width:85px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
+
+#pricingSheetListPlantResourceTitle{width:150px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
+#pricingSheetListPlantWasteTitle{width:130px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
+#pricingSheetListPlantQuantityTitle{width:85px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
+#pricingSheetListPlantRateTitle{width:85px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
+#pricingSheetListPlantResourceInput{width:150px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
+#pricingSheetListPlantWasteInput{width:130px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
+#pricingSheetListPlantQuantityInput{width:85px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
+#pricingSheetListPlantRateInput{width:85px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
+
+
+#pricingSheetLeftFooterBody{position:relative; margin-left:12px; margin-top:1px; width:481px; height:68px;}
+#pricingSheetLeftFooterHead{position:relative; margin-left:-3px; margin-top:1px; width:240px; height:25px; background-color:#d1d1d1;}
+#pricingSheetLeftFooterInput{position:relative; margin-left:-3px; margin-top:0px; width:240px; height:20px; border: none;/*  background-color:#d1d1d1; */}
+#pricingSheetRightFooterBody{position:relative; margin-left:507px; margin-top:-64px; width:481px; height:65px; /* background-color:#d1d1d1; */}
+
+#pricingSheetRightFooterCalculateBtn{position:relative; margin-left:0px; margin-top:-3px; width:200px; height:51px; background-color:#abf2c4; border-radius: 25px;cursor: pointer;}
+#pricingSheetRightFooterViewBtn{position:relative; margin-left:0px; margin-top:-3px; width:200px; height:51px; background-color:#535353; border-radius: 25px; cursor: pointer;}
+#pricingSheetRightFooterViewBtn:hover{position:relative; margin-left:0px; margin-top:-3px; width:200px; height:51px; background-color:#dc4848; border-radius: 25px}
+
+#pricingSheetCalculateSuccessAlertBackground{position:absolute; margin-left:auto; margin-right:auto; margin-top:-500px; width:1000px; height:500px;  background-color:#abf2c4; opacity:0.95;}
+#pricingSheetOkBtn{background-color: #535353; border: none; color: #efefef; height:50px; width:302px; text-align: center; text-decoration: none; display: inline-block; font-size: 30px; cursor: pointer;border-radius: 25px}
+#pricingSheetOkBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:50px; width:302px; text-align: center; text-decoration: none; display: inline-block; font-size: 30px; cursor: pointer;border-radius: 25px}
+
+
+
+/* Priced Tender Sheet */
+#pTenderSheep{position:relative; margin-left:auto; margin-right:auto; margin-top:-500px; width:1000px; height:500px;  background-color:#3f8d8a;}
+#pTenderSheetHead{position:absolute; margin-left:0px; margin-top:2px; width:1000px; height:35px; background : url(../images/pricingSheetHead.png); }
+#pTenderSheetHeadL2{position:relative; margin-left:0px; margin-left:10px; margin-top:1px; width:480px; height:22px; background-color:#535353;}
+
+
+/* Home buttons */
+#newProjectBtn{position:relative; margin-left:auto; margin-right:auto; margin-top:5px; width:160px; height:40px; border: 5px solid #0aaaa4; background-color:#d1d1d1; cursor: pointer;}
+#newProjectBtn:hover{position:relative; margin-left:auto; margin-right:auto; margin-top:5px; width:160px; height:40px; border: 5px solid #0aaaa4; background-color:#abf2c4; cursor: pointer;}
+#openProjectBtn{position:relative; margin-left:auto; margin-right:auto; margin-top:5px; width:160px; height:40px; border: 5px solid #0aaaa4; background-color:#d1d1d1; cursor: pointer;}
+#openProjectBtn:hover{position:relative; margin-left:auto; margin-right:auto; margin-top:5px; width:160px; height:40px; border: 5px solid #0aaaa4; background-color:#abf2c4; cursor: pointer;}
+
+
+/* New Project buttons */
+#proSetupBtn{position:relative; margin-left:auto; margin-right:auto; margin-top:5px; width:160px; height:40px; border: 3px solid #0aaaa4; background-color:#d1d1d1; cursor: pointer;}
+#globalDecisionBtn{position:relative; margin-left:auto; margin-right:auto; margin-top:5px; width:160px; height:40px; border: 3px solid #0aaaa4; background-color:#d1d1d1; cursor: pointer;}
+#rawBoqBtn{position:relative; margin-left:auto; margin-right:auto; margin-top:5px; width:160px; height:40px; border: 3px solid #0aaaa4; background-color:#d1d1d1; cursor: pointer;}
+#pricingSheetBtn{position:relative; margin-left:auto; margin-right:auto; margin-top:5px; width:160px; height:40px; border: 3px solid #0aaaa4; background-color:#d1d1d1; cursor: pointer;}
+#planReportsBtn{position:relative; margin-left:auto; margin-right:auto; margin-top:5px; width:160px; height:40px; border: 3px solid #0aaaa4; background-color:#d1d1d1; cursor: pointer;}
+#planReportsBtn{position:relative; margin-left:auto; margin-right:auto; margin-top:5px; width:160px; height:40px; border: 3px solid #0aaaa4; background-color:#d1d1d1; cursor: pointer;}
+
+
+/* Form Buttons */
+#proSetupDoneBtn{background-color: #535353; border: none; color: #efefef; height:35px; width:302px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; cursor: pointer;}
+#proSetupDoneBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:35px; width:302px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; cursor: pointer; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+#globalDecisionDoneBtn{background-color: #535353; border: none; color: #efefef; height:35px; width:302px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; cursor: pointer;}
+#globalDecisionDoneBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:35px; width:302px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; cursor: pointer; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+#rawBoqLevel1DoneBtn{background-color: #535353; border: none; color: #efefef; height:35px; width:302px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; cursor: pointer;}
+#rawBoqLevel1DoneBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:35px; width:302px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; cursor: pointer; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+#rawBoqLevel2DoneBtn{background-color: #535353; border: none; color: #efefef; height:35px; width:302px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; cursor: pointer;}
+#rawBoqLevel2DoneBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:35px; width:302px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; cursor: pointer;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+#rawBoqLevel3DoneBtn{background-color: #535353; border: none; color: #efefef; height:35px; width:302px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; cursor: pointer;}
+#rawBoqLevel3DoneBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:35px; width:302px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; cursor: pointer;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+#rawBoqLevel1AddBtn{background-color: #abf2c4; border: none; color: #535353; height:35px; width:302px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; cursor: pointer;}
+#rawBoqLevel2AddBtn{background-color: #abf2c4; border: none; color: #535353; height:35px; width:302px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; cursor: pointer;}
+#rawBoqLevel3AddBtn{background-color: #abf2c4; border: none; color: #535353; height:35px; width:302px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; cursor: pointer;}
+
+/* Next Buttons */
+#proSetupNextBtn{background-color: #535353; border: none; color: #efefef; height:50px; width:302px; text-align: center; text-decoration: none; display: inline-block; font-size: 30px; cursor: pointer;border-radius: 25px}
+#proSetupNextBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:50px; width:302px; text-align: center; text-decoration: none; display: inline-block; font-size: 30px; cursor: pointer;border-radius: 25px}
+#globalDecisionNextBtn{background-color: #535353; border: none; color: #efefef; height:50px; width:302px; text-align: center; text-decoration: none; display: inline-block; font-size: 30px; cursor: pointer;border-radius: 25px}
+#globalDecisionNextBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:50px; width:302px; text-align: center; text-decoration: none; display: inline-block; font-size: 30px; cursor: pointer;border-radius: 25px}
+#rawBoqLevel1NextBtn{background-color: #535353; border: none; color: #efefef; height:40px; width:252px; text-align: center; text-decoration: none; display: inline-block; font-size: 25px; cursor: pointer;border-radius: 20px}
+#rawBoqLevel1NextBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:40px; width:252px; text-align: center; text-decoration: none; display: inline-block; font-size: 25px; cursor: pointer;border-radius: 20px}
+#rawBoqLevel2NextBtn{background-color: #535353; border: none; color: #efefef; height:40px; width:252px; text-align: center; text-decoration: none; display: inline-block; font-size: 25px; cursor: pointer;border-radius: 20px}
+#rawBoqLevel2NextBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:40px; width:252px; text-align: center; text-decoration: none; display: inline-block; font-size: 25px; cursor: pointer;border-radius: 20px}
+#rawBoqLevel3NextBtn{background-color: #535353; border: none; color: #efefef; height:40px; width:252px; text-align: center; text-decoration: none; display: inline-block; font-size: 25px; cursor: pointer;border-radius: 20px}
+#rawBoqLevel3NextBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:40px; width:252px; text-align: center; text-decoration: none; display: inline-block; font-size: 25px; cursor: pointer;border-radius: 20px}
+
+
+
+
+/* text */
+#headText{position:relative; text-decoration:none; margin-left:auto; margin-right:auto; margin-top:00px;  text-align:center; 
+font-family: BAUHS93; font-size: 50px; font-weight: normal; color:#535353; margin-bottom:5px;}
+#homeBtnText{position:relative; text-decoration:none; margin-left:auto; margin-right:auto; margin-top:4px;  text-align:center; 
+font-family: trebuc; font-size: 23px; font-weight: normal; color:#535353; margin-bottom:5px;}
+#newProBtnText{position:relative; text-decoration:none; margin-left:auto; margin-right:auto; margin-top:6px;  text-align:center; 
+font-family: trebuc; font-size: 20px; font-weight: normal; color:#3f8d8a; margin-bottom:5px;}
+#proHeadText{position:relative; text-decoration:none; margin-right:20px; margin-top:7px;  text-align:right; 
+font-family: trebuc; font-size: 23px; font-weight: normal; color:#165654; margin-bottom:5px;}
+#proFormText{position:relative; text-decoration:none; margin-left:5px; margin-top:0px;  text-align:left; 
+font-family: trebuc; font-size: 23px; font-weight: normal; color:#165654; margin-bottom:5px;}
+#rawBoqHeadText{position:relative; text-decoration:none; margin-left:5px; margin-top:20px;  text-align:center; 
+font-family: trebuc; font-size: 18px; font-weight: normal; color:#d1d1d1; margin-bottom:0px;}
+#pricingSheetHeadText{position:relative; text-decoration:none; margin-left:20px; margin-top:4px;  text-align:left; 
+font-family: trebuc; font-size: 23px; font-weight: normal; color:#165654; margin-bottom:5px;}
+#pSheetTenderHeadText{position:relative; text-decoration:none; margin-left:20px; margin-top:4px;  text-align:left; 
+font-family: trebuc; font-size: 23px; font-weight: normal; color:#165654; margin-bottom:5px;}
+#pricingSheetResourceHeadText{position:relative; text-decoration:none; margin-left:20px; margin-top:0px;  text-align:left; 
+font-family: trebuc; font-size: 17px; font-weight: normal; color:#d1d1d1; margin-bottom:5px;}
+#pricingSheetResourceListText{position:relative; text-decoration:none; margin-left:0px; margin-top:0px;  text-align:center; 
+font-family: trebuc; font-size: 13px; font-weight: normal; color:#535353; margin-bottom:5px;}
+#pricingSheetLeftFooterHeadText{position:absolute; text-decoration:none; margin-left:5px; margin-top:5px;  text-align:left; 
+font-family: trebuc; font-size: 13px; font-weight: normal; color:#535353; margin-bottom:5px;}
+#pricingSheetCalculateText{position:absolute; text-decoration:none; margin-left:60px; margin-top:12px;  text-align:left; 
+font-family: trebuc; font-size: 20px; font-weight: normal; color:#535353; margin-bottom:5px;}
+#pricingSheetViewText{position:absolute; text-decoration:none; margin-left:16px; margin-top:12px;  text-align:left; 
+font-family: trebuc; font-size: 20px; font-weight: normal; color:#d1d1d1; margin-bottom:5px;}
+
+
+
+
+
+
+/* input */ 
+#proSetupInput {border: 1px solid #555; width:300px; height:25px; outline: none}
+
+
+
+/* Images */
+#centerImage{display: block; margin-left: auto; margin-right: auto;}
+
+
+

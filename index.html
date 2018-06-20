@@ -1,514 +1,596 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
 
-<title> Click To Price  </title>
-<script type="text/javascript" src="js/showHide.js" charset="utf-8"></script>
-<link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <title> Click To Price  </title>
+        <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+        
+<!--        JQUERY LIBRARY-->
+        <script src="js/jquery.min.js"></script>
 
-<script src="js/jquery.min.js"> </script>
-
-<script type="text/javascript">
-$(document).ready(function(){
-		$("#newProject").hide();
-		$("#proSetupPlane").hide();
-		$("#projectSetupHead").hide();
-		$("#projectSetupBody").hide();
-		$("#proSetupSuccessAlertBackground").hide();
-		$("#globalDecision").hide();
-		$("#globalDecisionSuccessAlertBackground").hide();
-		$("#rawBoq").hide();
-		$("#rawBoqSuccessAlertBackground").hide();
-		$("#pricingSheet").hide();
-		$("#pTenderSheep").hide();
-		$("#rawBoqBodyLevel2").hide();
-		$("#rawBoqBodyLevel3").hide();
-		$("#pricingSheetCalculateSuccessAlertBackground").hide();
+<!--        MAIN JS-->
+        <script type="text/javascript" src="js/showHide.js" charset="utf-8"></script>
+        
+<!--        CALENDER RANGER LIBRARY-->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/daterangepicker.css"/>
+		
+        <!-- Select Multiple Days Start -->
+<!--		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
+        <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/jquery-ui.multidatespicker.js" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.multidatespicker.css"/>
+<!--		<link rel="stylesheet" type="text/css" href="css/style.css"/>-->
+		
+        <script type="text/javascript">
+            $(function() {
+                // Documentation
+                $('i:contains(type)').attr('title', '[Optional] accepted values are: "allowed" [default]; "disabled".');
+                $('i:contains(format)').attr('title', '[Optional] accepted values are: "string" [default]; "object".');
+                $('#how-to').find('h4').each(function () {
+                    var $this = $(this);
+                    $this.wrap('<a href="#'+ $this.closest('li').attr('id') +'" />');
+                });
+                $('#demos').find('.demo').each(function () {
+                    var $this = $(this);
+                    $this.find('h3').wrapInner('<a href="#'+ $this.attr('id') +'" />');
+                });
+            });
+        </script>
+        <style>
+            h2 {
+                margin-top: 2em;
+            }
+        </style>
 		
 		
-    $("#newProjectBtn").click(function(){
-        $("#splash").hide();
-		$("#newProject").fadeIn("slow");
-		$("#proSetupPlane").fadeIn("slow");
-		$("#proSetupBtn").css({"background-color":"#fff", "border" : "3px solid #ffffff"});
-		$("#newProBtnText").css("color", "#3f8d8a");
-		$("#projectSetupHead").fadeIn("slow");
-		$("#projectSetupBody").fadeIn("slow");
-		
-		
-    });
-    $("#proSetupDoneBtn").click(function(){
-        $("#proSetupSuccessAlertBackground").slideDown("slow");
-	
-    });
-	
-	$("#proSetupNextBtn").click(function(){
-        $("#proSetupSuccessAlertBackground").hide("slow");
-        $("#proSetupPlane").fadeIn("slow");
-		$("#proSetupBtn").css({"background-color":"#fff", "border" : "3px solid #ffffff"});
-		$("#globalDecisionBtn").css({"background-color":"#fff", "border" : "3px solid #ffffff"});
-		$("#newProBtnText").css("color", "#3f8d8a");
-		$("#globalDecision").fadeIn("slow");
-	
-    });
-	
-	$("#globalDecisionDoneBtn").click(function(){
-        $("#globalDecisionSuccessAlertBackground").slideDown("slow");
-	
-    });
-	
-	$("#globalDecisionNextBtn").click(function(){
-		$("#globalDecisionSuccessAlertBackground").hide("slow");
-        $("#proSetupPlane").fadeIn("slow");
-		$("#proSetupBtn").css({"background-color":"#fff", "border" : "3px solid #ffffff"});
-		$("#globalDecisionBtn").css({"background-color":"#fff", "border" : "3px solid #ffffff"});
-		$("#rawBoqBtn").css({"background-color":"#fff", "border" : "3px solid #ffffff"});
-		$("#newProBtnText").css("color", "#3f8d8a");
-		$("#globalDecision").hide();
-		$("#rawBoq").fadeIn("slow");
-		$("#rawBoqHeadL1").css("background-color","#0aaaa4");
-		$("#rawBoqBodyLevel2").hide();
-		$("#rawBoqBodyLevel3").hide();
-		$("#rawBoqBodySuccessLevel1").hide();
-		$("#rawBoqBodySuccessLevel2").hide();
-		$("#rawBoqBodySuccessLevel3").hide();
-	
-    });
-	
-	$("#rawBoqLevel1DoneBtn").click(function(){
-        $("#rawBoqBodySuccessLevel1").slideDown("slow");
-    });
-	
-	$("#rawBoqLevel1NextBtn").click(function(){
-        $("#rawBoqBodySuccessLevel1").hide();
-		$("#rawBoqBodyLevel1").hide();
-		$("#rawBoqHeadL1").css("background-color","#535353");
-		$("#rawBoqHeadL2").css("background-color","#0aaaa4");
-		$("#rawBoqBodyLevel3").hide();
-		$("#rawBoqBodyLevel2").fadeIn("slow");
-    });
-	
-	$("#rawBoqLevel2DoneBtn").click(function(){
-        $("#rawBoqBodySuccessLevel2").slideDown("slow");
-    });
-	
-	$("#rawBoqLevel2NextBtn").click(function(){
-        $("#rawBoqBodySuccessLevel2").hide();
-		$("#rawBoqBodyLevel1").hide();
-		$("#rawBoqBodyLevel2").hide();
-		$("#rawBoqHeadL1").css("background-color","#535353");
-		$("#rawBoqHeadL2").css("background-color","#535353");
-		$("#rawBoqHeadL3").css("background-color","#0aaaa4");
-		$("#rawBoqBodyLevel3").fadeIn("slow");
-    });
-	
-	$("#rawBoqLevel3DoneBtn").click(function(){
-        $("#rawBoqBodySuccessLevel3").slideDown("slow");
-    });
-	
-	$("#rawBoqLevel3NextBtn").click(function(){
-        $("#rawBoqBodySuccessLevel3").hide();
-		$("#pricingSheet").fadeIn("slow");
-    });
-	
-	$("#pricingSheetRightFooterCalculateBtn").click(function(){
-        $("#newProject").hide();
-		$("#pricingSheetCalculateSuccessAlertBackground").fadeIn();
-    });
-	
-	$("#pricingSheetOkBtn").click(function(){
-        //$("#newProject").hide();
-		$("#pricingSheetCalculateSuccessAlertBackground").hide();
-		$("#pricingSheet").fadeIn("slow");
-		
-		
-    });
-	
-	$("#pricingSheetRightFooterViewBtn").click(function(){
-        $("#newProject").hide();
-		$("#pricingSheetCalculateSuccessAlertBackground").hide();
-		$("#pTenderSheep").fadeIn("slow");
-    });
-	
-	$("rawBoqLevel1AddBtn").click(function() {
-		var formDataArray = $("rawBoqLevel1Form").serializeArray();
-		var formDataJson = JSON.stringify(formDataArray);
-		var yourTableHTML = "";
-		var counter = 0;
-        jQuery.each(formDataJson, function(i,data) {
-            $("#rawBoqLevel1ListTable").append("<tr><td>" + data.sectionName + "</td><td>" + data.sectionId + "</td><td><button type="button">Level 2</button></td></tr>");
-        });
-	})
-	
-});
-
-</script>
-
-</head>
-
-
-<body>
-
-<div id="head">
-<p id="headText">Click To Price</p>
-</div>
-
-
-<div id="content1">
-
-
-
-<div id="leftSide">
-
-<table align="center">
-<tr><td><div id="newProjectBtn"><p id="homeBtnText"> New Project </p></div></td></tr>
-<tr><td><a href=""><div id="openProjectBtn"><p id="homeBtnText"> Load Project </p></div></a></td></tr>
-</table>
-</div>
-
-
-<div id="proSetupPlane">
-<table align="center">
-<tr><td><div id="proSetupBtn"><p id="newProBtnText"> Project Setup </p></div></td></tr>
-<tr><td><div id="globalDecisionBtn"><p id="newProBtnText"> Global Decision </p></div></td></tr>
-<tr><td><div id="rawBoqBtn"><p id="newProBtnText"> Raw BOQ </p></div></td></tr>
-<tr><td><div id="pricingSheetBtn"><p id="newProBtnText"> Pricing Sheet </p></div></td></tr>
-<tr><td><div id="planReportsBtn"><p id="newProBtnText"> Planned Reports </p></div></td></tr>
-</table>
-</div>
-
-
-
-<div id="splash"></div>
-<div id="newProject">
-
-<div id="projectSetupHead">
-<p id="proHeadText">Project Setup</p>
-</div>
-
-<div id="projectSetupBody">
-<br>&nbsp;</br>
-
-<form action="javascript:void(0);">
-  <table align="center">
-  
-  <tr><td><p id="proFormText"> Project Name </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="text" name="projectName" focus></td></tr>
-  <tr><td>&nbsp;</td></tr>
-  <tr><td><p id="proFormText"> Project Number </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="text" name="projectNumber" ></td></tr>
-  <tr><td>&nbsp;</td></tr>
-  <tr><td><p id="proFormText"> Client Number </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="text" name="clientNumber" ></td></tr>
-  
-  <tr><td></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupDoneBtn"  type="submit" value="Save"></td><td></td></tr>
-  
-  </table>
-</form> 
-</div>
-
-
-</div>
-
-<div id="globalDecision">
-<div id="projectSetupHead">
-<p id="proHeadText">Global Decision</p>
-</div>
-
-<div id="globalDecisionBody">
-
-<br>&nbsp;</br>
-
-
-<form action="javascript:void(0);">
-  <table align="center">
-  
-  <tr><td><p id="proFormText"> Overheads Percentage </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="text" name="overheadsPercentage" focus></td></tr>
-  <tr><td>&nbsp;</td></tr>
-  <tr><td><p id="proFormText"> Profit Percentage </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="text" name="profitPercentage" ></td></tr>
-  
-  <tr><td></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="globalDecisionDoneBtn"  type="submit" value="Save"></td><td></td></tr>
-  
-  </table>
-</form> 
-</div>
-
-</div>
-
-
-
-<div id="rawBoq">
-<div id="projectSetupHead">
-<p id="proHeadText">Raw BOQ</p>
-</div>
-
-<br>&nbsp;</br>
-<p></p>
-<center>
-<table>
-<tr>
-<td><div id="rawBoqHeadL1"><p id="rawBoqHeadText">Level 1</p></div></td>
-<td><div id="rawBoqHeadL2"><p id="rawBoqHeadText">Level 2</p></div></td>
-<td><div id="rawBoqHeadL3"><p id="rawBoqHeadText">Level 3</p></div></td>
-</tr>
-</table>
-</center>
-
-
-
-<div id="rawBoqBody"></div>
-
-<div id="rawBoqBodyLevel1">
-<br>&nbsp;</br>
-
-
-<form id="rawBoqLevel1Form" action="javascript:void(0);">
-  <table align="center">
-  
-  <tr><td><p id="proFormText"> Section Name </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="text" name="sectionName" focus></td></tr>
-  <tr><td>&nbsp;</td></tr>
-  <tr><td><p id="proFormText"> Section ID </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="text" name="sectionId" ></td></tr>
-  
-  <tr><td></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="rawBoqLevel1AddBtn"  type="submit" value="Add"></td><td></td></tr>
-  <tr><td>&nbsp;</td></tr>
-  <tr><td>&nbsp;</td></tr>
-  <tr><td>&nbsp;</td></tr>
-  <tr><td></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="rawBoqLevel1DoneBtn"  type="submit" value="Done"></td><td></td></tr>
-  
-  </table>
-</form>
-</div>
-
-<div id="rawBoqLevelSections" >
-<table style="width:100%">
-  <tr>
-    <th>Section Name</th>
-    <th>Section ID</th> 
-    <th>Action</th>
-  </tr>
- 
-</table>
-</div>
-
-<div id="rawBoqBodySuccessLevel1">
-
-<br></br>
-<center><img src="images/rawBoqSuccess.png"/></center>
-<p id="homeBtnText">Raw BOQ Level 1 Saved Successfully! </p>
-<br></br>
-<center><input id="rawBoqLevel1NextBtn" type="submit" value="NEXT"></center>
-</div>
-
-
-
-
-<div id="rawBoqBodyLevel2">
-<br/>
-<form action="javascript:void(0);">
-  <table align="center">
-  
-  <tr><td><p id="proFormText"> Activity Name </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="text" name="activityName" focus></td></tr>
-  <tr><td><p id="proFormText"> Activity ID </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="text" name="activityId" ></td></tr>
-  <tr><td><p id="proFormText"> Start Date </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="date" name="activityStartDate" ></td></tr>
-  <tr><td><p id="proFormText"> End Date </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="date" name="activityEndDate" ></td></tr>
-  <tr><td><p id="proFormText"> No. Of Days </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="text" name="noOfDays" ></td></tr>
-
-  <tr><td></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="rawBoqLevel2AddBtn"  type="submit" value="Add"></td><td></td></tr>
-  <tr><td></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="rawBoqLevel2DoneBtn"  type="submit" value="Done"></td><td></td></tr>
-  
-  </table>
-</form>
-
-</div>
-
-<div id="rawBoqBodySuccessLevel2">
-<br></br>
-<center><img src="images/rawBoqSuccess.png"/></center>
-<p id="homeBtnText">Raw BOQ Level 2 Saved Successfully! </p>
-<br></br>
-<center><input id="rawBoqLevel2NextBtn" type="submit" value="NEXT"></center>
-</div>
-
-
-<div id="rawBoqBodyLevel3">
-<br>
-<form action="javascript:void(0);">
-  <table align="center">
-  
-  <tr><td><p id="proFormText"> Activity Description </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="text" name="activDescription" focus></td></tr>
-  <tr><td><p id="proFormText"> Start Date </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="date" name="activDescriptionStartDate" ></td></tr>
-  <tr><td><p id="proFormText"> End Date </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="date" name="activDescriptionEndDate" ></td></tr>
-  <tr><td><p id="proFormText"> No. Of Days </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupInput" type="text" name="activDescriptionNoOfDays" ></td></tr>
-  
-
-  <tr><td></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="rawBoqLevel2AddBtn"  type="submit" value="Add"></td><td></td></tr>
-  </br>
-  <tr><td></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="rawBoqLevel3DoneBtn"  type="submit" value="Done"></td><td></td></tr>
-  
-  </table>
-</form>
-</div>
-
-<div id="rawBoqBodySuccessLevel3">
-<br></br>
-<center><img src="images/rawBoqSuccess.png"/></center>
-<p id="homeBtnText">Raw BOQ Level 3 Saved Successfully! </p>
-<br></br>
-<center><input id="rawBoqLevel3NextBtn" type="submit" value="NEXT"></center>
-</div>
-</div>
-
-
-
-
-<div id="proSetupSuccessAlertBackground">
-<br>&nbsp;</br>
-<center><img src="images/success.png" /></center>
-<p id="homeBtnText"> Project Setup Saved Successfully! </p>
-<br>&nbsp;</br>
-<center><input id="proSetupNextBtn" type="submit" value="NEXT"></center>
-</div>
-
-<div id="globalDecisionSuccessAlertBackground">
-<br>&nbsp;</br>
-<center><img src="images/success.png" /></center>
-<p id="homeBtnText">Global Decision Saved Successfully! </p>
-<br>&nbsp;</br>
-<center><input id="globalDecisionNextBtn" type="submit" value="NEXT"></center>
-</div>
-
-
-<div id="pricingSheet">
-<div id="pricingSheetHead"><p id="pricingSheetHeadText">Pricing Sheet</p></div>
-<div id="pricingSheetSelector">
-<form action="javascript:void(0);">
-<table>
-<tr>
-<td>
-<select id="pricingSheetHeadInput">
-  <option value="None">Select Section Name</option>
-  <option value="saab">Saab</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
-</select>
-</td>
-
-<td>
-<select id="pricingSheetHeadInput">
-  <option value="None">Select Activity Name</option>
-  <option value="saab">Saab</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
-</select>
-</td>
-<td>
-<select id="pricingSheetHeadInput">
-  <option value="None">Select Activity Description</option>
-  <option value="saab">Saab</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
-</select>
-</td>
-</tr>
-</table>
-</form>
-</div>
-
-<table>
-<tr>
-<td>
-<div id="pricingSheetPeopleHead"><p id="pricingSheetResourceHeadText"> People </p></div>
-<iframe src="iframes/peoplePricingSheet.html" id="pricingSheetPeopleBody"></iframe>
-</td>
-<td>
-<div id="pricingSheetPeopleHead"><p id="pricingSheetResourceHeadText"> Material </p></div>
-<iframe src="iframes/materialPricingSheet.html" id="pricingSheetPeopleBody"></iframe>
-</td>
-</tr>
-
-<tr>
-<td>
-<div id="pricingSheetPeopleHeadL2"><p id="pricingSheetResourceHeadText"> Fuel </p></div>
-<iframe src="iframes/fuelPricingSheet.html" id="pricingSheetPeopleBody"></iframe>
-</td>
-<td>
-<div id="pricingSheetPeopleHeadL2"><p id="pricingSheetResourceHeadText"> Plant </p></div>
-<iframe src="iframes/plantPricingSheet.html" id="pricingSheetPeopleBody"></iframe>
-</td>
-</tr>
-
-</table>
-
-<div id="pricingSheetLeftFooterBody">
-<table>
-<tr>
-<td><div id="pricingSheetLeftFooterHead"><p id="pricingSheetLeftFooterHeadText">Utilization</p></div></td>
-<td><div id="pricingSheetLeftFooterHead"><p id="pricingSheetLeftFooterHeadText">Plant Availability</p></div></td>
-</tr>
-
-<tr>
-<td><input id="pricingSheetLeftFooterInput"></td>
-<td><input id="pricingSheetLeftFooterInput"></td>
-</tr>
-</table>
-
-</div>
-
-
-<div id="pricingSheetRightFooterBody">
-<center>
-<table>
-<tr>
-<td><div id="pricingSheetRightFooterCalculateBtn"><p id="pricingSheetCalculateText">Calculate</p></div></td>
-<td><div id="pricingSheetRightFooterViewBtn"><p id="pricingSheetViewText">View Priced Tender</p></div></td>
-</tr>
-</table>
-</center>
-</div>
-
-</div>
-
-<!-- Priced Tender Sheet -->
-<div id="pTenderSheep">
-<div id="pTenderSheetHead"><p id="pSheetTenderHeadText">Priced Tender Sheet</p></div>
-<table>
-<tr>
-<td>
-<div id="pricingSheetPeopleHead"><p id="pricingSheetResourceHeadText"> People </p></div>
-<iframe src="iframes/peoplePricingSheet.html" id="pricingSheetPeopleBody"></iframe>
-</td>
-<td>
-<div id="pricingSheetPeopleHead"><p id="pricingSheetResourceHeadText"> Material </p></div>
-<iframe src="iframes/materialPricingSheet.html" id="pricingSheetPeopleBody"></iframe>
-</td>
-</tr>
-
-<tr>
-<td>
-<div id="pricingSheetPeopleHeadL2"><p id="pricingSheetResourceHeadText"> Fuel </p></div>
-<iframe src="iframes/fuelPricingSheet.html" id="pricingSheetPeopleBody"></iframe>
-</td>
-<td>
-<div id="pricingSheetPeopleHeadL2"><p id="pricingSheetResourceHeadText"> Plant </p></div>
-<iframe src="iframes/plantPricingSheet.html" id="pricingSheetPeopleBody"></iframe>
-</td>
-</tr>
-
-</table>
-</div>
-
-
-
-<div id="pricingSheetCalculateSuccessAlertBackground">
-<br>&nbsp;</br>
-<center><img src="images/success.png" /></center>
-<p id="homeBtnText"> Pricing Sheet Calculated Successfully! </p>
-<br>&nbsp;</br>
-<center><input id="pricingSheetOkBtn" type="submit" value="OK"></center>
-</div>
-
-
-
-</div>
-
-
-</body>
+		<!-- Select Multiple Days End -->        
+
+
+        <script>if (window.module) module = window.module;</script>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        
+
+    </head>
+
+    <body>
+
+        <div id="head">
+            <p id="headText">Click To Price</p>
+        </div>
+
+
+        <div id="content1">
+
+            <div id="leftSide">
+
+                <table align="center">
+                    <tr><td><div id="newProjectBtn"><p id="homeBtnText"> New Project </p></div></td></tr>
+                    <tr><td><div id="openProjectBtn"><p id="homeBtnText"> Load Project </p></div></td></tr>
+                </table>
+            </div>
+
+
+            <div id="proSetupPlane">
+                <table align="center">
+                    <tr><td><div id="proSetupBtn"><p id="newProBtnText"> Project Setup </p></div></td></tr>
+                    <tr><td><div id="globalDecisionBtn"><p id="newProBtnText"> Global Decision </p></div></td></tr>
+                    <tr><td><div id="rawBoqBtn"><p id="newProBtnText"> Raw BOQ </p></div></td></tr>
+                    <tr><td><div id="pricingSheetBtn"><p id="newProBtnText"> Pricing Sheet </p></div></td></tr>
+                    <tr><td><div id="planReportsBtn"><p id="newProBtnText"> Planned Reports </p></div></td></tr>
+                </table>
+            </div>
+
+            <div id="splash"></div>
+            <div id="newProject">
+
+                <div id="projectSetupHead">
+                    <p id="proHeadText">Project Setup</p>
+                </div>
+
+                <div id="projectSetupBody">
+                    <br>&nbsp;</br>
+
+                    <form id="proSetupForm" action="javascript:void(0);" >
+                        <table align="center">
+
+                            <tr><td><p id="proFormText"> Project Name </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupProjectNameInput" type="text"/></td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td><p id="proFormText"> Project Number </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupProjectNumberInput" type="text" /></td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td><p id="proFormText"> Client Name </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupclientNameInput" type="text" /></td></tr>
+
+                            <tr><td></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupDoneBtn"  type="submit" value="Save"/></td><td></td></tr>
+
+                        </table>
+                    </form> 
+                </div>
+
+            </div>
+
+            <div id="globalDecision">
+                <div id="projectSetupHead">
+                    <p id="proHeadText">Global Decision</p>
+                </div>
+
+                <div id="globalDecisionBody">
+
+                    <table>
+                        <tr>
+                            <td>
+                                <div id="globalDecHeadL1"><p id="globalDecHeadText">Level 1</p></div>
+                            </td>
+                            <td>
+                                <div id="globalDecHeadL2"><p id="globalDecHeadText">Level 2</p></div>
+                            </td>
+                            <td>
+                                <div id="globalDecHeadL3"><p id="globalDecHeadText">Level 3</p></div>
+                            </td>
+                            <td>
+                                <div id="globalDecSumm"><p id="globalDecHeadText">Global Decision Summary</p></div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div id="globalDecTabLine"></div>
+                    <div id="globalDecisionL1">
+                    <form action="javascript:void(0);">
+                        <table>
+                                   <tr><td>&nbsp;</td></tr>
+                            <tr><td><p id="globalDecFormText"> Project Duration </p></td><td> : &nbsp;&nbsp; <input id="globalDecDurationInput" type="number" name="overheadsPercentage"/></td><td><p id="globalDecFormText"> Years </p></td></tr>
+                            <tr><td></td><td> : &nbsp;&nbsp; <input id="globalDecDurationInput" type="number" name="overheadsPercentage"/></td><td><p id="globalDecFormText"> Months </p></td></tr>
+                            <tr><td></td><td> : &nbsp;&nbsp; <input id="globalDecDurationInput" type="number" name="overheadsPercentage"/></td><td><p id="globalDecFormText"> Days </p></td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td><p id="globalDecFormText"> Project Range </p></td><td colspan="2"> : &nbsp;&nbsp; <input id="globalDecInput" type="text" name="datefilter"/></td></tr>
+                                 
+                            <tr><td></td><td colspan="2">  &nbsp; &nbsp; &nbsp;<input id="globalDecisionL1DoneBtn"  type="submit" value="Save"/></td><td></td></tr>
+
+                        </table>
+                        <script type="text/javascript">
+			$(function() {
+
+			  $('input[name="datefilter"]').daterangepicker({
+				  autoUpdateInput: false,
+				  locale: {
+					  cancelLabel: 'Clear'
+				  }
+			  });
+
+			  $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+				  $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+			  });
+
+			  $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+				  $(this).val('');
+			  });
+
+			});
+			</script>
+                    </form>
+                    </div>
+                    <div id="globalDecisionL2">
+                    <form action="javascript:void(0);">
+                        <table>
+                                   <tr><td>&nbsp;</td></tr>
+                            <tr><td><p id="globalDecFormText"> Overheads Percentage </p></td><td> : &nbsp;&nbsp; <input id="globalDecDurationInput" type="number" name="overheadsPercentage"/>%</td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td><p id="globalDecFormText"> Profit Percentage </p></td><td align="left"> : &nbsp;&nbsp; <input id="globalDecDurationInput" type="number" name="profitPercentage"/>%</td></tr>
+
+                            <tr><td></td><td colspan="2">  &nbsp; &nbsp; &nbsp;<input id="globalDecisionL2DoneBtn"  type="submit" value="Save"/></td></tr>
+
+                        </table>
+                    </form>
+                    </div>
+                    
+                    <div id="globalDecisionL3">
+                    <div id="calenderContainer">
+                        <div id="mdp-demo"></div>
+			<input type="text" id="altField" value=""/>
+			<script type="text/javascript">
+			
+			var tmp = $('#mdp-demo').multiDatesPicker({
+				altField: '#altField'
+			});
+			
+			
+			$(document).ready(function () {
+			
+			//$('#mdp-demo').multiDatesPicker({});
+			
+			var dates = $('#mdp-demo').multiDatesPicker('value');
+			var dt = JSON.stringify(dates);
+			
+			
+			
+
+			$("#dButton").click(function(){
+				var selectedDates = $("#altField").val();
+				var arrayDates = selectedDates.split(',');
+				var daysArray = new Array();
+				var dateObjectArray = new Array();
+				for (var i = 0; i < arrayDates.length; i++) {
+					var fromString = arrayDates[i].split("/");
+					var f = new Date(fromString[2], fromString[0] - 1, fromString[1]);
+					daysArray.push(f.getDate());
+					var newDate = new Date();
+					dateObjectArray.push(newDate.setDate(f.getDate()));
+				}
+				$('#mdp-demo').multiDatesPicker({
+					// disable the 1st and 3rd of the current month
+					addDisabledDates: dateObjectArray
+				});
+				$("#displayText").val(daysArray[0]);
+			});	
+				
+			});
+			//var date = (new Date()).setDate(8);
+			
+			
+				
+			
+				
+				
+			</script>
+			
+			
+			<button type="" id="dButton">Display</button>
+			<input id="displayText" type="text" value=""/>
+                        </div>
+                        <div id="calenderButtonsContainer">
+                            <table align="center">
+                                <tr><td><input type="submit" id="cldrWeekendDaysBtn" value="Weekend Days"/></td></tr>
+                                <tr><td><input type="submit" id="cldrProWeekendDaysBtn" value="Working Days"/></td></tr>
+                                <tr><td><input type="submit" id="cldrWorkingDaysBtn" value="Project Weekend Days"/></td></tr>
+                            </table>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <div id="globalDecSummBody">
+                    <form action="javascript:void(0);">
+                        <table>
+                                   <tr><td>&nbsp;</td></tr>
+                            <tr><td><p id="globalDecFormText"> Summary </p></td><td> : &nbsp;&nbsp; <input id="globalDecDurationInput" type="number" name="overheadsPercentage"/>%</td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td><p id="globalDecFormText"> Summary </p></td><td align="left"> : &nbsp;&nbsp; <input id="globalDecDurationInput" type="number" name="profitPercentage"/>%</td></tr>
+
+                            <tr><td></td><td colspan="2">  &nbsp; &nbsp; &nbsp;<input id="globalDecisionL2DoneBtn"  type="submit" value="Save"/></td></tr>
+
+                        </table>
+                    </form>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div id="rawBoq">
+                <div id="projectSetupHead">
+                    <p id="proHeadText">Raw BOQ</p>
+                </div>
+
+                <br>&nbsp;</br>
+                <p></p>
+                <center>
+                    <table>
+                        <tr>
+                            <td><div id="rawBoqHeadL1"><p id="rawBoqHeadText">Level 1</p></div></td>
+                            <td><div id="rawBoqHeadL2"><p id="rawBoqHeadText">Level 2</p></div></td>
+                            <!-- <td><div id="rawBoqHeadL3"><p id="rawBoqHeadText">Level 3</p></div></td> -->
+                        </tr>
+                    </table>
+                </center>
+
+
+
+                <div id="rawBoqBody"></div>
+
+                <div id="rawBoqBodyLevel1">
+
+                    <form id="rawBoqLevel1Form" action="javascript:void(0);">
+                        <table id="rawBoqLevel1ListTable" >
+                            <tr></tr>
+                            <tr><td><p id="proBoqFormText"> Section Name </p></td></tr>
+                            <tr><td><select id="sectionIdInput" name="sectionName">
+                                        <option value="None">Select Section Name</option>
+                                        <option value="SAA1234">Saab</option>
+                                        <option value="Merc5678">Mercedes</option>
+                                        <option value="Au3456">Audi</option>
+                                    </select>
+                                </td></tr>
+                            <tr></tr>
+                            <tr><td><p id="proBoqFormText"> Section ID </p></td></tr>
+                            <tr></tr>
+                            <tr><td><input id="sectionIdTextF" type="text" name="sectionId"/></td></tr>
+                            <tr></tr>
+                            <tr><td><p id="proBoqFormText"> Activity Name </p></td></tr>
+                            <tr></tr>
+                            <tr><td><input id="proBoqInput" type="text" name="activityName"/></td></tr>
+                            <tr></tr>
+                            <tr><td><p id="proBoqFormText"> Activity ID </p></td></tr>
+                            <tr></tr>
+                            <tr><td><input id="proBoqInput" type="text" name="activityId"/></td></tr>
+                            <tr><td><input id="rawBoqLevel1AddBtn"  type="submit" value="Add"/></td></tr>
+
+                            <tr><td><input id="rawBoqLevel1DoneBtn"  type="submit" value="Done"/></td></tr>
+
+                        </table>
+                    </form>
+
+                    <div id="rawBoqLevel1UpdateList">
+
+                        <table><tr>
+                                <td><div id="rawBoqLevel1UpdateListTitle"><p id="rawBoqUpdateListHeadText">Added Sections & Activities</p></div></td>
+                            </tr></table>
+
+                        <!--<table id="rawBoqLevel1UpdateListTable">
+                        <tr><td></td><td></td></tr>
+                                   
+                        </table>-->
+                        <div id="rawBoqLevel1UpdateListTable">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="rawBoqBodySuccessLevel1">
+                    </br>
+                    <center><img src="images/success.png"/></center>
+                    <p id="homeBtnText">Raw BOQ Level 1 Saved Successfully! </p>
+                    </br>
+                    <center><input id="rawBoqLevel1NextBtn" type="submit" value="NEXT"/></center>
+                </div>
+
+
+
+
+                <div id="rawBoqBodyLevel2">
+
+                    <form id="rawBoqLevel2Form" action="javascript:void(0);">
+                        <table>
+                            <tr><td><p id="proBoqFormText"> Section Name </p></td>
+                            <td><p id="proBoqFormText"> Activity Name </p></td></tr>
+                            <tr><td><select id="activityDesSectionNameInput" name="sectionName">
+                                        <option value="None">Select Section Name</option>
+                                        <option value="SAA1234">Saab</option>
+                                        <option value="Merc5678">Mercedes</option>
+                                        <option value="Au3456">Audi</option>
+                                    </select>
+                                </td>
+                            
+                            <td><select id="activityDesActivityNameInput" name="sectionName">
+                                        <option value="None">Select Activity Name</option>
+                                        <option value="SAA1234">Saab</option>
+                                        <option value="Merc5678">Mercedes</option>
+                                        <option value="Au3456">Audi</option>
+                                    </select>
+                                </td></tr>
+                            <tr><td colspan="2"><p id="proBoqFormText"> Activity Description </p></td></tr>
+                            <tr><td colspan="2"><input id="activityDesBoqInput" type="text" name="activDescription"/></td></tr>
+                            <tr></tr>
+                            <tr><td colspan="2"><p id="proBoqFormText"> Production Achievable </p></td></tr>
+                            <tr><td colspan="2"><input id="activityDesBoqInput" type="text" name="ProductionAch"/></td></tr>
+                            <tr></tr>
+                            <tr><td colspan="2"><p id="proBoqFormText"> Total Quantity </p></td></tr>
+                            <tr><td colspan="2"><input id="activityDesBoqInput" type="text" name="totalQuantity"/></td></tr>
+                            <tr></tr>
+                            <tr><td colspan="2"><p id="proBoqFormText"> Unit Of Measurement </p></td></tr>
+                            <tr><td colspan="2"><input id="activityDesBoqInput" type="text" name="activDescriptionNoOfDays"/></td></tr>
+
+                            <tr><td colspan="2"><input id="rawBoqLevel2AddBtnActDesc"  type="submit" value="Add"/></td></tr>
+                            </br>
+                            <tr><td colspan="2"><input id="rawBoqLevel2DoneBtnActDesc"  type="submit" value="Done"/></td></tr>
+
+                        </table>
+                    </form>
+                    
+                    
+                    <div id="rawBoqLevel2UpdateList">
+
+                        <table><tr>
+                                <td><div id="rawBoqLevel2UpdateListTitle"><p id="rawBoqUpdateListHeadText">Added Activity Descriptions</p></div></td>
+                            </tr></table>
+
+                        <!--<table id="rawBoqLevel1UpdateListTable">
+                        <tr><td></td><td></td></tr>
+                                   
+                        </table>-->
+<!--                        <div id="rawBoqLevel1UpdateListTable">
+                        </div>-->
+                    </div>
+
+                </div>
+
+                <div id="rawBoqBodySuccessLevel2">
+                    </br>
+                    <center><img src="images/success.png"/></center>
+                    <p id="homeBtnText">Raw BOQ Level 2 Saved Successfully! </p>
+                    </br>
+                    <center><input id="rawBoqLevel2NextBtn" type="submit" value="NEXT"/></center>
+                </div>
+
+                <div id="rawBoqBodySuccessLevel3">
+                    </br>
+                    <center><img src="images/success.png"/></center>
+                    <p id="homeBtnText">Raw BOQ Level 3 Saved Successfully! </p>
+                    </br>
+                    <center><input id="rawBoqLevel3NextBtn" type="submit" value="NEXT"/></center>
+                </div>
+            </div>
+
+
+
+
+            <div id="proSetupSuccessAlertBackground">
+               
+                <div id="enteredProjectSetup"></div>
+                <center><img src="images/success.png" /></center>
+                <p id="homeBtnText"> Confirm Project Setup Details! </p>
+                
+                <center>
+                    <table>
+                        <tr>
+                            <td>
+                                <input id="proSetupNextBtnCancel" type="submit" value="Cancel"/>
+                            </td>
+                            <td>
+                                <input id="proSetupNextBtn" type="submit" value="NEXT"/>
+                            </td>
+                        </tr>
+                    </table>
+                    </center>
+                 
+            </div>
+
+            <div id="globalDecisionSuccessAlertBackground">
+                </br>
+                <center><img src="images/success.png" /></center>
+                <p id="homeBtnText">Global Decision Saved Successfully! </p>
+                </br>
+                <center><input id="globalDecisionNextBtn" type="submit" value="NEXT"/></center>
+            </div>
+
+
+            <div id="pricingSheet">
+                <div id="pricingSheetHead"><p id="pricingSheetHeadText">Pricing Sheet</p></div>
+                <div id="pricingSheetSelector">
+                    <form action="javascript:void(0);">
+                        <table>
+                            <tr>
+                                <td>
+                                    <select id="pricingSheetHeadInput">
+                                        <option value="None">Select Section Name</option>
+                                        <option value="saab">Saab</option>
+                                        <option value="mercedes">Mercedes</option>
+                                        <option value="audi">Audi</option>
+                                    </select>
+                                </td>
+
+                                <td>
+                                    <select id="pricingSheetHeadInput">
+                                        <option value="None">Select Activity Name</option>
+                                        <option value="saab">Saab</option>
+                                        <option value="mercedes">Mercedes</option>
+                                        <option value="audi">Audi</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select id="pricingSheetHeadInput">
+                                        <option value="None">Select Activity Description</option>
+                                        <option value="saab">Saab</option>
+                                        <option value="mercedes">Mercedes</option>
+                                        <option value="audi">Audi</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+
+                <table>
+                    <tr>
+                        <td>
+                            <div id="pricingSheetPeopleHead"><p id="pricingSheetResourceHeadText"> People </p></div>
+                            <iframe src="iframes/peoplePricingSheet.html" id="pricingSheetPeopleBody"></iframe>
+                        </td>
+                        <td>
+                            <div id="pricingSheetPeopleHead"><p id="pricingSheetResourceHeadText"> Material </p></div>
+                            <iframe src="iframes/materialPricingSheet.html" id="pricingSheetPeopleBody"></iframe>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div id="pricingSheetPeopleHeadL2"><p id="pricingSheetResourceHeadText"> Fuel </p></div>
+                            <iframe src="iframes/fuelPricingSheet.html" id="pricingSheetPeopleBody"></iframe>
+                        </td>
+                        <td>
+                            <div id="pricingSheetPeopleHeadL2"><p id="pricingSheetResourceHeadText"> Plant </p></div>
+                            <iframe src="iframes/plantPricingSheet.html" id="pricingSheetPeopleBody"></iframe>
+                        </td>
+                    </tr>
+
+                </table>
+
+                <div id="pricingSheetLeftFooterBody">
+                    <table>
+                        <tr>
+                            <td><div id="pricingSheetLeftFooterHead"><p id="pricingSheetLeftFooterHeadText">Utilization</p></div></td>
+                            <td><div id="pricingSheetLeftFooterHead"><p id="pricingSheetLeftFooterHeadText">Plant Availability</p></div></td>
+                        </tr>
+
+                        <tr>
+                            <td><input id="pricingSheetLeftFooterInput"/></td>
+                            <td><input id="pricingSheetLeftFooterInput"/></td>
+                        </tr>
+                    </table>
+
+                </div>
+
+
+                <div id="pricingSheetRightFooterBody">
+                    <center>
+                        <table>
+                            <tr>
+                                <td><div id="pricingSheetRightFooterCalculateBtn"><p id="pricingSheetCalculateText">Calculate</p></div></td>
+                                <td><div id="pricingSheetRightFooterViewBtn"><p id="pricingSheetViewText">View Priced Tender</p></div></td>
+                            </tr>
+                        </table>
+                    </center>
+                </div>
+
+            </div>
+
+            <!-- Priced Tender Sheet -->
+            <div id="pTenderSheep">
+                <div id="pTenderSheetHead"><p id="pSheetTenderHeadText">Priced Tender Sheet</p></div>
+                <table>
+                    <tr>
+                        <td>
+                            <div id="pricingSheetPeopleHead"><p id="pricingSheetResourceHeadText"> People </p></div>
+                            <iframe src="iframes/peoplePricingSheet.html" id="pricingSheetPeopleBody"></iframe>
+                        </td>
+                        <td>
+                            <div id="pricingSheetPeopleHead"><p id="pricingSheetResourceHeadText"> Material </p></div>
+                            <iframe src="iframes/materialPricingSheet.html" id="pricingSheetPeopleBody"></iframe>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div id="pricingSheetPeopleHeadL2"><p id="pricingSheetResourceHeadText"> Fuel </p></div>
+                            <iframe src="iframes/fuelPricingSheet.html" id="pricingSheetPeopleBody"></iframe>
+                        </td>
+                        <td>
+                            <div id="pricingSheetPeopleHeadL2"><p id="pricingSheetResourceHeadText"> Plant </p></div>
+                            <iframe src="iframes/plantPricingSheet.html" id="pricingSheetPeopleBody"></iframe>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+
+
+            <div id="pricingSheetCalculateSuccessAlertBackground">
+                </br>
+                <center><img src="images/success.png" /></center>
+                <p id="homeBtnText"> Pricing Sheet Calculated Successfully! </p>
+                </br>
+                <center><input id="pricingSheetOkBtn" type="submit" value="OK"/></center>
+            </div>
+
+
+
+        </div>
+
+    </body>
 
 </html>

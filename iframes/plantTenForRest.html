@@ -1,0 +1,29 @@
+<head>
+<title> &nbsp;</title>
+
+     <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+<!--        JQUERY LIBRARY-->
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+
+<!--        MAIN JS-->
+<script type="text/javascript" src="../js/showHide.js" charset="utf-8"></script>
+
+<link rel="stylesheet" type="text/css" href="../css/tenderForResources.css"/>
+<script>if (window.module) module = window.module;</script>
+</head>
+<table id="tenderForPlantsTable">
+
+<tr>
+<td><div id="tenForResPlantNameTitle"><p id="tenForResTitleText">Plant Name </p></div></td>
+<td><div id="tenForResPlantRateTypeTitle"><p id="tenForResTitleText">Dry vs Wet Rate</p></div></td>
+<td><div id="tenForResPlantRawRateTitle"><p id="tenForResTitleText">Raw Rate </p></div></td>
+<td><div id="tenForResPlantTotalCostTitle"> <p id="tenForResTitleText">Total Cost(R) </p></div></td>
+</tr>
+
+<tr><td><input id="tenForResPlantNameInput"/></td>
+<td><input id="tenForResPlantRateTypeInput" type="radio" name="one" value="male"/> <p id="tenForResDryRateText">DR</p> <input id="tenForResPlantRateTypeInput" name="one" type="radio" value="female"/> <p id="tenForResWetRateText">WR</p></td>
+<td><input id="tenForResPlantRawRateInput" type="number" type="number"/></td>
+<td><input id="tenForResPlantTotalCostInput"/></td></tr>
+</table>
+
+<input id="tenForResPlantDoneBtn" type="submit" value="Add New Row"/>

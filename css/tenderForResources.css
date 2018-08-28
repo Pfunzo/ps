@@ -1,0 +1,131 @@
+@font-face {font-family: BAUHS93; src: local(BAUHS93), url('../fonts/BAUHS93.TTF') format('truetype');}
+@font-face {font-family: trebuc; src: local(trebuc), url('../fonts/trebuc.ttf') format('truetype');}
+
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 20, 2018, 12:25:56 PM
+    Author     : Pfunzo
+*/
+
+#tenderForResources{position:relative; margin-left:204px; margin-top:0px; width:796px; height:500px; background-color:#d9d9d9; }
+#tenForResBody{position:absolute; margin-left:20px; margin-top:62px; width:750px; height:380px; background-color:#a5a5a5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); overflow-y:scroll;}
+#tenForResHeadL1{position:relative; margin-left:0px;  margin-right:auto; margin-top:10px; width:80px; height:24px; background-color:#535353; cursor:pointer;}
+#tenForResHeadL2{position:relative; margin-left:0px;  margin-right:auto; margin-top:10px; width:80px; height:24px; background-color:#535353; cursor:pointer;}
+#tenForResHeadL3{position:relative; margin-left:0px;  margin-right:auto; margin-top:10px; width:80px; height:24px; background-color:#535353; cursor:pointer;}
+#tenForResHeadL4{position:relative; margin-left:0px;  margin-right:auto; margin-top:10px; width:80px; height:24px; background-color:#535353; cursor:pointer;}
+#tenForResHeadL5{position:relative; margin-left:0px;  margin-right:auto; margin-top:10px; width:80px; height:24px; background-color:#535353; cursor:pointer;}
+#tenForResTabLine{position:relative; margin-left:3px; margin-right:auto; margin-top:-3px; width:590px; height:2px; background-color:#535353; }
+
+#tenForResPlantNameTitle{width:130px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResPlantRateTypeTitle{width:120px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResPlantRawRateTitle{width:85px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResPlantTransCostTitle{width:100px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResPlantUnitOfMTitle{width:60px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResPlantIncreasTitle{width:80px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResPlantTotalCostTitle{width:120px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+
+#tenForResPlantNameInput{width:130px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-3px; text-indent:5px; font-size:12px;}
+#tenForResPlantRateTypeInput{width:40px; height:12px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResPlantRawRateInput{width:85px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResPlantTransCostInput{width:100px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResPlantUnitOfMInput{width:60px; height:20px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResPlantIncreasInput{width:80px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResPlantTotalCostInput{width:120px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-3px; }
+
+#tenForResFuelNameTitle{width:130px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResFuelNameTitle{width:130px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+
+
+#tenForResTitleText{position:relative; text-decoration:none; margin-left:0px; margin-top:5px;  text-align:center; 
+font-family: trebuc; font-size: 14px; font-weight: normal; color:#535353; margin-bottom:5px;}
+#tenForResDryRateText{position:absolute; text-decoration:none; margin-left:25px; margin-top:-16px;  text-align:left; 
+font-family: trebuc; font-size: 12px; font-weight: normal; color:#535353; margin-bottom:5px;}
+#tenForResWetRateText{position:absolute; text-decoration:none; margin-left:70px; margin-top:-16px;  text-align:left; 
+font-family: trebuc; font-size: 12px; font-weight: normal; color:#535353; margin-bottom:5px;}
+
+#tenForResPlantBody{position:absolute; margin-left:5px; margin-top:5px; width:580px; height:290px; border:none; }
+#tenForResPeopleBody{position:absolute; margin-left:5px; margin-top:5px; width:580px; height:330px; border:none; }
+#tenForResMaterialBody{position:absolute; margin-left:5px; margin-top:5px; width:580px; height:330px; border:none;}
+#tenForResFuelBody{position:absolute; margin-left:5px; margin-top:5px; width:580px; height:330px; border:none;}
+#tenForResOthersBody{position:absolute; margin-left:5px; margin-top:5px; width:580px; height:330px; border:none;}
+
+#tenForResPlantAddRowBtn{background-color: #535353; border: none; color: #efefef; height:20px; width:129px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer;}
+
+#tenForResPeopleTopTableText{position:relative; text-decoration:none; margin-left:5px; margin-top:5px;  text-align:left; 
+font-family: trebuc; font-size: 13px; font-weight: normal; color:#535353; margin-bottom:5px;}
+#tenForResPeopleTopTableIncreaseInput{width:60px; height:20px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResPeopleTopTableLeviesInput{width:60px; height:20px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResPeopleTopTableLeaveInput{width:60px; height:20px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResPeopleTopTablePensionInput{width:60px; height:20px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-3px;}
+
+#tenForResPeopleNameTitle{width:100px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResPeopleSalaryTitle{width:80px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResPeopleIncreTitle{width:66px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResPeopleLeviesTitle{width:66px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResPeopleLeaveTitle{width:66px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResPeoplePensionTitle{width:66px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResPeopleMedicalTitle{width:66px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResPeopleBonusTitle{width:66px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResPeopleAnualCTitle{width:66px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResPeopleDailyCTitle{width:66px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+
+#tenForResPeopleNameInput{width:100px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-2px; text-indent:5px; font-size:12px;}
+#tenForResPeopleSalaryInput{width:80px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-2px; text-indent:5px; font-size:12px;}
+#tenForResPeopleIncreaInput{width:66px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-2px; text-indent:5px; font-size:12px;}
+#tenForResPeopleLeviesInput{width:66px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-2px; text-indent:5px; font-size:12px;}
+#tenForResPeopleLeaveInput{width:66px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-2px; text-indent:5px; font-size:12px;}
+#tenForResPeoplePensionInput{width:66px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-2px; text-indent:5px; font-size:12px;}
+#tenForResPeopleMedicalInput{width:66px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-2px; text-indent:5px; font-size:12px;}
+#tenForResPeopleBonusInput{width:66px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-2px; text-indent:5px; font-size:12px;}
+#tenForResPeopleAnualCInput{width:66px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-2px; text-indent:5px; font-size:12px;}
+#tenForResPeopleDailyCInput{width:66px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-2px; text-indent:5px; font-size:12px;}
+
+#tenForResPeopleAddRowBtn{background-color: #535353; border: none; color: #efefef; height:20px; width:129px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer;}
+
+
+#tenForResMaterialNameTitle{width:130px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResMaterialRawRateTitle{width:100px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResMaterialWastageFTitle{width:100px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResMaterialUnitOfMTitle{width:60px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResMaterialIncreasTitle{width:100px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResMaterialSellingRateTitle{width:130px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+
+#tenForResMaterialNameInput{width:130px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-2px; text-indent:5px; font-size:12px;}
+#tenForResMaterialRawRateInput{width:100px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-2px; text-indent:5px; font-size:12px;}
+#tenForResMaterialWastageInput{width:100px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-2px; text-indent:5px; font-size:12px;}
+#tenForResMaterialUnitOfMInput{width:60px; height:20px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-2px; text-indent:5px; font-size:12px;}
+#tenForResMaterialIncreasInput{width:100px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-2px; text-indent:5px; font-size:12px;}
+#tenForResMaterialSellingRateInput{width:130px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-2px; text-indent:5px; font-size:12px;}
+
+#tenForResMaterialAddRowBtn{background-color: #535353; border: none; color: #efefef; height:20px; width:129px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer;}
+
+
+#tenForResFuelNameTitle{width:130px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResFuelRawRateTitle{width:100px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResFuelWastageFTitle{width:100px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResFuelUnitOfMTitle{width:60px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResFuelIncreasTitle{width:100px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+#tenForResFuelSellingRateTitle{width:130px; height:22px; background-color:#efefef; border:none; margin-left:-3px; margin-top:-3px;}
+
+#tenForResFuelNameInput{width:130px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-2px; text-indent:5px; font-size:12px;}
+#tenForResFuelRawRateInput{width:100px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-2px; text-indent:5px; font-size:12px;}
+#tenForResFuelWastageInput{width:100px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-2px; text-indent:5px; font-size:12px;}
+#tenForResFuelUnitOfMInput{width:60px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-2px; text-indent:5px; font-size:12px;}
+#tenForResFuelIncreasInput{width:100px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-2px; text-indent:5px; font-size:12px;}
+#tenForResFuelSellingRateInput{width:130px; height:18px; background-color:#f8f7f6; border:none; margin-left:-3px; margin-top:-2px; text-indent:5px; font-size:12px;}
+
+#tenForResFuelAddRowBtn{background-color: #535353; border: none; color: #efefef; height:20px; width:129px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer;}
+
+
+#tenForResPlantSaveBtn{position:absolute; margin-left:610px; margin-top:450px; background-color: #535353; border: none; color: #efefef; height:30px; width:159px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer;}
+#tenForResPeopleSaveBtn{position:absolute; margin-left:610px; margin-top:450px; background-color: #535353; border: none; color: #efefef; height:30px; width:159px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer;}
+#tenForResMaterialSaveBtn{position:absolute; margin-left:610px; margin-top:450px; background-color: #535353; border: none; color: #efefef; height:30px; width:159px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer;}
+#tenForResFuelSaveBtn{position:absolute; margin-left:610px; margin-top:450px; background-color: #535353; border: none; color: #efefef; height:30px; width:159px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer;}
+
+
+

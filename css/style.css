@@ -7,10 +7,9 @@ a{text-decoration:none;}
 /* Home containers */
 #head{position:relative; margin-left:auto; margin-right:auto; margin-top:-2px; width:1000px; height:50px;  background-color:#a5a5a5;}
 #content1{position:relative; margin-left:auto; margin-right:auto; margin-top:-2px; width:1000px; height:500px;  background-color:#d9d9d9;}
+#testTableContent{position:relative; margin-left:auto; margin-right:auto; margin-top:-250px; width:1000px; height:500px;  background-color:#fff; overflow-y: auto;}
 #leftSide{position:absolute; margin-left:0px; margin-top:-2px; width:200px; height:498px;  border: 2px solid #a5a5a5; border-style: solid; background-color:#d9d9d9;}
 #splash{position:relative; margin-left:204px; margin-top:0px; width:796px; height:500px;  background : url(../images/logo.png); }
-
-
 
 
 /* New Project containers */
@@ -24,103 +23,8 @@ a{text-decoration:none;}
 #proSetupSuccessAlertBackground{position:relative; margin-left:auto; margin-right:auto; margin-top:-350px; width:400px; height:180px;  background-color:#afd5ce; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
 
 
-
-/* Global Decision Containers */
-#globalDecision{position:relative; margin-left:204px; margin-top:-500px; width:796px; height:500px; background-color:#d9d9d9;}
-#globalDecisionBody{position:absolute; margin-left:95px; margin-top:62px; width:600px; height:300px; background-color:#a5a5a5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
-#globalDecisionSuccessAlertBackground{position:relative; margin-left:auto; margin-right:auto; margin-top:-350px; width:400px; height:180px;  background-color:#afd5ce; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
-#globalDecHeadL1{position:relative; margin-left:0px;  margin-right:auto; margin-top:10px; width:100px; height:24px; background-color:#535353; }
-#globalDecHeadL2{position:relative; margin-left:-2px;  margin-right:auto; margin-top:10px; width:100px; height:24px; background-color:#535353; }
-#globalDecHeadL3{position:relative; margin-left:-2px;margin-right:auto; margin-top:10px; width:100px; height:24px; background-color:#535353; }
-#globalDecSumm{position:relative; margin-left:-2px; margin-right:auto; margin-top:10px; width:170px; height:24px; background-color:#535353; }
-#globalDecTabLine{position:relative; margin-left:3px; margin-right:auto; margin-top:-3px; width:590px; height:2px; background-color:#535353; }
-
-#globalDecisionL3{position:absolute; margin-left:3px; margin-top:0px; width:597px; height:350px; background-color:#a5a5a5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
-#calenderContainer{position:absolute;  margin-left:20px; margin-top:20px;}
-#calenderButtonsContainer{position:relative;  margin-left:350px; margin-top:20px; width:225px; height:300px; }
-#cldrWeekendDaysBtn{background: linear-gradient(-90deg, #3c6d6c, #6a9695); border: none; color: #d1d1d1; height:25px; width:200px; text-align: center; text-decoration: none; display: inline-block; font-size: 15px; cursor: pointer;border-radius: 5px;}
-#cldrProWeekendDaysBtn{background: linear-gradient(-90deg, #3c6d6c, #6a9695); border: none; color: #d1d1d1; height:25px; width:200px; text-align: center; text-decoration: none; display: inline-block; font-size: 15px; cursor: pointer;border-radius: 5px;}
-#cldrWorkingDaysBtn{background: linear-gradient(-90deg, #3c6d6c, #6a9695); border: none; color: #d1d1d1; height:25px; width:200px; text-align: center; text-decoration: none; display: inline-block; font-size: 15px; cursor: pointer;border-radius: 5px;}
-/* Raw BOQ Containers*/
-#rawBoq{position:relative; margin-left:204px; margin-top:-500px; width:796px; height:500px; background-color:#d9d9d9;}
-#rawBoqBody{position:absolute; margin-left:63px; margin-top:0px; width:670px; height:300px; background-color:#a5a5a5;}
-#rawBoqSuccessAlertBackground{position:relative; margin-left:auto; margin-right:auto; margin-top:-350px; width:400px; height:180px;  background-color:#afd5ce; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
-
-#rawBoqHeadL1{position:relative; margin-left:0.2px; margin-left:auto; margin-right:auto; margin-top:10px; width:333px; height:24px; background-color:#535353; }
-#rawBoqHeadL2{position:relative; margin-left:0.2px; margin-left:auto; margin-right:auto; margin-top:10px; width:333px; height:24px; background-color:#535353; }
-#rawBoqHeadL3{position:relative; margin-left:0.2px; margin-left:auto; margin-right:auto; margin-top:10px; width:220px; height:24px; background-color:#535353; }
-
-#rawBoqBodyLevel1{position:absolute; margin-left:63px; margin-top:0px; width:670px; height:300px; background-color:#a5a5a5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
-#rawBoqBodySuccessLevel1{position:relative; margin-left:auto; margin-right:auto; margin-top:50px; width:400px; height:180px; background-color:#afd5ce; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
-#rawBoqBodyLevel2{position:absolute; margin-left:63px; margin-top:0px; width:670px; height:300px; background-color:#a5a5a5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
-#rawBoqBodySuccessLevel2{position:relative; margin-left:auto; margin-right:auto; margin-top:50px; width:400px; height:180px; background-color:#afd5ce; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
-#rawBoqBodyLevel3{position:absolute; margin-left:63px; margin-top:0px; width:670px; height:300px; background-color:#a5a5a5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
-#rawBoqBodySuccessLevel3{position:relative; margin-left:auto; margin-right:auto; margin-top:0px; width:400px; height:180px; background-color:#afd5ce; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
-
-/* Pricing Sheet Containers */
-#pricingSheet{position:relative; margin-left:auto; margin-right:auto; margin-top:-500px; width:1000px; height:500px;  background-color:#d9d9d9;}
-#pricingSheetHead{position:absolute; margin-left:0px; margin-top:2px; width:1000px; height:35px; background : url(../images/pricingSheetHead.png); }
-
-#pricingSheetSelector{position:absolute; margin-left:0px; margin-left:auto; margin-right:auto; margin-top:40px; width:1000px; height:24px;}
-#pricingSheetHeadInput{width:326px; height:24px; background-color:#d1d1d1; border:none; color:#535353;}
-
-
-#pricingSheetPeopleHead{position:relative; margin-left:0px; margin-left:10px; margin-top:69px; width:480px; height:22px; background-color:#535353;}
-#pricingSheetPeopleHeadL2{position:relative; margin-left:0px; margin-left:10px; margin-top:1px; width:480px; height:22px; background-color:#535353;}
-#pricingSheetPeopleBody{position:relative; margin-left:0px; margin-left:10px; margin-top:1px; width:480px; height:150px; background-color:#d1d1d1; border:none;}
-
-#pricingSheetListPeopleResource{width:250px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
-#pricingSheetListPeopleQuantity{width:100px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
-#pricingSheetListPeopleRate{width:100px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
-#pricingSheetListPeopleResourceTitle{width:250px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
-#pricingSheetListPeopleQuantityTitle{width:100px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
-#pricingSheetListPeopleRateTitle{width:100px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
-
-#pricingSheetListMaterialResourceTitle{width:150px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
-#pricingSheetListMaterialWasteTitle{width:130px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
-#pricingSheetListMaterialQuantityTitle{width:85px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
-#pricingSheetListMaterialRateTitle{width:85px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
-#pricingSheetListMaterialResourceInput{width:150px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
-#pricingSheetListMaterialWasteInput{width:130px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
-#pricingSheetListMaterialQuantityInput{width:85px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
-#pricingSheetListMaterialRateInput{width:85px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
-
-#pricingSheetListFuelResourceTitle{width:150px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
-#pricingSheetListFuelWasteTitle{width:130px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
-#pricingSheetListFuelQuantityTitle{width:85px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
-#pricingSheetListFuelRateTitle{width:85px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
-#pricingSheetListFuelResourceInput{width:150px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
-#pricingSheetListFuelWasteInput{width:130px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
-#pricingSheetListFuelQuantityInput{width:85px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
-#pricingSheetListFuelRateInput{width:85px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
-
-#pricingSheetListPlantResourceTitle{width:150px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
-#pricingSheetListPlantWasteTitle{width:130px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
-#pricingSheetListPlantQuantityTitle{width:85px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
-#pricingSheetListPlantRateTitle{width:85px; height:18px; background-color:#d1d1d1; border:none; margin-left:-3px; margin-top:-3px;}
-#pricingSheetListPlantResourceInput{width:150px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
-#pricingSheetListPlantWasteInput{width:130px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
-#pricingSheetListPlantQuantityInput{width:85px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
-#pricingSheetListPlantRateInput{width:85px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; border: 1px solid #b8b8b8}
-
-
-#pricingSheetLeftFooterBody{position:relative; margin-left:12px; margin-top:1px; width:481px; height:68px;}
-#pricingSheetLeftFooterHead{position:relative; margin-left:-3px; margin-top:1px; width:240px; height:25px; background-color:#d1d1d1;}
-#pricingSheetLeftFooterInput{position:relative; margin-left:-3px; margin-top:0px; width:240px; height:20px; border: none;/*  background-color:#d1d1d1; */}
-#pricingSheetRightFooterBody{position:relative; margin-left:507px; margin-top:-64px; width:481px; height:65px; /* background-color:#d1d1d1; */}
-
-#pricingSheetRightFooterCalculateBtn{position:relative; margin-left:0px; margin-top:-3px; width:200px; height:51px; background-color:#abf2c4; border-radius: 25px;cursor: pointer;}
-#pricingSheetRightFooterViewBtn{position:relative; margin-left:0px; margin-top:-3px; width:200px; height:51px; background-color:#535353; border-radius: 25px; cursor: pointer;}
-#pricingSheetRightFooterViewBtn:hover{position:relative; margin-left:0px; margin-top:-3px; width:200px; height:51px; background-color:#dc4848; border-radius: 25px}
-
-#pricingSheetCalculateSuccessAlertBackground{position:absolute; margin-left:auto; margin-right:auto; margin-top:-500px; width:1000px; height:500px;  background-color:#abf2c4; opacity:0.95;}
-#pricingSheetOkBtn{background-color: #535353; border: none; color: #efefef; height:50px; width:302px; text-align: center; text-decoration: none; display: inline-block; font-size: 30px; cursor: pointer;border-radius: 25px}
-#pricingSheetOkBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:50px; width:302px; text-align: center; text-decoration: none; display: inline-block; font-size: 30px; cursor: pointer;border-radius: 25px}
-
-
-
 /* Priced Tender Sheet */
-#pTenderSheep{position:relative; margin-left:auto; margin-right:auto; margin-top:-500px; width:1000px; height:500px;  background-color:#d9d9d9;}
+#pTenderSheep{position:relative; margin-left:auto; margin-right:auto; margin-top:0px; width:1000px; height:500px;  background-color:#d9d9d9;}
 #pTenderSheetHead{position:absolute; margin-left:0px; margin-top:2px; width:1000px; height:35px; background : url(../images/pricingSheetHead.png); }
 #pTenderSheetHeadL2{position:relative; margin-left:0px; margin-left:10px; margin-top:1px; width:480px; height:22px; background-color:#535353;}
 
@@ -135,6 +39,7 @@ a{text-decoration:none;}
 /* New Project buttons */
 #proSetupBtn{position:relative; margin-left:auto; margin-right:auto; margin-top:5px; width:160px; height:25px; border: 1px solid #a5a5a5; background-color:#f3f7fa; cursor: pointer;}
 #globalDecisionBtn{position:relative; margin-left:auto; margin-right:auto; margin-top:5px; width:160px; height:25px; border: 1px solid #a5a5a5; background-color:#f3f7fa; cursor: pointer;}
+#tenForResBtn{position:relative; margin-left:auto; margin-right:auto; margin-top:5px; width:160px; height:25px; border: 1px solid #a5a5a5; background-color:#f3f7fa; cursor: pointer;}
 #rawBoqBtn{position:relative; margin-left:auto; margin-right:auto; margin-top:5px; width:160px; height:25px; border: 1px solid #a5a5a5; background-color:#f3f7fa; cursor: pointer;}
 #pricingSheetBtn{position:relative; margin-left:auto; margin-right:auto; margin-top:5px; width:160px; height:25px; border: 1px solid #a5a5a5; background-color:#f3f7fa; cursor: pointer;}
 #planReportsBtn{position:relative; margin-left:auto; margin-right:auto; margin-top:5px; width:160px; height:25px; border: 1px solid #a5a5a5; background-color:#f3f7fa; cursor: pointer;}
@@ -144,34 +49,17 @@ a{text-decoration:none;}
 /* Form Buttons */
 #proSetupDoneBtn{background-color: #535353; border: none; color: #efefef; height:25px; width:200px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer;}
 #proSetupDoneBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:25px; width:200px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
-#globalDecisionDoneBtn{background-color: #535353; border: none; color: #efefef; height:25px; width:150px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer;}
-#globalDecisionDoneBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:25px; width:150px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
-#globalDecisionL1DoneBtn{background-color: #535353; border: none; color: #efefef; height:25px; width:150px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer;}
-#globalDecisionL1DoneBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:25px; width:150px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
-
-#globalDecisionL2DoneBtn{background-color: #535353; border: none; color: #efefef; height:25px; width:150px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer;}
-#globalDecisionL2DoneBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:25px; width:150px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
-
-#globalDecisionL3DoneBtn{background-color: #535353; border: none; color: #efefef; height:25px; width:150px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer;}
-#globalDecisionL3DoneBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:25px; width:150px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
 
 
+#selectBoqType{position:absolute; margin-left:200px; margin-top:100px;}
+#importBoqBtn{background-color:#0aaaa4; border: none; color: #535353; height:100px; width:210px; text-align: center; text-decoration: none; display: inline-block; font-size: 25px; cursor: pointer;border-radius: 2px; box-shadow: 0 1px 2px 0 #595959, 0 1px 1px 0 #595959;}
+#importBoqBtn:hover{background-color:#a9cfce; border: none; color: #535353; height:100px; width:210px; text-align: center; text-decoration: none; display: inline-block; font-size: 25px; cursor: pointer;border-radius: 2px; box-shadow: 0 1px 2px 0 #595959, 0 1px 1px 0 #595959;}
+#manualBoqBtn{background-color:#0aaaa4; border: none; color: #535353; height:100px; width:210px; text-align: center; text-decoration: none; display: inline-block; font-size: 25px; cursor: pointer;border-radius: 2px; box-shadow: 0 1px 2px 0 #595959, 0 1px 1px 0 #595959;}
+#manualBoqBtn:hover{background-color:#a9cfce; border: none; color: #535353; height:100px; width:210px; text-align: center; text-decoration: none; display: inline-block; font-size: 25px; cursor: pointer;border-radius: 2px; box-shadow: 0 1px 2px 0 #595959, 0 1px 1px 0 #595959;}
 
-#rawBoqLevel1DoneBtn{margin-left:5px;background-color: #535353; border: none; color: #efefef; height:25px; width:202px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer;}
-#rawBoqLevel1DoneBtn:hover{margin-left:5px;background-color: #3f3f3f; border: none; color: #efefef; height:25px; width:202px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
-#rawBoqLevel2DoneBtn{margin-left:5px;background-color: #535353; border: none; color: #efefef; height:25px; width:202px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer;}
-#rawBoqLevel2DoneBtn:hover{margin-left:5px;background-color: #3f3f3f; border: none; color: #efefef; height:25px; width:202px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
-#rawBoqLevel3DoneBtn{margin-left:5px;background-color: #535353; border: none; color: #efefef; height:25px; width:202px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer;}
-#rawBoqLevel3DoneBtn:hover{margin-left:5px;background-color: #3f3f3f; border: none; color: #efefef; height:25px; width:202px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
-#rawBoqLevel1AddBtn{margin-left:5px; background-color: #abf2c4; border: none; color: #535353; height:25px; width:202px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer;}
-#rawBoqLevel2AddBtn{margin-left:5px;background-color: #abf2c4; border: none; color: #535353; height:25px; width:202px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer;}
-#rawBoqLevel2AddBtnActDesc{margin-left:5px;background-color: #abf2c4; border: none; color: #535353; height:25px; width:321px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer;}
+#editProTenderInfoYesBtn{background-color:#bc5166; border: none; color: #535353; height:35px; width:60px; text-align: center; text-decoration: none; display: inline-block; font-size: 15px; cursor: pointer;border-radius: 1px; box-shadow: 0 1px 2px 0 #595959, 0 1px 1px 0 #595959;}
+#editProTenderInfoNoBtn{background-color:#51ba99; border: none; color: #535353; height:35px; width:60px; text-align: center; text-decoration: none; display: inline-block; font-size: 15px; cursor: pointer;border-radius: 1px; box-shadow: 0 1px 2px 0 #595959, 0 1px 1px 0 #595959;}
 
-
-#rawBoqLevel3AddBtn{margin-left:5px;background-color: #abf2c4; border: none; color: #535353; height:25px; width:202px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer;}
-
-#rawBoqLevel2DoneBtnActDesc{margin-left:5px;background-color: #535353; border: none; color: #efefef; height:25px; width:321px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer;}
-#rawBoqLevel2DoneBtnActDesc:hover{margin-left:5px;background-color: #3f3f3f; border: none; color: #efefef; height:25px; width:321px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
 
 
 /* Next Buttons */
@@ -179,14 +67,6 @@ a{text-decoration:none;}
 #proSetupNextBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:25px; width:100px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer;border-radius: 25px}
 #proSetupNextBtnCancel{background-color: #e56464; border: none; color: #efefef; height:25px; width:100px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer;border-radius: 25px}
 #proSetupNextBtnCancel:hover{background-color: #bc5a5a; border: none; color: #efefef; height:25px; width:100px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer;border-radius: 25px}
-#globalDecisionNextBtn{background-color: #535353; border: none; color: #efefef; height:25px; width:100px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer;border-radius: 25px}
-#globalDecisionNextBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:25px; width:100px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer;border-radius: 25px}
-#rawBoqLevel1NextBtn{background-color: #535353; border: none; color: #efefef; height:25px; width:100px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer;border-radius: 25px}
-#rawBoqLevel1NextBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:25px; width:100px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer;border-radius: 25px}
-#rawBoqLevel2NextBtn{background-color: #535353; border: none; color: #efefef; height:25px; width:100px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer;border-radius: 25px}
-#rawBoqLevel2NextBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:25px; width:100px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer;border-radius: 25px}
-#rawBoqLevel3NextBtn{background-color: #535353; border: none; color: #efefef; height:25px; width:100px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer;border-radius: 25px}
-#rawBoqLevel3NextBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:25px; width:100px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer;border-radius: 25px}
 
 
 
@@ -210,8 +90,8 @@ font-family: trebuc; font-size: 18px; font-weight: normal; color:#535353; margin
 
 #proBoqFormText{position:relative; text-decoration:none; margin-left:5px; margin-top:0px;  text-align:left; 
 font-family: trebuc; font-size: 15px; font-weight: normal; color:#535353; margin-bottom:5px;}
-#rawBoqHeadText{position:relative; text-decoration:none; margin-left:5px; margin-top:20px;  text-align:center; 
-font-family: trebuc; font-size: 18px; font-weight: normal; color:#d1d1d1; margin-bottom:0px;}
+#rawBoqHeadText{position:absolute; text-decoration:none; margin-left:5px; margin-top:4px;  text-align:left; 
+font-family: trebuc; font-size: 14px; font-weight: normal; color:#d1d1d1; margin-bottom:0px;}
 #pricingSheetHeadText{position:relative; text-decoration:none; margin-left:20px; margin-top:4px;  text-align:left; 
 font-family: trebuc; font-size: 23px; font-weight: normal; color:#535353; margin-bottom:5px;}
 #pSheetTenderHeadText{position:relative; text-decoration:none; margin-left:20px; margin-top:4px;  text-align:left; 
@@ -224,44 +104,23 @@ font-family: trebuc; font-size: 13px; font-weight: normal; color:#535353; margin
 font-family: trebuc; font-size: 13px; font-weight: normal; color:#535353; margin-bottom:5px;}
 #pricingSheetCalculateText{position:absolute; text-decoration:none; margin-left:60px; margin-top:12px;  text-align:left; 
 font-family: trebuc; font-size: 20px; font-weight: normal; color:#535353; margin-bottom:5px;}
-#pricingSheetViewText{position:absolute; text-decoration:none; margin-left:16px; margin-top:12px;  text-align:left; 
-font-family: trebuc; font-size: 20px; font-weight: normal; color:#d1d1d1; margin-bottom:5px;}
+#pricingSheetViewText{position:absolute; text-decoration:none; margin-left:45px; margin-top:12px;  text-align:left; 
+font-family: trebuc; font-size: 17px; font-weight: normal; color:#d1d1d1; margin-bottom:5px;}
 #rawBoqUpdateListHeadText{position:relative; text-decoration:none; margin-left:5px; margin-top:20px;  text-align:center; 
 font-family: trebuc; font-size: 15px; font-weight: normal; color:#d1d1d1; margin-bottom:0px;}
-
-
-
+#priSheSummaryHeadText{position:absolute; text-decoration:none; margin-left:5px; margin-top:5px;  text-align:center; 
+font-family: trebuc; font-size: 16px; font-weight: normal; color:#d1d1d1; margin-bottom:0px;}
+#priSheSummaryAllowTitle{position:absolute; text-decoration:none; margin-left:40px; margin-top:5px;  text-align:center; 
+font-family: trebuc; font-size: 16px; font-weight: normal; color:#535353; margin-bottom:0px;}
 
 
 /* input */ 
-#proSetupInput {border: 1px solid #555; width:200px; height:20px; outline: none;}
-#proSetupProjectNameInput {border: 1px solid #555; width:200px; height:20px; outline: none;}
-#proSetupProjectNumberInput {border: 1px solid #555; width:200px; height:20px; outline: none;}
-#proSetupclientNameInput {border: 1px solid #555; width:200px; height:20px; outline: none;}
-#globalDecDurationInput {border: 1px solid #555; width:50px; height:20px; outline: none;}
-#globalDecInput {border: 1px solid #555; width:150px; height:20px; outline: none;}
-
-#proBoqInput {border: 1px solid #555; width:200px; height:20px; outline: none; margin-top:-10px; margin-left:5px;}
-#activityDesBoqInput {border: 1px solid #555; width:320px; height:20px; outline: none; margin-top:-10px; margin-left:5px;}
-#sectionIdInput {border: 1px solid #555; width:200px; height:20px; outline: none; margin-top:-10px; margin-left:5px;}
-#sectionIdTextF {border: 1px solid #555; width:200px; height:20px; outline: none; margin-top:-10px; margin-left:5px;}
-#activityDesSectionNameInput {border: 1px solid #555; width:156px; height:20px; outline: none; margin-top:-10px; margin-left:5px;}
-#activityDesActivityNameInput {border: 1px solid #555; width:156px; height:20px; outline: none; margin-top:-10px; margin-left:5px;}
-
-
+#proSetupInput {border: 1px solid #555; width:200px; height:20px; outline: none; text-indent: 10px;}
+#proSetupProjectNameInput {border: 1px solid #555; width:200px; height:20px; outline: none; text-indent: 10px;}
+#proSetupProjectNumberInput {border: 1px solid #555; width:200px; height:20px; outline: none; text-indent: 10px;}
+#proSetupclientNameInput {border: 1px solid #555; width:200px; height:20px; outline: none; text-indent: 10px;}
 
 /* Images */
 #centerImage{display: block; margin-left: auto; margin-right: auto;}
 
-/* Boq Forms */
-#rawBoqLevel1UpdateList{position:relative; margin-left:338px; margin-top:-240px; width:327px; height:280px; background-color:#e1e1e1; box-shadow: 0 1px 2px 0 #6a6a6a, 0 1px 5px 0 #6a6a6a; overflow-y: scroll;}
-#rawBoqLevel1UpdateListTitle{position:relative; margin-left:0px; margin-top:-20px; width:320px; height:20px; background-color:#535353; }
-.sectionNameUpdateListHead{position:relative; margin-left:10px; margin-top:0px; font-family: trebuc;font-size:15px; width:285px; height:18px; background-color:#c9c9c9; border:none; color:#535353;}
-.sectionNameUpdateListLi{position:relative; margin-left:20px; margin-top:-15px; font-family: trebuc;font-size:13px; width:275px; height:18px; background-color:eeeeee; border:none; color:#535353;}
-
-#rawBoqLevel2UpdateList{position:relative; margin-left:338px; margin-top:-260px; width:327px; height:280px; background-color:#e1e1e1; box-shadow: 0 1px 2px 0 #6a6a6a, 0 1px 5px 0 #6a6a6a; overflow-y: scroll;}
-#rawBoqLevel2UpdateListTitle{position:relative; margin-left:0px; margin-top:-20px; width:320px; height:20px; background-color:#535353; }
-.sectionNameUpdateListHead{position:relative; margin-left:10px; margin-top:0px; font-family: trebuc;font-size:15px; width:285px; height:18px; background-color:#c9c9c9; border:none; color:#535353;}
-.sectionNameUpdateListLi{position:relative; margin-left:20px; margin-top:-15px; font-family: trebuc;font-size:13px; width:275px; height:18px; background-color:eeeeee; border:none; color:#535353;}
-#rawBoqLevel2Form{position:relative; margin-left:2px; margin-top:-15px; width:327px; height:280px;}
 

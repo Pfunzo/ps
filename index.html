@@ -1,34 +1,36 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
         <title> Click To Price  </title>
-        <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+        <script >if (typeof module === 'object') {window.module = module; module = undefined;}</script>
         
-<!--        JQUERY LIBRARY-->
-        <script src="js/jquery.min.js"></script>
+<!--        J QUERY LIBRARY-->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
 
 <!--        MAIN JS-->
         <script type="text/javascript" src="js/showHide.js" charset="utf-8"></script>
         
 <!--        CALENDER RANGER LIBRARY-->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <script type="text/javascript" src="js/moment.min.js"></script>
+	<script type="text/javascript" src="js/daterangepicker.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/daterangepicker.css"/>
 		
         <!-- Select Multiple Days Start -->
-<!--		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
-        <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-		<script async defer src="https://buttons.github.io/buttons.js"></script>
-		<script type="text/javascript" src="js/jquery-ui.min.js" charset="utf-8"></script>
-		<script type="text/javascript" src="js/jquery-ui.multidatespicker.js" charset="utf-8"></script>
-		<link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
-		<link rel="stylesheet" type="text/css" href="css/jquery-ui.multidatespicker.css"/>
-<!--		<link rel="stylesheet" type="text/css" href="css/style.css"/>-->
+
+        <script type="text/javascript" src="js/tether.min.js" ></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/buttons.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="js/jquery-ui.multidatespicker.js" charset="utf-8"></script>
+        <script type="text/javascript" src="js/underscore.js" charset="utf-8"></script>
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui.multidatespicker.css"/>
+        <script type="text/javascript" src="js/jspdf.debug.js" charset="utf-8"></script>
+        <script type="text/javascript" src="js/jspdf.plugin.autotable.js" charset="utf-8"></script>
+
 		
-        <script type="text/javascript">
+<!--        <script type="text/javascript">
             $(function() {
                 // Documentation
                 $('i:contains(type)').attr('title', '[Optional] accepted values are: "allowed" [default]; "disabled".');
@@ -47,7 +49,7 @@
             h2 {
                 margin-top: 2em;
             }
-        </style>
+        </style>-->
 		
 		
 		<!-- Select Multiple Days End -->        
@@ -55,6 +57,11 @@
 
         <script>if (window.module) module = window.module;</script>
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="css/globalDecStyle.css"/>
+        <link rel="stylesheet" type="text/css" href="css/pricingSheetStyle.css"/>
+        <link rel="stylesheet" type="text/css" href="css/rawBoqStyle.css"/>
+        <link rel="stylesheet" type="text/css" href="css/tenderForResources.css"/>
+		
         
 
     </head>
@@ -76,15 +83,17 @@
                 </table>
             </div>
 
-
             <div id="proSetupPlane">
                 <table align="center">
                     <tr><td><div id="proSetupBtn"><p id="newProBtnText"> Project Setup </p></div></td></tr>
                     <tr><td><div id="globalDecisionBtn"><p id="newProBtnText"> Global Decision </p></div></td></tr>
+                    <tr><td><div id="tenForResBtn"><p id="newProBtnText"> Tender For Resources</p></div></td></tr>
                     <tr><td><div id="rawBoqBtn"><p id="newProBtnText"> Raw BOQ </p></div></td></tr>
                     <tr><td><div id="pricingSheetBtn"><p id="newProBtnText"> Pricing Sheet </p></div></td></tr>
                     <tr><td><div id="planReportsBtn"><p id="newProBtnText"> Planned Reports </p></div></td></tr>
                 </table>
+                <br>&nbsp;</br><br>&nbsp;</br><br>&nbsp;</br><br>&nbsp;</br>
+            <center><img src="images/footlogo.png"/></center>    
             </div>
 
             <div id="splash"></div>
@@ -100,16 +109,18 @@
                     <form id="proSetupForm" action="javascript:void(0);" >
                         <table align="center">
 
-                            <tr><td><p id="proFormText"> Project Name </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupProjectNameInput" type="text"/></td></tr>
+                            <tr><td><p id="proFormText"> Project Name </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input name="projectName" id="proSetupProjectNameInput" type="text"/></td></tr>
                             <tr><td>&nbsp;</td></tr>
-                            <tr><td><p id="proFormText"> Project Number </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupProjectNumberInput" type="text" /></td></tr>
+                            <tr><td><p id="proFormText"> Project Number </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input name="projectNumber"  id="proSetupProjectNumberInput" type="text" /></td></tr>
                             <tr><td>&nbsp;</td></tr>
-                            <tr><td><p id="proFormText"> Client Name </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupclientNameInput" type="text" /></td></tr>
+                            <tr><td><p id="proFormText"> Client Name </p></td><td>&nbsp;&nbsp;&nbsp;</td><td><input name="clientName" id="proSetupclientNameInput" type="text" /></td></tr>
 
                             <tr><td></td><td>&nbsp;&nbsp;&nbsp;</td><td><input id="proSetupDoneBtn"  type="submit" value="Save"/></td><td></td></tr>
 
                         </table>
                     </form> 
+                    
+                    <p id="errorMessage"></p>
                 </div>
 
             </div>
@@ -142,110 +153,64 @@
                     <form action="javascript:void(0);">
                         <table>
                                    <tr><td>&nbsp;</td></tr>
-                            <tr><td><p id="globalDecFormText"> Project Duration </p></td><td> : &nbsp;&nbsp; <input id="globalDecDurationInput" type="number" name="overheadsPercentage"/></td><td><p id="globalDecFormText"> Years </p></td></tr>
-                            <tr><td></td><td> : &nbsp;&nbsp; <input id="globalDecDurationInput" type="number" name="overheadsPercentage"/></td><td><p id="globalDecFormText"> Months </p></td></tr>
-                            <tr><td></td><td> : &nbsp;&nbsp; <input id="globalDecDurationInput" type="number" name="overheadsPercentage"/></td><td><p id="globalDecFormText"> Days </p></td></tr>
+                            <tr><td><p id="globalDecFormText"> Overheads Percentage </p></td><td> : &nbsp;&nbsp; <input id="globalDecPercOverHInput" type="number" name="overheadsPercentage"/>%</td></tr>
                             <tr><td>&nbsp;</td></tr>
-                            <tr><td><p id="globalDecFormText"> Project Range </p></td><td colspan="2"> : &nbsp;&nbsp; <input id="globalDecInput" type="text" name="datefilter"/></td></tr>
-                                 
-                            <tr><td></td><td colspan="2">  &nbsp; &nbsp; &nbsp;<input id="globalDecisionL1DoneBtn"  type="submit" value="Save"/></td><td></td></tr>
+                            <tr><td><p id="globalDecFormText"> Profit Percentage </p></td><td align="left"> : &nbsp;&nbsp; <input id="globalDecPercProfInput" type="number" name="profitPercentage"/>%</td></tr>
+
+                            <tr><td></td><td colspan="2">  &nbsp; &nbsp; &nbsp;<input id="globalDecisionL1DoneBtn"  type="submit" value="Save"/></td></tr>
 
                         </table>
-                        <script type="text/javascript">
-			$(function() {
-
-			  $('input[name="datefilter"]').daterangepicker({
-				  autoUpdateInput: false,
-				  locale: {
-					  cancelLabel: 'Clear'
-				  }
-			  });
-
-			  $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
-				  $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
-			  });
-
-			  $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
-				  $(this).val('');
-			  });
-
-			});
-			</script>
                     </form>
                     </div>
                     <div id="globalDecisionL2">
-                    <form action="javascript:void(0);">
+                        <form action="javascript:void(0);">
                         <table>
-                                   <tr><td>&nbsp;</td></tr>
-                            <tr><td><p id="globalDecFormText"> Overheads Percentage </p></td><td> : &nbsp;&nbsp; <input id="globalDecDurationInput" type="number" name="overheadsPercentage"/>%</td></tr>
                             <tr><td>&nbsp;</td></tr>
-                            <tr><td><p id="globalDecFormText"> Profit Percentage </p></td><td align="left"> : &nbsp;&nbsp; <input id="globalDecDurationInput" type="number" name="profitPercentage"/>%</td></tr>
-
-                            <tr><td></td><td colspan="2">  &nbsp; &nbsp; &nbsp;<input id="globalDecisionL2DoneBtn"  type="submit" value="Save"/></td></tr>
-
+                            <tr><td><p id="globalDecFormText"> Project Range </p></td><td colspan="2"> : &nbsp;&nbsp; <input id="globalDecProRangeInput" type="text" name="datefilter"/></td></tr>
+                            <tr><td><p id="globalDecFormText"> Project Duration </p></td><td> : &nbsp;&nbsp; <input id="globalDecDurationInputNoYrs" type="number" name="overheadsPercentage"/></td><td><p id="globalDecFormText"> Years </p></td></tr>
+                            <tr><td></td><td> : &nbsp;&nbsp; <input id="globalDecDurationInputNoMths" type="number" name="overheadsPercentage"/></td><td><p id="globalDecFormText"> Months </p></td></tr>
+                            <tr><td></td><td> : &nbsp;&nbsp; <input id="globalDecDurationInputNoDays" type="number" name="overheadsPercentage"/></td><td><p id="globalDecFormText"> Days </p></td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td><p id="globalDecFormText"> Working Hours Per Day </p></td><td > : &nbsp;&nbsp; <input id="globalDecDurationHoursInput" type="number" name="overheadsPercentage"/></td><td><p id="globalDecFormText"> Hours </p></td></tr>
+      
+                            <tr><td></td><td colspan="2">  &nbsp; &nbsp; &nbsp;<input id="globalDecisionL2DoneBtn"  type="submit" value="Save"/></td><td></td></tr>
                         </table>
+
                     </form>
+                    
                     </div>
                     
                     <div id="globalDecisionL3">
                     <div id="calenderContainer">
                         <div id="mdp-demo"></div>
-			<input type="text" id="altField" value=""/>
-			<script type="text/javascript">
-			
-			var tmp = $('#mdp-demo').multiDatesPicker({
-				altField: '#altField'
-			});
-			
-			
-			$(document).ready(function () {
-			
-			//$('#mdp-demo').multiDatesPicker({});
-			
-			var dates = $('#mdp-demo').multiDatesPicker('value');
-			var dt = JSON.stringify(dates);
-			
-			
+<!--			<input type="text" id="altField" value=""/>-->
+                        
+                        </br>
+<center><input type="submit" id="addSelectednwdDaysDummyBtn" value="Add Selected Days"/></center>
+<center><input type="submit" id="addSelectednwdNWDBtn" value="Add None Working Days"/></center>
+<center><input type="submit" id="addSelectednwdPWBtn" value="Add Project Weekend Days"/></center>
+<center><input type="submit" id="addSelectednwdWDBtn" value="Confirm Working Days"/></center>
+<script type="text/javascript">
 			
 
-			$("#dButton").click(function(){
-				var selectedDates = $("#altField").val();
-				var arrayDates = selectedDates.split(',');
-				var daysArray = new Array();
-				var dateObjectArray = new Array();
-				for (var i = 0; i < arrayDates.length; i++) {
-					var fromString = arrayDates[i].split("/");
-					var f = new Date(fromString[2], fromString[0] - 1, fromString[1]);
-					daysArray.push(f.getDate());
-					var newDate = new Date();
-					dateObjectArray.push(newDate.setDate(f.getDate()));
-				}
-				$('#mdp-demo').multiDatesPicker({
-					// disable the 1st and 3rd of the current month
-					addDisabledDates: dateObjectArray
-				});
-				$("#displayText").val(daysArray[0]);
-			});	
-				
-			});
-			//var date = (new Date()).setDate(8);
+</script>
 			
-			
-				
-			
-				
-				
-			</script>
-			
-			
-			<button type="" id="dButton">Display</button>
-			<input id="displayText" type="text" value=""/>
+			<br></br>
+<!--			<button type="" id="dButton">Display</button>-->
+                        
+                        
+<!--			<input id="displayText" type="text" value=""/>-->
                         </div>
                         <div id="calenderButtonsContainer">
                             <table align="center">
-                                <tr><td><input type="submit" id="cldrWeekendDaysBtn" value="Weekend Days"/></td></tr>
-                                <tr><td><input type="submit" id="cldrProWeekendDaysBtn" value="Working Days"/></td></tr>
-                                <tr><td><input type="submit" id="cldrWorkingDaysBtn" value="Project Weekend Days"/></td></tr>
+                                <tr><td><p id="homeBtnText"/>Select Day Type</p></td></tr>
+                                <tr><td><input type="submit" id="cldrNonWorkingDaysBtn" value="Non-Working Days"/></td></tr>
+                                <tr><td></br></td></tr>
+                                <tr><td><input type="submit" id="cldrProWeekendDaysBtn" value="Project Weekend Days"/></td></tr>
+                                <tr><td></br></td></tr>
+                                <tr><td><input type="submit" id="cldrWorkingDaysBtn" value="Working Days"/></td></tr>
+                                <tr><td></br></td></tr>
+                                <tr><td><input type="submit" id="globalDecisionL3DoneBtn" value="Done"/></td></tr>
                             </table>
                             
                         </div>
@@ -255,44 +220,268 @@
                     <div id="globalDecSummBody">
                     <form action="javascript:void(0);">
                         <table>
-                                   <tr><td>&nbsp;</td></tr>
-                            <tr><td><p id="globalDecFormText"> Summary </p></td><td> : &nbsp;&nbsp; <input id="globalDecDurationInput" type="number" name="overheadsPercentage"/>%</td></tr>
-                            <tr><td>&nbsp;</td></tr>
-                            <tr><td><p id="globalDecFormText"> Summary </p></td><td align="left"> : &nbsp;&nbsp; <input id="globalDecDurationInput" type="number" name="profitPercentage"/>%</td></tr>
-
-                            <tr><td></td><td colspan="2">  &nbsp; &nbsp; &nbsp;<input id="globalDecisionL2DoneBtn"  type="submit" value="Save"/></td></tr>
+                            <tr><td><p id="globalDecFormText"> Project Total Working Days </p></td><td> : &nbsp;&nbsp; <input type="text" id="prTotalWDaysInput" value=""/></td></tr>
+                            <tr><td><p id="globalDecFormText"> Average Working Days Per Month </p></td><td align="left"> : &nbsp;&nbsp; <input type="text" id="noWorkingDaysPMonthInput" value=""/></td></tr>
+                            <tr><td><p id="globalDecFormText"> No. Of Hours Per Day </p></td><td> : &nbsp;&nbsp; <input type="text" id="noHoursPDayInput"/></td></tr>
+                            <tr><td><p id="globalDecFormText"> Average Weeks Per Month</p></td><td align="left"> : &nbsp;&nbsp; <input type="text" id="averageWeekspMonthInput" value=""/></td></tr>
+                            <tr><td><p id="globalDecFormText"> No. Of Hours Per Week </p></td><td align="left"> : &nbsp;&nbsp; <input type="text" id="noHoursPWeekInput" value=""/></td></tr>
+                            
+                            <tr><td><p id="globalDecFormText"> Total Number Of Months </p></td><td align="left"> : &nbsp;&nbsp; <input type="text" id="noMonthsInput" value=""/></td></tr>
+                            <tr><td><p id="globalDecFormText"> Overheads Percentage </p></td><td align="left"> : &nbsp;&nbsp; <input type="text" id="percOverheadsInput" value=""/></td></tr>
+                            <tr><td><p id="globalDecFormText"> Profit Percentage </p></td><td align="left"> : &nbsp;&nbsp; <input type="text" id="percProfitInput" value=""/></td></tr>
+                            <tr><td></td><td colspan="2">  &nbsp; &nbsp; &nbsp;<input id="globalDecisionSummDoneBtn"  type="submit" value="Done"/></td></tr>
 
                         </table>
                     </form>
                     </div>
+                    
+                    <p id="addGlobalDecisionMessage"></p>
                 </div>
 
             </div>
 
+            <div id="tenderForResources">
+                <div id="projectSetupHead">
+                    <p id="proHeadText">Tender For Resources</p>
+                </div>
+                <div id="tenForResBody">
+                    <table>
+                        <tr>
+                            <td>
+                                <div id="tenForResHeadL1"><p id="globalDecHeadText">Plant</p></div>
+                            </td>
+                            <td>
+                                <div id="tenForResHeadL2"><p id="globalDecHeadText">People</p></div>
+                            </td>
+                            <td>
+                                <div id="tenForResHeadL3"><p id="globalDecHeadText">Material</p></div>
+                            </td>
+                            <td>
+                                <div id="tenForResHeadL4"><p id="globalDecHeadText">Fuel</p></div>
+                            </td>
+                            <td>
+                                <div id="tenForResHeadL5"><p id="globalDecHeadText">Others</p></div>
+                            </td>
+                        </tr>
+                    </table>                    
+                    <div id="tenForResTabLine"></div>
+                    
+                    <div id="tenForResPlantBody">
+                    <table id="tenderForPlantsTable">
+                    <tr>
+                    <td><div id="tenForResPlantNameTitle"><p id="tenForResTitleText">Plant Name </p></div></td>
+                    <td><div id="tenForResPlantRateTypeTitle"><p id="tenForResTitleText">Dry vs Wet Rate</p></div></td>
+                    <td><div id="tenForResPlantRawRateTitle"><p id="tenForResTitleText">Raw Rate </p></div></td>
+                    <td><div id="tenForResPlantTransCostTitle"><p id="tenForResTitleText">Transport Cost </p></div></td>
+                    <td><div id="tenForResPlantUnitOfMTitle"><p id="tenForResTitleText">Unit </p></div></td>
+                    <td><div id="tenForResPlantIncreasTitle"><p id="tenForResTitleText">Increase(%)</p></div></td>
+                    <td><div id="tenForResPlantTotalCostTitle"> <p id="tenForResTitleText">Selling Rate(R) </p></div></td>
+                    </tr>
 
+                    <tr><td><input id="tenForResPlantNameInput"/></td>
+                    <td><input id="tenForResPlantRateTypeInput" type="radio" name="one" value="DryRate"/> <p id="tenForResDryRateText">DR</p> <input id="tenForResPlantRateTypeInput" name="one" type="radio" value="WetRate"/> <p id="tenForResWetRateText">WR</p></td>
+                    <td><input id="tenForResPlantRawRateInput" type="number"/></td>
+                    <td><input id="tenForResPlantTransCostInput" type="number"/></td>
+                    <td><select id="tenForResPlantUnitOfMInput" >
+                            <option value="none">Select</option>
+                            <option value="Month">Month</option> 
+                            <option value="Day">Day</option>
+                            <option value="Hour">Hr</option>
+                            <option value="Cubic_Meters">m<sup>3</sup></option>
+                            <option value="Square_Meters">m<sup>2</sup></option>
+                            <option value="Meters">m</option>
+                            <option value="Bags">Bgs</option>
+                            <option value="Number">No.</option>
+                            <option value="Percentage">%</option>
+                            <option value="Density">kg/m<sup>3</sup></option>
+                        </select></td>
+                    <td><input id="tenForResPlantIncreasInput" type="number"/></td>
+                    <td><input id="tenForResPlantTotalCostInput" disabled/></td></tr>
+                    </table>
+
+                    <input id="tenForResPlantAddRowBtn" type="submit" value="Add Plant"/>
+                    <p id="addPlantMessage"></p>
+                    
+                    </div>
+                    
+                    <div id="tenForResPeopleBody">
+                        <table>
+                            <tr>
+                                <td><p id="tenForResPeopleTopTableText">Increase(%)</p></td><td><input id="tenForResPeopleTopTableIncreaseInput" type="number"/></td>
+                                <td><p id="tenForResPeopleTopTableText">Levies(%)</p></td><td><input id="tenForResPeopleTopTableLeviesInput" type="number"/></td>
+                                <td><p id="tenForResPeopleTopTableText">Leave(Days)</p></td><td><input id="tenForResPeopleTopTableLeaveInput" type="number"/></td>
+                                <td><p id="tenForResPeopleTopTableText">Pension(%)</p></td><td><input id="tenForResPeopleTopTablePensionInput" type="number"/></td>
+                                
+                            </tr>
+                        </table>
+                        
+                        
+                        <table id="tenderForPeopleTable">
+                            <tr>
+                                <td><div id="tenForResPeopleNameTitle"><p id="tenForResTitleText">People Name</p></div></td>
+                                <td><div id="tenForResPeopleSalaryTitle"><p id="tenForResTitleText">Salary/y</p></div></td>
+                                <td><div id="tenForResPeopleIncreTitle"><p id="tenForResTitleText">Increase</p></div></td>
+                                <td><div id="tenForResPeopleLeviesTitle"><p id="tenForResTitleText">Levies</p></div></td>
+                                <td><div id="tenForResPeopleLeaveTitle"><p id="tenForResTitleText">Leave</p></div></td>
+                                <td><div id="tenForResPeoplePensionTitle"><p id="tenForResTitleText">Pension</p></div></td>
+                                <td><div id="tenForResPeopleMedicalTitle"><p id="tenForResTitleText">Medical</p></div></td>
+                                <td><div id="tenForResPeopleBonusTitle"><p id="tenForResTitleText">Bonus</p></div></td>
+                                <td><div id="tenForResPeopleAnualCTitle"><p id="tenForResTitleText">Cost/y</p></div></td>
+                                <td><div id="tenForResPeopleDailyCTitle"><p id="tenForResTitleText">Cost/d</p></div></td>
+                            </tr>
+                            
+                            <tr>
+                                <td><input id="tenForResPeopleNameInput" type="text"/></td>
+                                <td><input id="tenForResPeopleSalaryInput" type="number"/></td>
+                                <td><input id="tenForResPeopleIncreaInput" type="number" disabled/></td>
+                                <td><input id="tenForResPeopleLeviesInput" type="number" disabled/></td>
+                                <td><input id="tenForResPeopleLeaveInput" type="number" disabled/></td>
+                                <td><input id="tenForResPeoplePensionInput" type="number" disabled/></td>
+                                <td><input id="tenForResPeopleMedicalInput" type="number"/></td>
+                                <td><input id="tenForResPeopleBonusInput" type="number"/></td>
+                                <td><input id="tenForResPeopleAnualCInput" type="number" disabled/></td>
+                                <td><input id="tenForResPeopleDailyCInput" type="number" disabled/></td>
+                                
+                            </tr>
+
+                        </table>
+                        <input id="tenForResPeopleAddRowBtn" type="submit" value="Add People"/>
+                        <p id="addPeopleMessage"></p>
+                    </div>
+                    
+                    <div id="tenForResMaterialBody">
+                        <table>
+                            <tr>
+                                <td><div id="tenForResMaterialNameTitle"><p id="tenForResTitleText">Material Name</p></div></td>
+                                <td><div id="tenForResMaterialRawRateTitle"><p id="tenForResTitleText">Raw Rate</p></div></td>
+                                <td><div id="tenForResMaterialWastageFTitle"><p id="tenForResTitleText">Wastage Factor</p></div></td>
+                                <td><div id="tenForResMaterialUnitOfMTitle"><p id="tenForResTitleText">Unit</p></div></td>
+                                <td><div id="tenForResMaterialIncreasTitle"><p id="tenForResTitleText">Increase(%)</p></div></td>
+                                <td><div id="tenForResMaterialSellingRateTitle"><p id="tenForResTitleText">Selling Rate</p></div></td>
+                            </tr>
+                        </table>
+                        
+                        <table id="tenderForMaterialTable">
+                            <tr>
+                                <td><input id="tenForResMaterialNameInput" type="text"/></td>
+                                <td><input id="tenForResMaterialRawRateInput" type="number"/></td>
+                                <td><input id="tenForResMaterialWastageInput" type="number"/></td>
+                                <td>
+                                    <select id="tenForResMaterialUnitOfMInput">
+                                        <option value="none">Select</option>
+                                        <option value="Cubic_Meters">m<sup>3</sup></option>
+                                        <option value="Square_Meters">m<sup>2</sup></option>
+                                        <option value="Meters">m</option>
+                                        <option value="Bags">Bags</option>
+                                        <option value="Number">No.</option>
+                                        <option value="Percentage">%</option>
+                                        <option value="Density">kg/m<sup>3</sup></option>
+                                    </select>
+                                </td>
+                                <td><input id="tenForResMaterialIncreasInput" type="number"/></td>
+                                    <td><input id="tenForResMaterialSellingRateInput" type="text" disabled/></td>
+                            </tr>
+                        </table>
+                        <input id="tenForResMaterialAddRowBtn" type="submit" value="Add Material"/>
+                        <p id="addMaterialMessage"></p>
+						
+                    </div>
+					
+                    
+                    
+                    <div id="tenForResFuelBody">
+                        <table>
+                            <tr>
+                                <td><div id="tenForResFuelNameTitle"><p id="tenForResTitleText">Fuel Name</p></div></td>
+                                <td><div id="tenForResFuelRawRateTitle"><p id="tenForResTitleText">Raw Rate</p></div></td>
+                                <td><div id="tenForResFuelWastageFTitle"><p id="tenForResTitleText">Wastage Factor</p></div></td>
+                                <td><div id="tenForResFuelUnitOfMTitle"><p id="tenForResTitleText">Unit</p></div></td>
+                                <td><div id="tenForResFuelIncreasTitle"><p id="tenForResTitleText">Increase(%)</p></div></td>
+                                <td><div id="tenForResFuelSellingRateTitle"><p id="tenForResTitleText">Selling Rate</p></div></td>
+                            </tr>
+                        </table>
+                        
+                        <table id="tenderForFuelTable">
+                            <tr>
+                                <td><input name="petNamePeF" id="tenForResFuelNameInput" type="text" value="Petrol"/></td>
+                                <td><input name="petRawRateF" id="tenForResFuelRawRateInput" type="number"/></td>
+                                <td><input name="petWasteFF" id="tenForResFuelWastageInput" type="number"/></td>
+				<td><input name="" id="tenForResFuelUnitOfMInput" type="text" value="l(liters)" disabled/></td>
+                                <td><input name="petIncreaseF" id="tenForResFuelIncreasInput" type="number"/></td>
+                                <td><input name="petSellingRateF" id="tenForResFuelSellingRateInput" type="text" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td><input name="petNameDiF" id="tenForResFuelNameInput" type="text" value="Diesel"/></td>
+                                <td><input name="dieRawRateF" id="tenForResFuelRawRateInput" type="number"/></td>
+                                <td><input name="dieWasteFF" id="tenForResFuelWastageInput" type="number"/></td>
+				<td><input name="" id="tenForResFuelUnitOfMInput" type="text" value="l(liters)" disabled/></td>
+                                <td><input name="dieIncreaseF" id="tenForResFuelIncreasInput" type="number"/></td>
+                                <td><input name="dieSellingRateF" id="tenForResFuelSellingRateInput" type="text" disabled/></td>
+                            </tr>
+                        </table>
+                        <p id="addFuelMessage"></p>
+                    </div>
+                    <div id="tenForResOthersBody"></div>
+					
+                    
+                </div>
+                <input id="tenForResPlantSaveBtn" type="submit" value="Save Plant List"/>
+                <input id="tenForResPeopleSaveBtn" type="submit" value="Save People List"/>
+                <input id="tenForResMaterialSaveBtn" type="submit" value="Save Material "/>
+                <input id="tenForResFuelSaveBtn" type="submit" value="Save Fuel List"/>
+            </div>
+                
 
             <div id="rawBoq">
                 <div id="projectSetupHead">
                     <p id="proHeadText">Raw BOQ</p>
                 </div>
-
-                <br>&nbsp;</br>
-                <p></p>
-                <center>
-                    <table>
+                
+                <div id="selectBoqType">
+                    <p id="homeBtnText">Edit Project Tender Information</p>
+                    
+                    <table align="center">
                         <tr>
-                            <td><div id="rawBoqHeadL1"><p id="rawBoqHeadText">Level 1</p></div></td>
-                            <td><div id="rawBoqHeadL2"><p id="rawBoqHeadText">Level 2</p></div></td>
-                            <!-- <td><div id="rawBoqHeadL3"><p id="rawBoqHeadText">Level 3</p></div></td> -->
+                            <td><input id="editProTenderInfoNoBtn" type="submit" value="No"/></td>
+                            <td><input id="editProTenderInfoYesBtn" type="submit" value="Yes"/></td>
                         </tr>
                     </table>
-                </center>
-
-
-
-                <div id="rawBoqBody"></div>
-
-                <div id="rawBoqBodyLevel1">
+                    <br>&nbsp;</br><br>&nbsp;</br><br>&nbsp;</br>
+                    <table align="center">
+                        <tr>
+                            <td>
+                                <input type="submit" id="importBoqBtn" value="Import BoQ"/>
+                            </td>
+                            <td><br></br></td>
+                            <td>
+                                <input type="submit" id="manualBoqBtn" value="Manual BoQ"/>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                </div>
+                
+                
+                
+                
+                <div id="manualRawBoqBodyContainer">
+                <br>&nbsp;</br>
+                <p></p>
+                
+                <div id="rawBoqBody">
+                    
+                    <table id="boqLevelTable">
+                        <tr>
+                            <td>
+                                <div id="rawBoqHeadL1"><p id="rawBoqHeadText">Level 1</p></div>
+                            </td>
+                            <td>
+                                <div id="rawBoqHeadL2"><p id="rawBoqHeadText">Level 2</p></div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div id="rawBoqTabLine"></div>
+                   <div id="rawBoqBodyLevel1">
 
                     <form id="rawBoqLevel1Form" action="javascript:void(0);">
                         <table id="rawBoqLevel1ListTable" >
@@ -312,13 +501,16 @@
                             <tr></tr>
                             <tr><td><p id="proBoqFormText"> Activity Name </p></td></tr>
                             <tr></tr>
-                            <tr><td><input id="proBoqInput" type="text" name="activityName"/></td></tr>
+                            <tr><td><input id="proBoqActivityNameInput" type="text" name="activityName"/></td></tr>
                             <tr></tr>
                             <tr><td><p id="proBoqFormText"> Activity ID </p></td></tr>
                             <tr></tr>
-                            <tr><td><input id="proBoqInput" type="text" name="activityId"/></td></tr>
+                            <tr><td><input id="proBoqActivityIdInput" type="text" name="activityId"/></td></tr>
                             <tr><td><input id="rawBoqLevel1AddBtn"  type="submit" value="Add"/></td></tr>
-
+                            <tr><td>&nbsp;</td><tr/>
+                            <tr><td>&nbsp;</td><tr/>
+                            <tr><td>&nbsp;</td><tr/>
+                            <tr><td>&nbsp;</td><tr/>
                             <tr><td><input id="rawBoqLevel1DoneBtn"  type="submit" value="Done"/></td></tr>
 
                         </table>
@@ -326,14 +518,12 @@
 
                     <div id="rawBoqLevel1UpdateList">
 
-                        <table><tr>
+                        <table>
+                            <tr>
                                 <td><div id="rawBoqLevel1UpdateListTitle"><p id="rawBoqUpdateListHeadText">Added Sections & Activities</p></div></td>
-                            </tr></table>
-
-                        <!--<table id="rawBoqLevel1UpdateListTable">
-                        <tr><td></td><td></td></tr>
-                                   
-                        </table>-->
+                            </tr>
+                        </table>
+                        
                         <div id="rawBoqLevel1UpdateListTable">
                         </div>
                     </div>
@@ -357,35 +547,38 @@
                         <table>
                             <tr><td><p id="proBoqFormText"> Section Name </p></td>
                             <td><p id="proBoqFormText"> Activity Name </p></td></tr>
-                            <tr><td><select id="activityDesSectionNameInput" name="sectionName">
+                            <tr><td><select id="activityDesSectionNameInput" name="ActDescSectionName">
                                         <option value="None">Select Section Name</option>
-                                        <option value="SAA1234">Saab</option>
-                                        <option value="Merc5678">Mercedes</option>
-                                        <option value="Au3456">Audi</option>
+                                        <option value="desRd">Road</option>
+                                        <option value="desHs">House</option>
+                                        <option value="desMl">Mall</option>
                                     </select>
                                 </td>
                             
-                            <td><select id="activityDesActivityNameInput" name="sectionName">
+                            <td><select id="activityDesActivityNameInput" name="ActDescActivityName">
                                         <option value="None">Select Activity Name</option>
-                                        <option value="SAA1234">Saab</option>
-                                        <option value="Merc5678">Mercedes</option>
-                                        <option value="Au3456">Audi</option>
+                                        <option value="desCl">Clear</option>
+                                        <option value="desDg">Dig</option>
+                                        <option value="desSt">Start</option>
+                                        
                                     </select>
-                                </td></tr>
+                            </td></tr>
                             <tr><td colspan="2"><p id="proBoqFormText"> Activity Description </p></td></tr>
-                            <tr><td colspan="2"><input id="activityDesBoqInput" type="text" name="activDescription"/></td></tr>
+                            <tr><td colspan="2"><input id="activityDesBoqInput_D" type="text" name="activDescription"/></td></tr>
                             <tr></tr>
                             <tr><td colspan="2"><p id="proBoqFormText"> Production Achievable </p></td></tr>
-                            <tr><td colspan="2"><input id="activityDesBoqInput" type="text" name="ProductionAch"/></td></tr>
+                            <tr><td colspan="2"><input id="activityDesBoqInput_P" type="text" name="ProductionAch"/></td></tr>
                             <tr></tr>
                             <tr><td colspan="2"><p id="proBoqFormText"> Total Quantity </p></td></tr>
-                            <tr><td colspan="2"><input id="activityDesBoqInput" type="text" name="totalQuantity"/></td></tr>
+                            <tr><td colspan="2"><input id="activityDesBoqInput_Q" type="text" name="totalQuantity"/></td></tr>
                             <tr></tr>
                             <tr><td colspan="2"><p id="proBoqFormText"> Unit Of Measurement </p></td></tr>
-                            <tr><td colspan="2"><input id="activityDesBoqInput" type="text" name="activDescriptionNoOfDays"/></td></tr>
+                            <tr><td colspan="2"><input id="activityDesBoqInput_U" type="text" name="activDescriptionNoOfDays"/></td></tr>
 
                             <tr><td colspan="2"><input id="rawBoqLevel2AddBtnActDesc"  type="submit" value="Add"/></td></tr>
-                            </br>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td>&nbsp;</td></tr>
                             <tr><td colspan="2"><input id="rawBoqLevel2DoneBtnActDesc"  type="submit" value="Done"/></td></tr>
 
                         </table>
@@ -398,12 +591,8 @@
                                 <td><div id="rawBoqLevel2UpdateListTitle"><p id="rawBoqUpdateListHeadText">Added Activity Descriptions</p></div></td>
                             </tr></table>
 
-                        <!--<table id="rawBoqLevel1UpdateListTable">
-                        <tr><td></td><td></td></tr>
-                                   
-                        </table>-->
-<!--                        <div id="rawBoqLevel1UpdateListTable">
-                        </div>-->
+                        <div id="rawBoqLevel2UpdateListTable">
+                        </div>
                     </div>
 
                 </div>
@@ -422,6 +611,11 @@
                     <p id="homeBtnText">Raw BOQ Level 3 Saved Successfully! </p>
                     </br>
                     <center><input id="rawBoqLevel3NextBtn" type="submit" value="NEXT"/></center>
+                </div> 
+                    
+                </div>
+
+                
                 </div>
             </div>
 
@@ -496,24 +690,72 @@
 
                 <table>
                     <tr>
-                        <td>
-                            <div id="pricingSheetPeopleHead"><p id="pricingSheetResourceHeadText"> People </p></div>
-                            <iframe src="iframes/peoplePricingSheet.html" id="pricingSheetPeopleBody"></iframe>
-                        </td>
-                        <td>
-                            <div id="pricingSheetPeopleHead"><p id="pricingSheetResourceHeadText"> Material </p></div>
-                            <iframe src="iframes/materialPricingSheet.html" id="pricingSheetPeopleBody"></iframe>
-                        </td>
+        <td>
+        <div id="pricingSheetTR1Body">
+        <div id="pricingSheetPeopleHead"><p id="pricingSheetResourceHeadText"> People </p></div>
+        <table>
+        <tr>
+        <td><div id="pricingSheetListPeopleResourceTitle"><p id="pricingSheetResourceListText"> People </p></div></td>
+        <td><div id="pricingSheetListPeopleSellRateResourceTitle"><p id="pricingSheetResourceListText"> Selling Rate </p></div></td>
+        <td><div id="pricingSheetListPeopleQuantityTitle"><p id="pricingSheetResourceListText"> Quantity </p></div></td>
+        <td><div id="pricingSheetListPeopleRateTitle"> <p id="pricingSheetResourceListText"> Pricing Rate </p></div></td>
+        </tr>
+        </table>
+        <table id="peoPricingSheetTable">
+        </table>
+        </div>	
+        </td>
+						
+        <td>
+        <div id="pricingSheetTR1Body">
+            <div id="pricingSheetPeopleHead"><p id="pricingSheetResourceHeadText"> Material </p></div>
+            <table>
+            <tr>
+            <td><div id="pricingSheetListMaterialResourceTitle"><p id="pricingSheetResourceListText"> Material </p></div></td>
+            <td><div id="pricingSheetListMaterialSellRateTitle"><p id="pricingSheetResourceListText"> Selling Rate </p></div></td>
+            <td><div id="pricingSheetListMaterialQuantityTitle"><p id="pricingSheetResourceListText"> Quantity </p></div></td>
+            <td><div id="pricingSheetListMaterialRateTitle"> <p id="pricingSheetResourceListText"> Pricing Rate </p></div></td>
+            </tr>
+            </table>
+            <table id="MatPricingSheetTable">
+
+            </table>
+        </div>
+        </td>
                     </tr>
 
                     <tr>
                         <td>
+			<div id="pricingSheetTR2Body">
                             <div id="pricingSheetPeopleHeadL2"><p id="pricingSheetResourceHeadText"> Fuel </p></div>
-                            <iframe src="iframes/fuelPricingSheet.html" id="pricingSheetPeopleBody"></iframe>
+                            <table>
+                            <tr>
+                            <td><div id="pricingSheetListFuelResourceTitle"><p id="pricingSheetResourceListText"> Fuel </p></div></td>
+                            <td><div id="pricingSheetListFuelSellRateTitle"><p id="pricingSheetResourceListText"> Selling Rate </p></div></td>
+                            <td><div id="pricingSheetListFuelQuantityTitle"><p id="pricingSheetResourceListText"> Quantity </p></div></td>
+                            <td><div id="pricingSheetListFuelRateTitle"> <p id="pricingSheetResourceListText"> Pricing Rate </p></div></td>
+                            </tr>
+                            </table>
+                            <table id="fuelPricingSheetTable">
+
+                            </table>
+			</div>
                         </td>
                         <td>
+			<div id="pricingSheetTR2Body">
                             <div id="pricingSheetPeopleHeadL2"><p id="pricingSheetResourceHeadText"> Plant </p></div>
-                            <iframe src="iframes/plantPricingSheet.html" id="pricingSheetPeopleBody"></iframe>
+                            <table>
+                            <tr>
+                            <td><div id="pricingSheetListPlantResourceTitle"><p id="pricingSheetResourceListText"> Plant </p></div></td>
+                            <td><div id="pricingSheetListPlantSellRateTitle"><p id="pricingSheetResourceListText"> Selling Rate </p></div></td>
+                            <td><div id="pricingSheetListPlantQuantityTitle"><p id="pricingSheetResourceListText"> Quantity </p></div></td>
+                            <td><div id="pricingSheetListPlantRateTitle"> <p id="pricingSheetResourceListText"> Pricing Rate </p></div></td>
+                            </tr>
+                            </table>
+                            <table id="plaPricingSheetTable">
+
+                            </table>
+			</div>
                         </td>
                     </tr>
 
@@ -524,9 +766,11 @@
                         <tr>
                             <td><div id="pricingSheetLeftFooterHead"><p id="pricingSheetLeftFooterHeadText">Utilization</p></div></td>
                             <td><div id="pricingSheetLeftFooterHead"><p id="pricingSheetLeftFooterHeadText">Plant Availability</p></div></td>
+                            <td><div id="pricingSheetLeftFooterHead"><p id="pricingSheetLeftFooterHeadText">Production Achievable</p></div></td>
                         </tr>
 
                         <tr>
+                            <td><input id="pricingSheetLeftFooterInput"/></td>
                             <td><input id="pricingSheetLeftFooterInput"/></td>
                             <td><input id="pricingSheetLeftFooterInput"/></td>
                         </tr>
@@ -537,17 +781,86 @@
 
                 <div id="pricingSheetRightFooterBody">
                     <center>
-                        <table>
+<!--                        <table>
                             <tr>
                                 <td><div id="pricingSheetRightFooterCalculateBtn"><p id="pricingSheetCalculateText">Calculate</p></div></td>
                                 <td><div id="pricingSheetRightFooterViewBtn"><p id="pricingSheetViewText">View Priced Tender</p></div></td>
                             </tr>
-                        </table>
+                        </table>-->
+                        
+                        <table>
+                            <tr>
+                                <td><div id="pricingSheetRightFooterEmptyBtn"><p id="pricingSheetCalculateText"></p></div></td>
+                                <td><div id="pricingSheetRightViewSummaryBtn"><p id="pricingSheetViewText">View Pricing Summary</p></div></td>
+                            </tr>
+                        </table>                        
                     </center>
                 </div>
 
             </div>
+            
+    <div id="pricingSheetSummary">
+        <div id="projectSetupHead">
+            <p id="proHeadText">Pricing Sheet Summary</p>
+        </div>
+        <div id="priSheSummaryProAch">
+        <table>
+            <tr>
+                <td>
+                    <select id="priSheSummarySelection_Sec">
+                        <option value="None">Select Section Name</option>
+                        <option value="secRd">Road</option>
+                        <option value="secBd">Build</option>
+                        <option value="secTr">Tree</option>
+                    </select>
+                </td>
 
+                <td>
+                    <select id="priSheSummarySelection_Act">
+                        <option value="None">Select Activity Name</option>
+                        <option value="actCl">Clearing</option>
+                        <option value="actCv">Carving</option>
+                        <option value="actDg">Digging</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="priSheSummarySelection_Desc">
+                        <option value="None">Select Activity Description</option>
+                        <option value="desWt">Water</option>
+                        <option value="desSh">Shovel</option>
+                        <option value="desCt">Cut</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <input id="priSheSummaryConfProAchBtn" type="submit" value="Confirm Production Acheivable"/>
+        <input id="priSheSummaryConfProAchInput" type="text"/>
+        <input id="priSheSummaryConfProAchBtnC" type="submit" value="Confirm"/>
+        </div>
+        
+        <center>
+        <table>
+            <tr>
+                <td><div id="priSheSummaryProAchTitl"><p id="priSheSummaryHeadText">Plant Allowable Cost</p></div></td>
+                <td><div id="priSheSummaryProAchTitl"><p id="priSheSummaryHeadText">People Allowable Cost</p></div></td>
+                <td><div id="priSheSummaryProAchTitl"><p id="priSheSummaryHeadText">Material Allowable Cost</p></div></td>
+                <td><div id="priSheSummaryProAchTitl"><p id="priSheSummaryHeadText">Fluent Allowable Cost</p></div></td>
+            </tr>
+            <tr>
+                <td><input id="plantAllwInput" type="number" disabled/></td>
+                
+                <td><input id="peopleAllwInput" type="number" disabled/></td>
+                
+                <td><input id="matAllwInput" type="number" disabled/></td>
+                
+                <td><input id="fuelAllwInput" type="number" disabled/></td>
+            </tr>
+        </table>
+        </center>
+        
+    </div>
+            
+            
             <!-- Priced Tender Sheet -->
             <div id="pTenderSheep">
                 <div id="pTenderSheetHead"><p id="pSheetTenderHeadText">Priced Tender Sheet</p></div>
@@ -590,7 +903,39 @@
 
 
         </div>
-
+        
+        <div id="testTableContent">
+            <table id="pdfPutTable" name="">
+            <thead>
+            <tr>
+			<th><p>Pay Ref. <br>SANS 1200</p></th>
+			<th><p>Item</p></th>
+			<th><p>Description</p></th>
+			<th><p>Unit</p></th>
+			<th><p>Qty</p></th>
+			<th><p>Rate</p></th>
+			<th><p>Amount</p></th>
+            </tr>
+            </thead>
+                <tbody>
+                    
+                </tbody>  
+                
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><p>Total: </p></td>
+                        <td><p>R26251</p></td>
+                    </tr>
+                </tfoot>
+            </table>
+            <button id="pdf">Generate</button>
+        </div>
+<p id="secActivityMessage"></p>
     </body>
 
 </html>

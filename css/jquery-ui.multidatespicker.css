@@ -10,3 +10,19 @@ table.ui-datepicker-calendar {border-collapse: separate;}
 	background: #2c65ab none;
 	color: white;
 }
+
+.ui-datepicker a.ui-state-active {
+  border-color: #c5c5c5;
+  background-color: #f6f6f6;
+  color: #454545;
+}
+
+.ui-datepicker .ui-state-highlight {
+  border: 0;
+}
+
+.ui-datepicker .ui-state-highlight a {
+  background-color: #fff7cc;
+  border-color: #ffd700;
+  color: #777620;
+}

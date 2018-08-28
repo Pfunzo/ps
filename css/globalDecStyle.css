@@ -1,0 +1,63 @@
+@font-face {font-family: BAUHS93; src: local(BAUHS93), url('../fonts/BAUHS93.TTF') format('truetype');}
+@font-face {font-family: trebuc; src: local(trebuc), url('../fonts/trebuc.ttf') format('truetype');}
+
+
+/* Global Decision Containers */
+#globalDecision{position:relative; margin-left:204px; margin-top:-500px; width:796px; height:500px; background-color:#d9d9d9;}
+#globalDecisionBody{position:absolute; margin-left:95px; margin-top:62px; width:600px; height:380px; background-color:#a5a5a5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+#globalDecisionSuccessAlertBackground{position:relative; margin-left:auto; margin-right:auto; margin-top:-350px; width:400px; height:180px;  background-color:#afd5ce; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+#globalDecHeadL1{position:relative; margin-left:0px;  margin-right:auto; margin-top:10px; width:100px; height:24px; background-color:#535353; cursor:pointer;}
+#globalDecHeadL2{position:relative; margin-left:-2px;  margin-right:auto; margin-top:10px; width:100px; height:24px; background-color:#535353; cursor:pointer;}
+#globalDecHeadL3{position:relative; margin-left:-2px;margin-right:auto; margin-top:10px; width:100px; height:24px; background-color:#535353; cursor:pointer;}
+#globalDecSumm{position:relative; margin-left:-2px; margin-right:auto; margin-top:10px; width:170px; height:24px; background-color:#535353; cursor:pointer;}
+#globalDecTabLine{position:relative; margin-left:3px; margin-right:auto; margin-top:-3px; width:590px; height:2px; background-color:#535353; }
+/*#altField{position:relative; margin-left:auto; margin-right:auto; display:none;}*/
+
+
+#globalDecisionL3{position:absolute; margin-left:3px; margin-top:0px; width:597px; height:350px; background-color:#a5a5a5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+#calenderContainer{position:absolute;  margin-left:20px; margin-top:20px;}
+#calenderButtonsContainer{position:relative;  margin-left:350px; margin-top:20px; width:225px; height:300px; }
+#cldrNonWorkingDaysBtn{background-color:#d45c5f; border: none; color: #535353; height:28px; width:200px; text-align: center; text-decoration: none; display: inline-block; font-size: 15px; cursor: pointer;border-radius: 5px; box-shadow: 0 2px 4px 0 #595959, 0 3px 5px 0 #595959;}
+#cldrProWeekendDaysBtn{background-color:#4b6ecf; border: none; color: #535353; height:28px; width:200px; text-align: center; text-decoration: none; display: inline-block; font-size: 15px; cursor: pointer;border-radius: 5px; box-shadow: 0 2px 4px 0 #595959, 0 3px 5px 0 #595959;}
+#cldrWorkingDaysBtn{background-color:#7cbe6d; border: none; color: #535353; height:28px; width:200px; text-align: center; text-decoration: none; display: inline-block; font-size: 15px; cursor: pointer;border-radius: 5px; box-shadow: 0 2px 4px 0 #595959, 0 3px 5px 0 #595959;}
+#addSelectednwdDaysDummyBtn{position:absolute; margin-left:-150px; margin-top:-10px; background-color:#0aaaa4; border: none; color: #535353; height:30px; width:300px; text-align: center; text-decoration: none; display: inline-block; font-size: 15px; cursor: pointer;border-radius: 5px; box-shadow: 0 2px 4px 0 #595959, 0 3px 5px 0 #595959; opacity:0.2;}
+#addSelectednwdNWDBtn{position:absolute; margin-left:-150px; margin-top:-10px; background-color:#d45c5f; border: none; color: #535353; height:30px; width:300px; text-align: center; text-decoration: none; display: inline-block; font-size: 15px; cursor: pointer;border-radius: 5px; box-shadow: 0 2px 4px 0 #595959, 0 3px 5px 0 #595959;}
+#addSelectednwdPWBtn{position:absolute; margin-left:-150px; margin-top:-10px; background-color:#4b6ecf; border: none; color: #535353; height:30px; width:300px; text-align: center; text-decoration: none; display: inline-block; font-size: 15px; cursor: pointer;border-radius: 5px; box-shadow: 0 2px 4px 0 #595959, 0 3px 5px 0 #595959;}
+#addSelectednwdWDBtn{position:absolute; margin-left:-150px; margin-top:-10px; background-color:#7cbe6d; border: none; color: #535353; height:30px; width:300px; text-align: center; text-decoration: none; display: inline-block; font-size: 15px; cursor: pointer;border-radius: 5px; box-shadow: 0 2px 4px 0 #595959, 0 3px 5px 0 #595959;}
+
+#globalDecisionL3DoneBtn{background-color:#535353; border: none; color: #d1d1d1; height:28px; width:200px; text-align: center; text-decoration: none; display: inline-block; font-size: 15px; cursor: pointer;border-radius: 5px; box-shadow: 0 1px 2px 0 #595959, 0 1px 1px 0 #595959;}
+#globalDecisionL3DoneBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:28px; width:200px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+
+#globalDecisionDoneBtn{background-color: #535353; border: none; color: #efefef; height:25px; width:150px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer;}
+#globalDecisionDoneBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:25px; width:150px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+#globalDecisionL1DoneBtn{background-color: #535353; border: none; color: #efefef; height:25px; width:150px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer;}
+#globalDecisionL1DoneBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:25px; width:150px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+
+#globalDecisionL2DoneBtn{background-color: #535353; border: none; color: #efefef; height:25px; width:180px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer;}
+#globalDecisionL2DoneBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:25px; width:180px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+
+#globalDecisionSummDoneBtn{background-color: #535353; border: none; color: #efefef; height:25px; width:150px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer;}
+#globalDecisionSummDoneBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:25px; width:150px; text-align: center; text-decoration: none; display: inline-block; font-size: 17px; cursor: pointer; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+
+#globalDecisionNextBtn{background-color: #535353; border: none; color: #efefef; height:25px; width:100px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer;border-radius: 25px}
+#globalDecisionNextBtn:hover{background-color: #3f3f3f; border: none; color: #efefef; height:25px; width:100px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer;border-radius: 25px}
+
+#globalDecDurationInput {border: 1px solid #555; width:50px; height:20px; outline: none; text-indent: 10px;}
+#globalDecDurationInputNoYrs {border: 1px solid #555; width:50px; height:20px; outline: none; text-indent: 10px;}
+#globalDecDurationInputNoMths {border: 1px solid #555; width:50px; height:20px; outline: none; text-indent: 10px;}
+#globalDecDurationInputNoDays {border: 1px solid #555; width:50px; height:20px; outline: none; text-indent: 10px;}
+#globalDecDurationHoursInput {border: 1px solid #555; width:50px; height:20px; outline: none; text-indent: 10px;}
+#globalDecPercOverHInput {border: 1px solid #555; width:50px; height:20px; outline: none; text-indent: 10px;}
+#globalDecPercProfInput {border: 1px solid #555; width:50px; height:20px; outline: none; text-indent: 10px;}
+#globalDecInput {border: 1px solid #555; width:150px; height:20px; outline: none; text-indent: 10px;}
+#globalDecProRangeInput {border: 1px solid #555; width:180px; height:20px; outline: none; text-indent: 10px;}
+
+#prTotalWDaysInput{background-color: #535353; border: none; color: #efefef; width:50px; text-indent: 10px;}
+#noWorkingDaysPYearInput{background-color: #535353; border: none; color: #efefef; width:50px; text-indent: 10px;}
+#noWorkingDaysPMonthInput{background-color: #535353; border: none; color: #efefef; width:50px; text-indent: 10px;}
+#noHoursPDayInput{background-color: #535353; border: none; color: #efefef; width:50px; text-indent: 10px;}
+#averageWeekspMonthInput{background-color: #535353; border: none; color: #efefef; width:50px; text-indent: 10px;}
+#noHoursPWeekInput{background-color: #535353; border: none; color: #efefef; width:50px; text-indent: 10px;}
+#noMonthsInput{background-color: #535353; border: none; color: #efefef; width:50px; text-indent: 10px;}
+#percOverheadsInput{background-color: #535353; border: none; color: #efefef; width:50px; text-indent: 10px;}
+#percProfitInput{background-color: #535353; border: none; color: #efefef; width:50px; text-indent: 10px;}

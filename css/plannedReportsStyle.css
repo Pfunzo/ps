@@ -1,0 +1,23 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 30, 2018, 2:34:05 PM
+    Author     : Pfunzo
+*/
+#pldRpt{position:relative; margin-left:204px; margin-top:0px; width:796px; height:500px; background-color:#d9d9d9; }
+#pldRptBody{position:absolute; margin-left:20px; margin-top:62px; width:750px; height:380px; background-color:#a5a5a5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+
+#pldRpHead{position:relative; margin-left:0px;  margin-right:auto; margin-top:10px; width:200px; height:24px; background-color:#535353; cursor:pointer;}
+#pldRpList1{position:relative; margin-left:0px;  margin-right:auto; margin-top:10px; width:170px; height:100px; background-color:#535353; border-radius: 5px; cursor:pointer;}
+#pldRpList2{position:relative; margin-left:0px;  margin-right:auto; margin-top:10px; width:170px; height:100px; background-color:#535353; border-radius: 5px;}
+#pldRpList3{position:relative; margin-left:0px;  margin-right:auto; margin-top:10px; width:170px; height:100px; background-color:#535353; border-radius: 5px;}
+#pldRpList4{position:relative; margin-left:0px;  margin-right:auto; margin-top:10px; width:170px; height:100px; background-color:#535353; border-radius: 5px;}
+#pldRpList5{position:relative; margin-left:0px;  margin-right:auto; margin-top:10px; width:170px; height:100px; background-color:#535353; border-radius: 5px;}
+#pldRpList6{position:relative; margin-left:0px;  margin-right:auto; margin-top:10px; width:170px; height:100px; background-color:#535353; border-radius: 5px;}
+#pldRpList7{position:relative; margin-left:0px;  margin-right:auto; margin-top:10px; width:170px; height:100px; background-color:#535353; border-radius: 5px;}
+#pldRpListName{position:relative; margin-left:0px;  margin-right:auto; margin-top:0px; width:170px; height:24px; background-color:#e1e1e1; border-radius: 5px;}
+#pldRpListNameText{position:absolute; text-decoration:none; margin-left:5px; margin-top:5px;  text-align:center; 
+font-family: trebuc; font-size: 13px; font-weight: normal; color:#535353; margin-bottom:0px;}

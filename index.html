@@ -61,6 +61,7 @@
         <link rel="stylesheet" type="text/css" href="css/pricingSheetStyle.css"/>
         <link rel="stylesheet" type="text/css" href="css/rawBoqStyle.css"/>
         <link rel="stylesheet" type="text/css" href="css/tenderForResources.css"/>
+        <link rel="stylesheet" type="text/css" href="css/plannedReportsStyle.css"/>
 		
         
 
@@ -278,7 +279,7 @@
                     <td><div id="tenForResPlantTotalCostTitle"> <p id="tenForResTitleText">Selling Rate(R) </p></div></td>
                     </tr>
 
-                    <tr><td><input id="tenForResPlantNameInput"/></td>
+<!--                    <tr><td><input id="tenForResPlantNameInput"/></td>
                     <td><input id="tenForResPlantRateTypeInput" type="radio" name="one" value="DryRate"/> <p id="tenForResDryRateText">DR</p> <input id="tenForResPlantRateTypeInput" name="one" type="radio" value="WetRate"/> <p id="tenForResWetRateText">WR</p></td>
                     <td><input id="tenForResPlantRawRateInput" type="number"/></td>
                     <td><input id="tenForResPlantTransCostInput" type="number"/></td>
@@ -296,7 +297,8 @@
                             <option value="Density">kg/m<sup>3</sup></option>
                         </select></td>
                     <td><input id="tenForResPlantIncreasInput" type="number"/></td>
-                    <td><input id="tenForResPlantTotalCostInput" disabled/></td></tr>
+                    <td><input id="tenForResPlantTotalCostInput" disabled/></td>
+                    </tr>-->
                     </table>
 
                     <input id="tenForResPlantAddRowBtn" type="submit" value="Add Plant"/>
@@ -362,7 +364,7 @@
                         </table>
                         
                         <table id="tenderForMaterialTable">
-                            <tr>
+<!--                            <tr>
                                 <td><input id="tenForResMaterialNameInput" type="text"/></td>
                                 <td><input id="tenForResMaterialRawRateInput" type="number"/></td>
                                 <td><input id="tenForResMaterialWastageInput" type="number"/></td>
@@ -380,8 +382,9 @@
                                 </td>
                                 <td><input id="tenForResMaterialIncreasInput" type="number"/></td>
                                     <td><input id="tenForResMaterialSellingRateInput" type="text" disabled/></td>
-                            </tr>
+                            </tr>-->
                         </table>
+                        
                         <input id="tenForResMaterialAddRowBtn" type="submit" value="Add Material"/>
                         <p id="addMaterialMessage"></p>
 						
@@ -651,7 +654,46 @@
                 <center><input id="globalDecisionNextBtn" type="submit" value="NEXT"/></center>
             </div>
 
-
+            
+            
+            
+            
+            
+            <div id="pldRpt">
+                <div id="projectSetupHead">
+                    <p id="proHeadText">Planned Reports</p>
+                </div>    
+                
+                <div id="pldRptBody">
+                    <div id="pldRpHead"><p id="globalDecHeadText">&nbsp;&nbsp;&nbsp;&nbsp;Select Report Below</p></div>
+                    <center>
+                    <table>
+                        <tr>
+                            <td><div id="pldRpList1"><div id="pldRpListName"><p id="pldRpListNameText">Bill of Quantity</p></div><center><image src="images/boqReportIcon.png"/></center></div></td>
+                            <td><div id="pldRpList2"><div id="pldRpListName"><p id="pldRpListNameText">Cost Distribution</p></div><center><image src="images/costDReportIcon.png"/></center></div></td>
+                            <td><div id="pldRpList3"><div id="pldRpListName"><p id="pldRpListNameText">Project Scrutiny</p></div><center><image src="images/scrutinyReportIcon.png"/></center></div></td>
+                            <td><div id="pldRpList4"><div id="pldRpListName"><p id="pldRpListNameText">Gantt Chart</p></div><center><image src="images/ganttReportIcon.png"/></center></div></td>
+                        </tr>
+                        <tr>
+                            <td><div id="pldRpList5"><div id="pldRpListName"><p id="pldRpListNameText">Method Statement</p></div><center><image src="images/methodReportIcon.png"/></center></div></td>
+                            <td><div id="pldRpList6"><div id="pldRpListName"><p id="pldRpListNameText">Project Summary</p></div><center><image src="images/sumReportIcon.png"/></center></div></td>
+                            <td><div id="pldRpList7"><div id="pldRpListName"><p id="pldRpListNameText">Store</p></div><center><image src="images/storeReportIcon.png"/></center></div></td>
+                        </tr>
+                    </table>
+                    <center>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             <div id="pricingSheet">
                 <div id="pricingSheetHead"><p id="pricingSheetHeadText">Pricing Sheet</p></div>
                 <div id="pricingSheetSelector">
@@ -702,7 +744,9 @@
         </tr>
         </table>
         <table id="peoPricingSheetTable">
+            
         </table>
+        <input id="priSheetPeopleAddRowBtn" type="submit" value="Add Plant"/>
         </div>	
         </td>
 						
@@ -720,6 +764,7 @@
             <table id="MatPricingSheetTable">
 
             </table>
+            <input id="priSheetMatAddRowBtn" type="submit" value="Add Material"/>
         </div>
         </td>
                     </tr>
@@ -755,6 +800,7 @@
                             <table id="plaPricingSheetTable">
 
                             </table>
+                            <input id="priSheetPlantAddRowBtn" type="submit" value="Add Plant"/>
 			</div>
                         </td>
                     </tr>
@@ -766,13 +812,13 @@
                         <tr>
                             <td><div id="pricingSheetLeftFooterHead"><p id="pricingSheetLeftFooterHeadText">Utilization</p></div></td>
                             <td><div id="pricingSheetLeftFooterHead"><p id="pricingSheetLeftFooterHeadText">Plant Availability</p></div></td>
-                            <td><div id="pricingSheetLeftFooterHead"><p id="pricingSheetLeftFooterHeadText">Production Achievable</p></div></td>
+<!--                            <td><div id="pricingSheetLeftFooterHead"><p id="pricingSheetLeftFooterHeadText">Production Achievable</p></div></td>-->
                         </tr>
 
                         <tr>
                             <td><input id="pricingSheetLeftFooterInput"/></td>
                             <td><input id="pricingSheetLeftFooterInput"/></td>
-                            <td><input id="pricingSheetLeftFooterInput"/></td>
+<!--                            <td><input id="pricingSheetLeftFooterInput"/></td>-->
                         </tr>
                     </table>
 
@@ -790,8 +836,9 @@
                         
                         <table>
                             <tr>
-                                <td><div id="pricingSheetRightFooterEmptyBtn"><p id="pricingSheetCalculateText"></p></div></td>
-                                <td><div id="pricingSheetRightViewSummaryBtn"><p id="pricingSheetViewText">View Pricing Summary</p></div></td>
+                                <td><div id="pricingSheetRightcalculateBtn"><p id="pricingSheetViewText">Calculate</p></div></td>
+                                <td><div id="pricingSheetRightFooterEmptyBtn"><p id="pricingSheetViewText">&nbsp;</p></div></td>
+                                <td><div id="pricingSheetRightViewSummaryBtn"><p id="pricingSheetViewText">View Reports</p></div></td>
                             </tr>
                         </table>                        
                     </center>
@@ -908,19 +955,67 @@
             <table id="pdfPutTable" name="">
             <thead>
             <tr>
-			<th><p>Pay Ref. <br>SANS 1200</p></th>
-			<th><p>Item</p></th>
-			<th><p>Description</p></th>
-			<th><p>Unit</p></th>
-			<th><p>Qty</p></th>
-			<th><p>Rate</p></th>
-			<th><p>Amount</p></th>
+            <th><p>Pay Ref. <br>SANS 1200</p></th>
+            <th><p>Item</p></th>
+            <th><p>Description</p></th>
+            <th><p>Unit</p></th>
+            <th><p>Qty</p></th>
+            <th><p>Rate</p></th>
+            <th><p>Amount</p></th>
             </tr>
             </thead>
                 <tbody>
-                    
+                <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td><p>8</p></td><td><p></p></td><td><p>Section A</p></td><td><p></p></td><td><p></p></td><td><p></p></td><td><p></p></td></tr>
+                </tbody> 
+                <tbody>
+                
+                <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td><p></p></td><td><p>8.1</p></td><td><p>Activity 1</p></td><td><p></p></td><td><p></p></td><td><p></p></td><td><p></p></td></tr> 
+                <tr><td><p></p></td><td><p>8.1.1</p></td><td><p>Activity Description__1</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                <tr><td><p></p></td><td><p>8.1.2</p></td><td><p>Activity Description__2</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                <tr><td><p></p></td><td><p>8.1.3</p></td><td><p>Activity Description__3</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                
+                <tr><td><p></p></td><td><p>8.2</p></td><td><p>Activity 2</p></td><td><p></p></td><td><p></p></td><td><p></p></td><td><p></p></td></tr> 
+                <tr><td><p></p></td><td><p>8.2.1</p></td><td><p>Activity Description__1</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                <tr><td><p></p></td><td><p>8.2.2</p></td><td><p>Activity Description__2</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                <tr><td><p></p></td><td><p>8.2.3</p></td><td><p>Activity Description__3</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                <tr><td><p></p></td><td><p>8.2.4</p></td><td><p>Activity Description__4</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                <tr><td><p></p></td><td><p>8.2.5</p></td><td><p>Activity Description__5</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                <tr><td><p></p></td><td><p>8.2.6</p></td><td><p>Activity Description__6</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
                 </tbody>  
                 
+                <tbody>
+                <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td><p>14</p></td><td><p></p></td><td><p>Section B</p></td><td><p></p></td><td><p></p></td><td><p></p></td><td><p></p></td></tr>
+                
+                <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td><p></p></td><td><p>14.1</p></td><td><p>Activity 1 Of Section B</p></td><td><p></p></td><td><p></p></td><td><p></p></td><td><p></p></td></tr> 
+                
+                <tr><td><p></p></td><td><p>14.1.1</p></td><td><p>Activity Description__1</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                <tr><td><p></p></td><td><p>14.1.2</p></td><td><p>Activity Description__2</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                <tr><td><p></p></td><td><p>14.1.3</p></td><td><p>Activity Description__3</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                <tr><td><p></p></td><td><p>14.1.4</p></td><td><p>Activity Description__4</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                <tr><td><p></p></td><td><p>14.1.5</p></td><td><p>Activity Description__5</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                <tr><td><p></p></td><td><p>14.1.6</p></td><td><p>Activity Description__6</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                <tr><td><p></p></td><td><p>14.1.7</p></td><td><p>Activity Description__7</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                <tr><td><p></p></td><td><p>14.1.8</p></td><td><p>Activity Description__8</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                <tr><td><p></p></td><td><p>14.1.9</p></td><td><p>Activity Description__9</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                <tr><td><p></p></td><td><p>14.2.0</p></td><td><p>Activity Description__10</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                <tr><td><p></p></td><td><p>14.2.1</p></td><td><p>Activity Description__11</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                <tr><td><p></p></td><td><p>14.2.2</p></td><td><p>Activity Description__12</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                <tr><td><p></p></td><td><p>14.2.3</p></td><td><p>Activity Description__13</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                <tr><td><p></p></td><td><p>14.2.4</p></td><td><p>Activity Description__14</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                <tr><td><p></p></td><td><p>14.2.5</p></td><td><p>Activity Description__15</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                <tr><td><p></p></td><td><p>14.2.6</p></td><td><p>Activity Description__16</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                
+                <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td><p></p></td><td><p>15.1</p></td><td><p>Activity 2 Of Section B</p></td><td><p></p></td><td><p></p></td><td><p></p></td><td><p></p></td></tr>
+                <tr><td><p></p></td><td><p>15.1.1</p></td><td><p>Activity Description__1</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                <tr><td><p></p></td><td><p>15.1.2</p></td><td><p>Activity Description__2</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                <tr><td><p></p></td><td><p>15.1.3</p></td><td><p>Activity Description__3</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                <tr><td><p></p></td><td><p>15.1.4</p></td><td><p>Activity Description__4</p></td><td><p>ml</p></td><td><p>3</p></td><td><p>R5414</p></td><td><p>R16 242</p></td></tr>
+                </tbody> 
                 <tfoot>
                     <tr>
                         <td></td>

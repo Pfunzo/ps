@@ -87,7 +87,7 @@ $(document).ready(function () {
 $("#newProject").hide();$("#proSetupPlane").hide();$("#projectSetupHead").hide();$("#projectSetupBody").hide();$("#proSetupSuccessAlertBackground").hide();$("#globalDecisionL1").hide();
 $("#globalDecisionL2").hide();$("#globalDecisionL3").hide();$("#globalDecSummBody").hide();$("#globalDecision").hide();$("#tenderForResources").hide();$("#globalDecisionSuccessAlertBackground").hide();
 $("#rawBoq").hide();$("#rawBoqBodySuccessLevel1").hide();$("#rawBoqBodySuccessLevel2").hide();$("#rawBoqBodySuccessLevel3").hide();$("#rawBoqSuccessAlertBackground").hide();
-$("#testTableContent").hide();
+$("#testTableContent").hide();$("#pldRpt").hide();
 //$("#pricingSheet").hide();
 $("#pTenderSheep").hide();$("#rawBoqBodyLevel2").hide();$("#rawBoqBodyLevel3").hide();$("#pricingSheetSummary").hide();$("#pricingSheetCalculateSuccessAlertBackground").hide();
 $("#prTotalWDaysInput").prop('disabled', true);$("#noWorkingDaysPYearInput").prop('disabled', true);$("#noWorkingDaysPMonthInput").prop('disabled', true);$("#noHoursPDayInput").prop('disabled', true);
@@ -428,24 +428,9 @@ $("#globalDecDurationInputNoYrs").prop('disabled', true);$("#globalDecDurationIn
         $("#tenForResHeadL4").css("background-color", "#0aaaa4"); $("#tenForResHeadL1").css("background-color", "#535353"); $("#tenForResHeadL2").css("background-color", "#535353"); $("#tenForResHeadL3").css("background-color", "#535353"); $("#tenForResHeadL5").css("background-color", "#535353");
         $("#tenForResPlantBody").hide(); $("#tenForResPeopleBody").hide(); $("#tenForResMaterialBody").hide(); $("#tenForResFuelBody").fadeIn(); $("#tenForResOthersBody").hide();
         $("#tenForResPlantSaveBtn").hide();$("#tenForResPeopleSaveBtn").hide();$("#tenForResMaterialSaveBtn").hide();$("#tenForResFuelSaveBtn").show();
-	matRowCount = $('#MatPricingSheetTable tr').length;
-        $('[name="matQtyInput"]').change(function(){
-            for(var a=0; a < matRowCount; a++){
-                var matRawSellRate = $('[name="matSellingRateInput"]').val();
-                var matRawQty = $('[name="matQtyInput"]').val();
-                var matPricingRate = matRawQty * matRawSellRate;
-                $('[name="matPriceRate"]').val(matPricingRate.toFixed(2));
-            }
-        });
         $("#MatPricingSheetTable tr").each(function(){
-        $(this).find("td:eq(2)").change(function(){
-                for(var a=0; a < matRowCount; a++){
-                    var matRawSellRateAuto = $('[name="matSellingRateI' + a + '"]').val();
-                    var matRawQtyAuto = $('[name="matQty' + a + '"]').val();
-                    var matPricingRateAuto = matRawQtyAuto * matRawSellRateAuto;
-                    $('[name="matPriceRate'+a+'"]').val(matPricingRateAuto.toFixed(2));
-                }
-            });
+            console.log("Selling Rate");
+        
 	});
     });
    
@@ -454,6 +439,7 @@ $("#globalDecDurationInputNoYrs").prop('disabled', true);$("#globalDecDurationIn
         $("#tenForResPlantBody").hide();$("#tenForResPeopleBody").hide();$("#tenForResMaterialBody").hide();$("#tenForResFuelBody").hide();
 	$("#rawBoq").fadeIn();$("#rawBoqBtn").css({"background-color": "#fff", "border": "1px solid #0aaaa4"}); $("#rawBoqHeadL1").css("background-color", "#0aaaa4");
 	$("#tenForResPlantSaveBtn").hide();$("#tenForResPeopleSaveBtn").hide();$("#tenForResMaterialSaveBtn").hide();$("#tenForResFuelSaveBtn").hide();	
+        //$("#proSetupBtn").css({"background-color": "#fff", "border": "1px solid #0aaaa4"});
         $("#fuelPricingSheetTable tr").each(function(){
         $(this).find("td:eq(2)").change(function(){
                 for(var a=0; a < 2; a++){
@@ -509,8 +495,11 @@ $("#globalDecDurationInputNoYrs").prop('disabled', true);$("#globalDecDurationIn
     });
 
     $("#pricingSheetRightViewSummaryBtn").click(function () {
-        $("#proSetupPlane").show();$("#pricingSheetSummary").show();$("#rawBoq").hide();$("#splash").hide();$("#pricingSheet").hide();$("#tenderForResources").hide();
-        $("#testTableContent").show();
+        $("#proSetupPlane").show();//$("#pricingSheetSummary").show();
+        $("#rawBoq").hide();$("#splash").hide();$("#pricingSheet").hide();$("#tenderForResources").hide();
+        //$("#testTableContent").show();
+        $("#pldRpt").show();
+        
     });
     
     $("#pricingSheetRightFooterCalculateBtn").click(function () {
@@ -639,6 +628,8 @@ $("#globalDecDurationInputNoYrs").prop('disabled', true);$("#globalDecDurationIn
             + "</p></td><td><input name=\"plRR" + plCount + "\" id=\"tenForResPlantRawRateInput\"  type=\"number\" /></td><td><input name=\"plTrans" + plCount + "\" id=\"tenForResPlantTransCostInput\" type=\"number\"/></td><td><select name=\"plUnit" + plCount + "\" id=\"tenForResPlantUnitOfMInput\"><option value=\"none\">Select</option><option value=\"month\">Month</option><option value=\"day\">Day</option><option value=\"Hour\">Hr</option><option value=\"Bags\">Bags</option></select></td>\n\
             <td><input name=\"plIncrea" + plCount + "\" id=\"tenForResPlantIncreasInput\" type=\"number\"/></td><td align=\"right\" ><input name=\"plSellRate" + plCount + "\" id=\"tenForResPlantTotalCostInput\" disabled/></td></tr>"    
             );
+            $("#tenForResPlantAddRowBtn").prop('disabled', true);
+            $("#tenForResPlantAddRowBtn").css("opacity", "0.5");
             DRvsWRName++;plCount++;
             $("#tenderForPlantsTable tr").each(function(){
                 $(this).find("td:eq(5)").change(function(){
@@ -662,12 +653,14 @@ $("#globalDecDurationInputNoYrs").prop('disabled', true);$("#globalDecDurationIn
                         var plSellRateForPS = $('[name="plSellRate'+ i +'"]').val();
                         
                     }
-                    $("#plaPricingSheetTable").append(
-                    "<tr><td><input name=\"plNamePS_a" + i + "\" id=\"pricingSheetListPlantResourceInput\" type=\"text\" value=\"" + inputPlName + "\" disabled/></td>" +
-                    "<td><input name=\"plSellRatePS_a" + i +"\" id=\"pricingSheetListPlantSellRateInput\" type=\"number\" value=\"" + plSellRateForPS + "\" disabled/></td>" +
-                    "<td><input name=\"plQtyPS_a" + i + "\" id=\"pricingSheetListPlantQuantityInput\" type=\"number\"/></td>" +
-                    "<td><input name=\"plPricingRatePS_a" + i + "\" id=\"pricingSheetListPlantRateInput\" class=\"plAllwClass\" type=\"number\" disabled/></td></tr>"
-                    );
+                    $("#tenForResPlantAddRowBtn").prop('disabled', false);
+                    $("#tenForResPlantAddRowBtn").css("opacity", "1");
+//                    $("#plaPricingSheetTable").append(
+//                    "<tr><td><input name=\"plNamePS_a" + i + "\" id=\"pricingSheetListPlantResourceInput\" type=\"text\" value=\"" + inputPlName + "\" disabled/></td>" +
+//                    "<td><input name=\"plSellRatePS_a" + i +"\" id=\"pricingSheetListPlantSellRateInput\" type=\"number\" value=\"" + plSellRateForPS + "\" disabled/></td>" +
+//                    "<td><input name=\"plQtyPS_a" + i + "\" id=\"pricingSheetListPlantQuantityInput\" type=\"number\"/></td>" +
+//                    "<td><input name=\"plPricingRatePS_a" + i + "\" id=\"pricingSheetListPlantRateInput\" class=\"plAllwClass\" type=\"number\" disabled/></td></tr>"
+//                    );
             
         var finRateType;
         if(rateType === "DryRate"){
@@ -722,6 +715,8 @@ $("#globalDecDurationInputNoYrs").prop('disabled', true);$("#globalDecDurationIn
                 <td><input name=\"peoMedical" + peoCount + "\" id=\"tenForResPeopleMedicalInput\" type=\"number\"/></td><td><input name=\"peoBonus" + peoCount + "\" id=\"tenForResPeopleBonusInput\" type=\"number\"/></td><td><input name=\"peoAnnualC" + peoCount + "\" id=\"tenForResPeopleAnualCInput\" type=\"number\" disabled/></td>\n\
                 <td><input name=\"peoDailyC" + peoCount + "\" id=\"tenForResPeopleDailyCInput\" type=\"number\" disabled/></td></tr>"
             );
+    $("#tenForResPeopleAddRowBtn").prop('disabled', true);
+    $("#tenForResPeopleAddRowBtn").css("opacity", "0.5");
         peoCount++;
         $("#tenderForPeopleTable tr").each(function(){
             $(this).find("td:eq(7)").change(function(){
@@ -747,13 +742,10 @@ $("#globalDecDurationInputNoYrs").prop('disabled', true);$("#globalDecDurationIn
                         $('[name="peoAnnualC'+ i +'"]').val(peoAnnualfC.toFixed(2));
                         $('[name="peoDailyC'+ i +'"]').val(peoDailyC.toFixed(2));
                         peoSellRateForPS = $('[name="peoDailyC'+ i +'"]').val();
+                        $("#tenForResPeopleAddRowBtn").prop('disabled', false);
+                        $("#tenForResPeopleAddRowBtn").css("opacity", "1");
                         }
-                        $("#peoPricingSheetTable").append(
-                        "<tr><td><input name=\"peoNamePS_a" +i+ "\" id=\"pricingSheetListPeopleResource\" type=\"text\" value=\"" + inputPeoName + "\" disabled/></td>" +
-                        "<td><input name=\"peoSellRatePS_a" +i+ "\" id=\"pricingSheetListPeopleSellRateResource\" type=\"number\" value=\"" + peoSellRateForPS + "\" disabled/></td>" +
-                        "<td><input name=\"peoQtyPS_a" +i+ "\" id=\"pricingSheetListPeopleQuantity\" type=\"number\"/></td>" +
-                        "<td><input name=\"peoPricingRatePS_a" +i+ "\" id=\"pricingSheetListPeopleRate\" class=\"peoAllwClass\" type=\"number\" disabled/></td></tr>"
-                        );
+                        
                 
                 var peoJSON = "{personName: " + inputPeoName + ", salary: " + inputPeoRawRate + ", increase: " + peoIncrease + ", levies: " + peoLevies + 
                             ", leave: " + peoLeave + ", pension: " + peoPension + ", medical: " + peoMed + ", bonus: " + peoBonus + 
@@ -791,6 +783,8 @@ $("#globalDecDurationInputNoYrs").prop('disabled', true);$("#globalDecDurationIn
                 "<option value=\"none\">Select</option><option value=\"Cubic_Meters\">m<sup>3</sup></option><option value=\"Square_Meters\">m<sup>2</sup></option><option value=\"Meters\">m</option><option value=\"Bags\">Bags</option><option value=\"Number\">No.</option></select>" +
                 "<td><input name=\"matIncrea" + matCount + "\" id=\"tenForResMaterialIncreasInput\" type=\"number\"</td><td><input name=\"matSellingRate" + matCount + "\" id=\"tenForResMaterialSellingRateInput\" type=\"text\" disabled/></td></tr>"
             );
+            $("#tenForResMaterialAddRowBtn").prop('disabled', true);
+            $("#tenForResMaterialAddRowBtn").css("opacity", "0.5");
         $("#tenderForMaterialTable tr").each(function(){
             $(this).find("td:eq(4)").change(function(){
                         for(var i=0; i < matCount; i++){
@@ -804,9 +798,9 @@ $("#globalDecDurationInputNoYrs").prop('disabled', true);$("#globalDecDurationIn
                         $('[name="matSellingRate'+ i +'"]').val(matSellingRate.toFixed(2));
                         sellRateToPricingSheet = $('[name="matSellingRate'+ i +'"]').val();
                         }
-                        $("#MatPricingSheetTable").append(
-                        "<tr><td><input name=\"matName" + i + "\" id=\"pricingSheetListMaterialResourceInput\" type=\"text\" value=\"" + inputMatName + "\"disabled/></td><td><input name=\"matSellingRateI" + i + "\" id=\"pricingSheetListMaterialSellRateInput\" type=\"number\" value=\"" + sellRateToPricingSheet + "\" disabled/></td><td><input name=\"matQty" + i +"\" id=\"pricingSheetListMaterialQuantityInput\" type=\"number\"/></td><td><input name=\"matPriceRate" + i + "\" id=\"pricingSheetListMaterialRateInput\" class=\"matAllwClass\" type=\"number\"/></td></tr>"
-                        );
+                        $("#tenForResMaterialAddRowBtn").prop('disabled', false);
+                        $("#tenForResMaterialAddRowBtn").css("opacity", "1");
+
                 var matJSON = "{materialName: " + inputMatName + ", rawRate: " + inputMatRawRate + ", sellingRate: " + matSellingRate + ", wastageFactor: " + inputMatWastage + 
                             ", increase: " + inputMatIncrea + ", UnitOfMeasure:{unitName: "+ matUnitName+ ", unitAbbreviation: " + matUnitAbb + "}}";
                     //console.log(JSON.stringify(matJSON));
@@ -835,6 +829,212 @@ $("#globalDecDurationInputNoYrs").prop('disabled', true);$("#globalDecDurationIn
 		matCount++;
     });
     
+        var g = 0;var h= 0;
+    $("#priSheetMatAddRowBtn").click(function(){
+        
+     $("#MatPricingSheetTable").append(
+                        "<tr><td><select id=\"selMatName" + g +"\"  class=\"pricingSheetListMaterialResourceInput\"></select></td><td><input name=\"matSellingRateI" + g + "\" id=\"pricingSheetListMaterialSellRateInput\" type=\"number\" disabled/></td><td><input name=\"matQty" + g +"\" id=\"pricingSheetListMaterialQuantityInput\" type=\"number\"/></td><td><input name=\"matPriceRate" + g + "\" id=\"pricingSheetListMaterialRateInput\" class=\"matAllwClass\" type=\"number\" disabled/></td></tr>"
+                        ); 
+
+                //$("#selMatName" + g).append("<option value=\"none\">Hi" + g + "</option>");
+                $.ajax({
+                    
+                type: "GET",
+                //dataType: "json",
+                url: url + "/api/v1/material/get?key=ps_backendv1.0_api_key",
+                //data: "key=freeli_v1.0_ndivhuwo_dev",
+                timeout: 2000, // timeout milliseconds
+                success: function (data, status, xhr) {   // success callback function
+                        //$('#message').append(JSON.stringify(data.list));
+                    //materialListJSON = data;
+                    
+                    $("#selMatName"+h).empty(); // remove old options
+                    $("#selMatName"+h).append($("<option>", {
+                        value: '',
+                        text : 'Please Select' 
+                        }));
+
+                    $.each(data.list, function (key, value) {
+                        //$('#message').append(value.fullName);
+                        $("#selMatName"+h).append($("<option>", {
+                                value: value.sellingRate,
+                                text : value.materialName 
+                        })); 
+                        //console.log("Value: " + value.sellingRate);
+                        //console.log("Text: " + value.materialName);
+                        
+                    });h++;
+                }, 
+                error: function (jqXhr, textStatus, errorMessage) { // error callback 
+                    $('#secActivityMessage').append('Error: ' + errorMessage + " " + JSON.stringify(jqXhr) + " " + textStatus);
+                } 
+            }); 
+            g++;
+        
+        $("#MatPricingSheetTable tr").each(function(){
+            $(this).find("td:eq(0)").change(function(){
+                for(var i=0; i < 100; i++){
+                //var selSellRate = $("#selMatName"+i).val();
+                var selSellRate = parseFloat($("#selMatName"+i).val());
+                //var selSellRate2 = parseInt(selSellRate);
+                $('[name="matSellingRateI'+ i +'"]').val(selSellRate.toFixed(2));
+                //console.log("Original : "  + selSellRate);
+                
+            }
+            });
+            
+            $(this).find("td:eq(2)").change(function(){
+                for(var a=0; a < 100; a++){
+                    var matRawSellRateAuto = $('[name="matSellingRateI' + a + '"]').val();
+                    var matRawQtyAuto = $('[name="matQty' + a + '"]').val();
+                    var matPricingRateAuto = matRawQtyAuto * matRawSellRateAuto;
+                    $('[name="matPriceRate'+a+'"]').val(matPricingRateAuto.toFixed(2));
+                    //$('[name="matPriceRate'+a+'"]').val("Hi");
+                    console.log("Selling Rate : " + matRawSellRateAuto);
+                }
+            });
+        });
+        
+    });
+    
+    
+    var plRC=0;var plSC=0;
+    $("#priSheetPlantAddRowBtn").click(function(){
+        $("#plaPricingSheetTable").append(
+            "<tr><td><select id=\"plNamePS_a" + plRC + "\" class=\"pricingSheetListPlantResourceInput\"></select></td>" +
+            "<td><input name=\"plSellRatePS_a" + plRC +"\" id=\"pricingSheetListPlantSellRateInput\" type=\"number\" disabled/></td>" +
+            "<td><input name=\"plQtyPS_a" + plRC + "\" id=\"pricingSheetListPlantQuantityInput\" type=\"number\"/></td>" +
+            "<td><input name=\"plPricingRatePS_a" + plRC + "\" id=\"pricingSheetListPlantRateInput\" class=\"plAllwClass\" type=\"number\" disabled/></td></tr>"
+        );
+
+        $.ajax({
+            type: "GET",
+            //dataType: "json",
+            url: url + "/api/v1/plant/get?key=ps_backendv1.0_api_key",
+            //data: "key=freeli_v1.0_ndivhuwo_dev",
+            timeout: 2000, // timeout milliseconds
+            success: function (data, status, xhr) {   // success callback function
+                    //$('#message').append(JSON.stringify(data.list));
+                //materialListJSON = data;
+
+                $("#plNamePS_a"+plSC).empty(); // remove old options
+                $("#plNamePS_a"+plSC).append($("<option>", {
+                    value: '',
+                    text : 'Please Select' 
+                    }));
+
+                $.each(data.list, function (key, value) {
+                    //$('#message').append(value.fullName);
+                    $("#plNamePS_a"+plSC).append($("<option>", {
+                            value: value.sellingRate,
+                            text : value.plantName 
+                    })); 
+                    //console.log("Value: " + value.sellingRate);
+                    //console.log("Text: " + value.materialName);
+
+                });plSC++;
+            }, 
+            error: function (jqXhr, textStatus, errorMessage) { // error callback 
+                $('#secActivityMessage').append('Error: ' + errorMessage + " " + JSON.stringify(jqXhr) + " " + textStatus);
+            } 
+        }); 
+        plRC++;
+        
+        $("#plaPricingSheetTable tr").each(function(){
+            $(this).find("td:eq(0)").change(function(){
+                for(var i=0; i < 100; i++){
+                //var selSellRate = $("#selMatName"+i).val();
+                var selSellRate = parseFloat($("#plNamePS_a"+i).val());
+                //var selSellRate2 = parseInt(selSellRate);
+                $('[name="plSellRatePS_a'+ i +'"]').val(selSellRate.toFixed(2));
+                //console.log("Original : "  + selSellRate);
+                
+            }
+            });
+            
+            $(this).find("td:eq(2)").change(function(){
+                for(var a=0; a < 100; a++){
+                    var matRawSellRateAuto = $('[name="plSellRatePS_a' + a + '"]').val();
+                    var matRawQtyAuto = $('[name="plQtyPS_a' + a + '"]').val();
+                    var matPricingRateAuto = matRawQtyAuto * matRawSellRateAuto;
+                    $('[name="plPricingRatePS_a'+a+'"]').val(matPricingRateAuto.toFixed(2));
+                    //$('[name="matPriceRate'+a+'"]').val("Hi");
+                    //console.log("Selling Rate : " + matRawSellRateAuto);
+                }
+            });
+        });
+    });
+    
+    
+    var peoRC=0;var peoSC=0;
+    $("#priSheetPeopleAddRowBtn").click(function(){
+        $("#peoPricingSheetTable").append(
+            "<tr><td><select id=\"peoNamePS_a" +peoRC+ "\" class=\"pricingSheetListPeopleResource\"></select></td>" +
+            "<td><input name=\"peoSellRatePS_a" +peoRC+ "\" id=\"pricingSheetListPeopleSellRateResource\" type=\"number\" disabled/></td>" +
+            "<td><input name=\"peoQtyPS_a" +peoRC+ "\" id=\"pricingSheetListPeopleQuantity\" type=\"number\"/></td>" +
+            "<td><input name=\"peoPricingRatePS_a" +peoRC+ "\" id=\"pricingSheetListPeopleRate\" class=\"peoAllwClass\" type=\"number\" disabled/></td></tr>"
+        );
+
+       $.ajax({
+            type: "GET",
+            //dataType: "json",
+            url: url + "/api/v1/people/get?key=ps_backendv1.0_api_key",
+            //data: "key=freeli_v1.0_ndivhuwo_dev",
+            timeout: 2000, // timeout milliseconds
+            success: function (data, status, xhr) {   // success callback function
+                    //$('#message').append(JSON.stringify(data.list));
+                //materialListJSON = data;
+
+                $("#peoNamePS_a"+peoSC).empty(); // remove old options
+                $("#peoNamePS_a"+peoSC).append($("<option>", {
+                    value: '',
+                    text : 'Please Select' 
+                    }));
+
+                $.each(data.list, function (key, value) {
+                    //$('#message').append(value.fullName);
+                    $("#peoNamePS_a"+peoSC).append($("<option>", {
+                            value: value.totalCost,
+                            text : value.personName 
+                    })); 
+                    //console.log("Value: " + value.sellingRate);
+                    //console.log("Text: " + value.materialName);
+
+                });peoSC++;
+            }, 
+            error: function (jqXhr, textStatus, errorMessage) { // error callback 
+                $('#secActivityMessage').append('Error: ' + errorMessage + " " + JSON.stringify(jqXhr) + " " + textStatus);
+            } 
+        }); 
+        peoRC++;
+        
+       $("#peoPricingSheetTable tr").each(function(){
+            $(this).find("td:eq(0)").change(function(){
+                for(var i=0; i < 100; i++){
+                //var selSellRate = $("#selMatName"+i).val();
+                var selSellRate = parseFloat($("#peoNamePS_a"+i).val());
+                //var selSellRate2 = parseInt(selSellRate);
+                $('[name="peoSellRatePS_a'+ i +'"]').val(selSellRate.toFixed(2));
+                //console.log("Original : "  + selSellRate);
+                
+            }
+            });
+            
+            $(this).find("td:eq(2)").change(function(){
+                for(var a=0; a < 100; a++){
+                    var matRawSellRateAuto = $('[name="peoSellRatePS_a' + a + '"]').val();
+                    var matRawQtyAuto = $('[name="peoQtyPS_a' + a + '"]').val();
+                    var matPricingRateAuto = matRawQtyAuto * matRawSellRateAuto;
+                    $('[name="peoPricingRatePS_a'+a+'"]').val(matPricingRateAuto.toFixed(2));
+                    //$('[name="matPriceRate'+a+'"]').val("Hi");
+                    //console.log("Selling Rate : " + matRawSellRateAuto);
+                }
+            });
+        }); 
+    });
+    
+    
+    
     //calculations
     $("#tenForResPlantIncreasInput").change(function(){
         inputPlName = $("#tenForResPlantNameInput").val();
@@ -852,12 +1052,7 @@ $("#globalDecDurationInputNoYrs").prop('disabled', true);$("#globalDecDurationIn
         plCostPMonthWInc = plCostPMonth + plIncrease;
         plSellingRate = plCostPMonthWInc / prAverageWorkingDaysPerMonth;
         $("#tenForResPlantTotalCostInput").val(plSellingRate.toFixed(2));
-        $("#plaPricingSheetTable").append(
-        "<tr><td><input name=\"plNamePS\" id=\"pricingSheetListPlantResourceInput\" type=\"text\" value=\"" + inputPlName + "\" disabled/></td>" +
-        "<td><input name=\"plSellRatePS\" id=\"pricingSheetListPlantSellRateInput\" type=\"number\" value=\"" + plSellingRate.toFixed(2) + "\" disabled/></td>" +
-        "<td><input name=\"plQtyPS\" id=\"pricingSheetListPlantQuantityInput\" type=\"number\"/></td>" +
-        "<td><input name=\"plPricingRatePS\" id=\"pricingSheetListPlantRateInput\" class=\"plAllwClass\" type=\"number\" disabled/></td></tr>"
-        );
+
         
         
         var finRateType;
@@ -957,10 +1152,6 @@ $("#globalDecDurationInputNoYrs").prop('disabled', true);$("#globalDecDurationIn
         inputMatIncrea = $("#tenForResMaterialIncreasInput").val();
         matSellingRate = (parseInt(inputMatRawRate) * (inputMatWastage/100)) + parseInt(inputMatRawRate) + (((parseInt(inputMatRawRate) * (inputMatWastage/100)) + parseInt(inputMatRawRate)) * (inputMatIncrea/100));
         $("#tenForResMaterialSellingRateInput").val(matSellingRate.toFixed(2));
-	$("#MatPricingSheetTable").append(
-        "<tr><td><input name=\"matName\" id=\"pricingSheetListMaterialResourceInput\" type=\"text\" value=\"" + inputMatName + "\"disabled/></td><td><input name=\"matSellingRateInput\" id=\"pricingSheetListMaterialSellRateInput\" type=\"number\" value=\"" + matSellingRate.toFixed(2) + "\" disabled/></td>" +
-        "<td><input name=\"matQtyInput\" id=\"pricingSheetListMaterialQuantityInput\" type=\"number\"/></td><td><input name=\"matPriceRate\" id=\"pricingSheetListMaterialRateInput\" class=\"matAllwClass\"type=\"number\" disabled/></td></tr>"
-        );
 
         var matJSON = "{materialName: " + inputMatName + ", rawRate: " + inputMatRawRate + ", sellingRate: " + matSellingRate + ", wastageFactor: " + inputMatWastage + 
                             ", increase: " + inputMatIncrea + ", UnitOfMeasure:{unitName: "+ matUnitName+ ", unitAbbreviation: " + matUnitAbb + "}}";
@@ -1060,7 +1251,7 @@ $("#globalDecDurationInputNoYrs").prop('disabled', true);$("#globalDecDurationIn
     var plAllowedCol=0; var peoAllowedCol=0; var matAllowedCol=0; var fuelAllowedCol=0;
         
         
-        document.getElementById('pdf').onclick = function() {
+        document.getElementById('pldRpList1').onclick = function() {
             var doc = new jsPDF('p', 'pt');
             var res = doc.autoTableHtmlToJson(document.getElementById('pdfPutTable'));
             var height = doc.internal.pageSize.height;
@@ -1088,7 +1279,14 @@ $("#globalDecDurationInputNoYrs").prop('disabled', true);$("#globalDecDurationIn
         var secidC = "8.3"; 
         var actidC = "8.3.1";
         var desidC = "8.3.1.1";
-        
+    
+    
+        $("#pldRpList1").click(function(){
+            
+            
+            
+        });
+    
     $("#priSheSummaryConfProAchBtnC").click(function(){
         var rawProAchIn = $("#priSheSummaryConfProAchInput").val();
         $(".plAllwClass").each(function() {

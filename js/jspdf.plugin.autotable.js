@@ -110,7 +110,7 @@ exports.getTheme = function (name) {
     var themes = {
         'striped': {
             table: { fillColor: 255, textColor: 80, fontStyle: 'normal' },
-            header: { textColor: 255, fillColor: [41, 128, 185], fontStyle: 'bold' },
+            header: { textColor: 255, fillColor: [41, 40, 43], fontStyle: 'bold' },
             body: {},
             alternateRow: { fillColor: 245 }
         },

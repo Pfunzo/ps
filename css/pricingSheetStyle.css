@@ -18,6 +18,7 @@
 #pricingSheetTR2Body{position:relative; margin-left:0px; margin-top:10px; width:490px; height:200px; background-color:#d1d1d1; border:none;}
 
 #pricingSheetListPeopleResource{width:185px; height:18px; background-color:#ececec; border:none; margin-left:0px; margin-top:-3px; text-indent:10px;}
+.pricingSheetListPeopleResource{width:185px; height:18px; background-color:#ececec; border:none; margin-left:0px; margin-top:-3px; text-indent:10px;}
 #pricingSheetListPeopleSellRateResource{width:100px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; text-indent:10px;}
 #pricingSheetListPeopleQuantity{width:60px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; text-indent:10px;}
 #pricingSheetListPeopleRate{width:117px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; text-indent:10px;}
@@ -31,6 +32,7 @@
 #pricingSheetListMaterialQuantityTitle{width:60px; height:18px; background-color:#c0c0c0; border:none; margin-left:-3px; margin-top:-3px;}
 #pricingSheetListMaterialRateTitle{width:117px; height:18px; background-color:#c0c0c0; border:none; margin-left:-3px; margin-top:-3px;}
 #pricingSheetListMaterialResourceInput{width:185px; height:18px; background-color:#ececec; border:none; margin-left:0px; margin-top:-3px; text-indent:10px;}
+.pricingSheetListMaterialResourceInput{width:185px; height:18px; background-color:#ececec; border:none; margin-left:0px; margin-top:-3px; text-indent:10px;}
 #pricingSheetListMaterialSellRateInput{width:100px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; text-indent:10px;}
 #pricingSheetListMaterialQuantityInput{width:60px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px;text-indent:10px;}
 #pricingSheetListMaterialRateInput{width:117px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px;text-indent:10px;}
@@ -49,14 +51,15 @@
 #pricingSheetListPlantQuantityTitle{width:60px; height:18px; background-color:#c0c0c0; border:none; margin-left:-3px; margin-top:-3px;}
 #pricingSheetListPlantRateTitle{width:117px; height:18px; background-color:#c0c0c0; border:none; margin-left:-3px; margin-top:-3px;}
 #pricingSheetListPlantResourceInput{width:185px; height:18px; background-color:#ececec; border:none; margin-left:0px; margin-top:-3px; text-indent:10px;}
+.pricingSheetListPlantResourceInput{width:185px; height:18px; background-color:#ececec; border:none; margin-left:0px; margin-top:-3px; text-indent:10px;}
 #pricingSheetListPlantSellRateInput{width:100px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; text-indent:10px;}
 #pricingSheetListPlantQuantityInput{width:60px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; text-indent:10px;}
 #pricingSheetListPlantRateInput{width:117px; height:18px; background-color:#ececec; border:none; margin-left:-3px; margin-top:-3px; text-indent:10px;}
 
 
 #pricingSheetLeftFooterBody{position:relative; margin-left:12px; margin-top:1px; width:481px; height:68px;}
-#pricingSheetLeftFooterHead{position:relative; margin-left:-3px; margin-top:1px; width:140px; height:25px; background-color:#d1d1d1;}
-#pricingSheetLeftFooterInput{position:relative; margin-left:-3px; margin-top:0px; width:140px; height:20px; border: none;/*  background-color:#d1d1d1; */}
+#pricingSheetLeftFooterHead{position:relative; margin-left:-3px; margin-top:1px; width:240px; height:25px; background-color:#d1d1d1;}
+#pricingSheetLeftFooterInput{position:relative; margin-left:-3px; margin-top:0px; width:240px; height:20px; border: none;/*  background-color:#d1d1d1; */}
 #pricingSheetRightFooterBody{position:relative; margin-left:507px; margin-top:-64px; width:481px; height:65px; /* background-color:#d1d1d1; */}
 
 #pricingSheetRightFooterCalculateBtn{position:relative; margin-left:0px; margin-top:-3px; width:200px; height:51px; background-color:#abf2c4; border-radius: 25px;cursor: pointer;}
@@ -64,7 +67,8 @@
 #pricingSheetRightFooterViewBtn:hover{position:relative; margin-left:0px; margin-top:-3px; width:200px; height:51px; background-color:#dc4848; border-radius: 25px}
 
 #pricingSheetRightFooterEmptyBtn{position:relative; margin-left:0px; margin-top:-3px; width:150px; height:45px;  border-radius: 25px;}
-#pricingSheetRightViewSummaryBtn{position:relative; margin-left:0px; margin-top:-3px; width:250px; height:45px; background-color:#535353; border-radius: 25px; cursor: pointer;}
+#pricingSheetRightViewSummaryBtn{position:relative; margin-left:0px; margin-top:-3px; width:150px; height:45px; background-color:#535353; border-radius: 5px; cursor: pointer;}
+#pricingSheetRightcalculateBtn{position:relative; margin-left:0px; margin-top:-3px; width:150px; height:45px; background-color:#535353; border-radius: 5px; cursor: pointer;}
 
 #pricingSheetCalculateSuccessAlertBackground{position:absolute; margin-left:auto; margin-right:auto; margin-top:0px; width:1000px; height:500px;  background-color:#abf2c4; opacity:0.95;}
 #pricingSheetOkBtn{background-color: #535353; border: none; color: #efefef; height:50px; width:302px; text-align: center; text-decoration: none; display: inline-block; font-size: 30px; cursor: pointer;border-radius: 25px}
@@ -87,3 +91,7 @@ font-family: trebuc; font-size: 13px; font-weight: normal; color:#535353; margin
 #peopleAllwInput{position:relative; margin-left:0px; margin-top:00px; width:185px; height:35px; background-color:#f0f0f0; border:none; font-size: 18px; text-indent:8px;}
 #matAllwInput{position:relative; margin-left:0px; margin-top:00px; width:185px; height:35px; background-color:#f0f0f0; border:none; font-size: 18px; text-indent:8px;}
 #fuelAllwInput{position:relative; margin-left:0px; margin-top:00px; width:185px; height:35px; background-color:#f0f0f0; border:none; font-size: 18px; text-indent:8px;}
+
+#priSheetMatAddRowBtn{background-color: #535353; margin-left:3px;border: none; color: #efefef; height:20px; width:129px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer;}
+#priSheetPlantAddRowBtn{background-color: #535353; margin-left:3px;border: none; color: #efefef; height:20px; width:129px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer;}
+#priSheetPeopleAddRowBtn{background-color: #535353; margin-left:3px;border: none; color: #efefef; height:20px; width:129px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer;}
